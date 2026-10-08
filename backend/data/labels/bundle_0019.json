@@ -1,0 +1,325 @@
+{
+  "bundle_id": "bundle_0019",
+  "scenario": "city_mismatch",
+  "documents": {
+    "id_card": {
+      "file": "id_card.png",
+      "fields": {
+        "name": {
+          "value": "Joshua Basu",
+          "bbox": [
+            440,
+            359,
+            683,
+            389
+          ]
+        },
+        "father_name": {
+          "value": "Aadi Venkatesh",
+          "bbox": [
+            439,
+            463,
+            732,
+            493
+          ]
+        },
+        "dob": {
+          "value": "30/05/1997",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "gender": {
+          "value": "Male",
+          "bbox": [
+            440,
+            671,
+            531,
+            701
+          ]
+        },
+        "id_number": {
+          "value": "7346 7065 6272",
+          "bbox": [
+            440,
+            775,
+            744,
+            805
+          ]
+        },
+        "house_no": {
+          "value": "15",
+          "bbox": [
+            440,
+            879,
+            487,
+            909
+          ]
+        },
+        "locality": {
+          "value": "Patla Ganj Road",
+          "bbox": [
+            510,
+            879,
+            818,
+            917
+          ]
+        },
+        "city": {
+          "value": "Amravati",
+          "bbox": [
+            841,
+            879,
+            1008,
+            909
+          ]
+        },
+        "state": {
+          "value": "Telangana",
+          "bbox": [
+            440,
+            937,
+            634,
+            975
+          ]
+        },
+        "pincode": {
+          "value": "846564",
+          "bbox": [
+            657,
+            937,
+            797,
+            967
+          ]
+        },
+        "address": {
+          "value": "15, Patla Ganj Road, Amravati, Telangana, 846564",
+          "bbox": [
+            440,
+            879,
+            1008,
+            975
+          ]
+        }
+      }
+    },
+    "address_proof": {
+      "file": "address_proof.png",
+      "fields": {
+        "name": {
+          "value": "Joshua Basu",
+          "bbox": [
+            440,
+            359,
+            683,
+            389
+          ]
+        },
+        "house_no": {
+          "value": "15",
+          "bbox": [
+            440,
+            463,
+            487,
+            493
+          ]
+        },
+        "locality": {
+          "value": "Patla Ganj Road",
+          "bbox": [
+            510,
+            463,
+            818,
+            501
+          ]
+        },
+        "city": {
+          "value": "Jaipur",
+          "bbox": [
+            842,
+            463,
+            957,
+            501
+          ]
+        },
+        "state": {
+          "value": "Telangana",
+          "bbox": [
+            440,
+            521,
+            634,
+            559
+          ]
+        },
+        "pincode": {
+          "value": "846564",
+          "bbox": [
+            657,
+            521,
+            797,
+            551
+          ]
+        },
+        "address": {
+          "value": "15, Patla Ganj Road, Jaipur, Telangana, 846564",
+          "bbox": [
+            440,
+            463,
+            957,
+            559
+          ]
+        },
+        "bill_date": {
+          "value": "21/07/2025",
+          "bbox": [
+            440,
+            625,
+            650,
+            655
+          ]
+        },
+        "account_number": {
+          "value": "16272046537",
+          "bbox": [
+            440,
+            729,
+            697,
+            759
+          ]
+        }
+      }
+    },
+    "income_certificate": {
+      "file": "income_certificate.png",
+      "fields": {
+        "name": {
+          "value": "Joshua Basu",
+          "bbox": [
+            440,
+            359,
+            683,
+            389
+          ]
+        },
+        "father_name": {
+          "value": "Aadi Venkatesh",
+          "bbox": [
+            439,
+            463,
+            732,
+            493
+          ]
+        },
+        "dob": {
+          "value": "30/05/1997",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "id_number": {
+          "value": "7346 7065 6272",
+          "bbox": [
+            440,
+            671,
+            744,
+            701
+          ]
+        },
+        "annual_income": {
+          "value": "Rs. 2,05,000",
+          "bbox": [
+            440,
+            775,
+            678,
+            811
+          ]
+        },
+        "issue_date": {
+          "value": "16/10/2025",
+          "bbox": [
+            440,
+            879,
+            650,
+            909
+          ]
+        },
+        "house_no": {
+          "value": "15",
+          "bbox": [
+            440,
+            983,
+            487,
+            1013
+          ]
+        },
+        "locality": {
+          "value": "Patla Ganj Road",
+          "bbox": [
+            510,
+            983,
+            818,
+            1021
+          ]
+        },
+        "city": {
+          "value": "Amravati",
+          "bbox": [
+            841,
+            983,
+            1008,
+            1013
+          ]
+        },
+        "state": {
+          "value": "Telangana",
+          "bbox": [
+            440,
+            1041,
+            634,
+            1079
+          ]
+        },
+        "pincode": {
+          "value": "846564",
+          "bbox": [
+            657,
+            1041,
+            797,
+            1071
+          ]
+        },
+        "address": {
+          "value": "15, Patla Ganj Road, Amravati, Telangana, 846564",
+          "bbox": [
+            440,
+            983,
+            1008,
+            1079
+          ]
+        }
+      }
+    }
+  },
+  "injected": [
+    {
+      "type": "city_mismatch",
+      "field": "city",
+      "is_conflict": true,
+      "severity": "MEDIUM",
+      "docs": [
+        "id_card",
+        "address_proof"
+      ],
+      "values": {
+        "id_card": "Amravati",
+        "address_proof": "Jaipur"
+      }
+    }
+  ]
+}

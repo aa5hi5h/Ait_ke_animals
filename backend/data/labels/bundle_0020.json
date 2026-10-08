@@ -1,0 +1,325 @@
+{
+  "bundle_id": "bundle_0020",
+  "scenario": "address_abbreviation",
+  "documents": {
+    "id_card": {
+      "file": "id_card.png",
+      "fields": {
+        "name": {
+          "value": "Inaya Salvi",
+          "bbox": [
+            440,
+            359,
+            645,
+            397
+          ]
+        },
+        "father_name": {
+          "value": "Gagan Mitra",
+          "bbox": [
+            440,
+            463,
+            671,
+            501
+          ]
+        },
+        "dob": {
+          "value": "27/05/1988",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "gender": {
+          "value": "Female",
+          "bbox": [
+            440,
+            671,
+            580,
+            701
+          ]
+        },
+        "id_number": {
+          "value": "4641 7080 5310",
+          "bbox": [
+            440,
+            775,
+            744,
+            805
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 43",
+          "bbox": [
+            440,
+            879,
+            606,
+            909
+          ]
+        },
+        "locality": {
+          "value": "Acharya Circle Rd",
+          "bbox": [
+            628,
+            879,
+            967,
+            917
+          ]
+        },
+        "city": {
+          "value": "Adoni",
+          "bbox": [
+            990,
+            879,
+            1098,
+            909
+          ]
+        },
+        "state": {
+          "value": "Punjab",
+          "bbox": [
+            440,
+            937,
+            571,
+            975
+          ]
+        },
+        "pincode": {
+          "value": "777387",
+          "bbox": [
+            594,
+            937,
+            734,
+            967
+          ]
+        },
+        "address": {
+          "value": "H.No. 43, Acharya Circle Rd, Adoni, Punjab, 777387",
+          "bbox": [
+            440,
+            879,
+            1098,
+            975
+          ]
+        }
+      }
+    },
+    "address_proof": {
+      "file": "address_proof.png",
+      "fields": {
+        "name": {
+          "value": "Inaya Salvi",
+          "bbox": [
+            440,
+            359,
+            645,
+            397
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 43",
+          "bbox": [
+            440,
+            463,
+            606,
+            493
+          ]
+        },
+        "locality": {
+          "value": "Acharya Circle Road",
+          "bbox": [
+            628,
+            463,
+            1014,
+            501
+          ]
+        },
+        "city": {
+          "value": "Adoni",
+          "bbox": [
+            1037,
+            463,
+            1145,
+            493
+          ]
+        },
+        "state": {
+          "value": "Punjab",
+          "bbox": [
+            440,
+            521,
+            571,
+            559
+          ]
+        },
+        "pincode": {
+          "value": "777387",
+          "bbox": [
+            594,
+            521,
+            734,
+            551
+          ]
+        },
+        "address": {
+          "value": "H.No. 43, Acharya Circle Road, Adoni, Punjab, 777387",
+          "bbox": [
+            440,
+            463,
+            1145,
+            559
+          ]
+        },
+        "bill_date": {
+          "value": "07/05/2025",
+          "bbox": [
+            440,
+            625,
+            650,
+            655
+          ]
+        },
+        "account_number": {
+          "value": "92327193745",
+          "bbox": [
+            440,
+            729,
+            697,
+            759
+          ]
+        }
+      }
+    },
+    "income_certificate": {
+      "file": "income_certificate.png",
+      "fields": {
+        "name": {
+          "value": "Inaya Salvi",
+          "bbox": [
+            440,
+            359,
+            645,
+            397
+          ]
+        },
+        "father_name": {
+          "value": "Gagan Mitra",
+          "bbox": [
+            440,
+            463,
+            671,
+            501
+          ]
+        },
+        "dob": {
+          "value": "27/05/1988",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "id_number": {
+          "value": "4641 7080 5310",
+          "bbox": [
+            440,
+            671,
+            744,
+            701
+          ]
+        },
+        "annual_income": {
+          "value": "Rs. 1,91,000",
+          "bbox": [
+            440,
+            775,
+            678,
+            811
+          ]
+        },
+        "issue_date": {
+          "value": "13/04/2025",
+          "bbox": [
+            440,
+            879,
+            650,
+            909
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 43",
+          "bbox": [
+            440,
+            983,
+            606,
+            1013
+          ]
+        },
+        "locality": {
+          "value": "Acharya Circle Road",
+          "bbox": [
+            628,
+            983,
+            1014,
+            1021
+          ]
+        },
+        "city": {
+          "value": "Adoni",
+          "bbox": [
+            1037,
+            983,
+            1145,
+            1013
+          ]
+        },
+        "state": {
+          "value": "Punjab",
+          "bbox": [
+            440,
+            1041,
+            571,
+            1079
+          ]
+        },
+        "pincode": {
+          "value": "777387",
+          "bbox": [
+            594,
+            1041,
+            734,
+            1071
+          ]
+        },
+        "address": {
+          "value": "H.No. 43, Acharya Circle Road, Adoni, Punjab, 777387",
+          "bbox": [
+            440,
+            983,
+            1145,
+            1079
+          ]
+        }
+      }
+    }
+  },
+  "injected": [
+    {
+      "type": "address_abbreviation",
+      "field": "address",
+      "is_conflict": false,
+      "severity": null,
+      "docs": [
+        "id_card",
+        "address_proof"
+      ],
+      "values": {
+        "id_card": "H.No. 43, Acharya Circle Rd, Adoni, Punjab, 777387",
+        "address_proof": "H.No. 43, Acharya Circle Road, Adoni, Punjab, 777387"
+      }
+    }
+  ]
+}

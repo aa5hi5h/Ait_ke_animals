@@ -1,0 +1,325 @@
+{
+  "bundle_id": "bundle_0038",
+  "scenario": "address_abbreviation",
+  "documents": {
+    "id_card": {
+      "file": "id_card.png",
+      "fields": {
+        "name": {
+          "value": "Lipika Baria",
+          "bbox": [
+            440,
+            359,
+            659,
+            397
+          ]
+        },
+        "father_name": {
+          "value": "Wahab Venkataraman",
+          "bbox": [
+            440,
+            463,
+            854,
+            493
+          ]
+        },
+        "dob": {
+          "value": "07/02/2005",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "gender": {
+          "value": "Female",
+          "bbox": [
+            440,
+            671,
+            580,
+            701
+          ]
+        },
+        "id_number": {
+          "value": "5496 5137 0985",
+          "bbox": [
+            440,
+            775,
+            744,
+            805
+          ]
+        },
+        "house_no": {
+          "value": "967",
+          "bbox": [
+            440,
+            879,
+            510,
+            909
+          ]
+        },
+        "locality": {
+          "value": "Mall Chowk Rd",
+          "bbox": [
+            533,
+            879,
+            815,
+            909
+          ]
+        },
+        "city": {
+          "value": "Nandyal",
+          "bbox": [
+            839,
+            879,
+            993,
+            917
+          ]
+        },
+        "state": {
+          "value": "Kerala",
+          "bbox": [
+            1017,
+            879,
+            1138,
+            909
+          ]
+        },
+        "pincode": {
+          "value": "551256",
+          "bbox": [
+            440,
+            937,
+            580,
+            967
+          ]
+        },
+        "address": {
+          "value": "967, Mall Chowk Rd, Nandyal, Kerala, 551256",
+          "bbox": [
+            440,
+            879,
+            1138,
+            967
+          ]
+        }
+      }
+    },
+    "address_proof": {
+      "file": "address_proof.png",
+      "fields": {
+        "name": {
+          "value": "Lipika Baria",
+          "bbox": [
+            440,
+            359,
+            659,
+            397
+          ]
+        },
+        "house_no": {
+          "value": "967",
+          "bbox": [
+            440,
+            463,
+            510,
+            493
+          ]
+        },
+        "locality": {
+          "value": "Mall Chowk Road",
+          "bbox": [
+            533,
+            463,
+            862,
+            493
+          ]
+        },
+        "city": {
+          "value": "Nandyal",
+          "bbox": [
+            886,
+            463,
+            1040,
+            501
+          ]
+        },
+        "state": {
+          "value": "Kerala",
+          "bbox": [
+            440,
+            521,
+            561,
+            551
+          ]
+        },
+        "pincode": {
+          "value": "551256",
+          "bbox": [
+            585,
+            521,
+            725,
+            551
+          ]
+        },
+        "address": {
+          "value": "967, Mall Chowk Road, Nandyal, Kerala, 551256",
+          "bbox": [
+            440,
+            463,
+            1040,
+            551
+          ]
+        },
+        "bill_date": {
+          "value": "02/02/2025",
+          "bbox": [
+            440,
+            625,
+            650,
+            655
+          ]
+        },
+        "account_number": {
+          "value": "61200471138",
+          "bbox": [
+            440,
+            729,
+            694,
+            759
+          ]
+        }
+      }
+    },
+    "income_certificate": {
+      "file": "income_certificate.png",
+      "fields": {
+        "name": {
+          "value": "Lipika Baria",
+          "bbox": [
+            440,
+            359,
+            659,
+            397
+          ]
+        },
+        "father_name": {
+          "value": "Wahab Venkataraman",
+          "bbox": [
+            440,
+            463,
+            854,
+            493
+          ]
+        },
+        "dob": {
+          "value": "07/02/2005",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "id_number": {
+          "value": "5496 5137 0985",
+          "bbox": [
+            440,
+            671,
+            744,
+            701
+          ]
+        },
+        "annual_income": {
+          "value": "Rs. 7,68,000",
+          "bbox": [
+            440,
+            775,
+            678,
+            811
+          ]
+        },
+        "issue_date": {
+          "value": "26/08/2025",
+          "bbox": [
+            440,
+            879,
+            650,
+            909
+          ]
+        },
+        "house_no": {
+          "value": "967",
+          "bbox": [
+            440,
+            983,
+            510,
+            1013
+          ]
+        },
+        "locality": {
+          "value": "Mall Chowk Road",
+          "bbox": [
+            533,
+            983,
+            862,
+            1013
+          ]
+        },
+        "city": {
+          "value": "Nandyal",
+          "bbox": [
+            886,
+            983,
+            1040,
+            1021
+          ]
+        },
+        "state": {
+          "value": "Kerala",
+          "bbox": [
+            440,
+            1041,
+            561,
+            1071
+          ]
+        },
+        "pincode": {
+          "value": "551256",
+          "bbox": [
+            585,
+            1041,
+            725,
+            1071
+          ]
+        },
+        "address": {
+          "value": "967, Mall Chowk Road, Nandyal, Kerala, 551256",
+          "bbox": [
+            440,
+            983,
+            1040,
+            1071
+          ]
+        }
+      }
+    }
+  },
+  "injected": [
+    {
+      "type": "address_abbreviation",
+      "field": "address",
+      "is_conflict": false,
+      "severity": null,
+      "docs": [
+        "id_card",
+        "address_proof"
+      ],
+      "values": {
+        "id_card": "967, Mall Chowk Rd, Nandyal, Kerala, 551256",
+        "address_proof": "967, Mall Chowk Road, Nandyal, Kerala, 551256"
+      }
+    }
+  ]
+}

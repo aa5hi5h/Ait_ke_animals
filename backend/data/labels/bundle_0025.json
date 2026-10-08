@@ -1,0 +1,325 @@
+{
+  "bundle_id": "bundle_0025",
+  "scenario": "address_abbreviation",
+  "documents": {
+    "id_card": {
+      "file": "id_card.png",
+      "fields": {
+        "name": {
+          "value": "Patrick Misra",
+          "bbox": [
+            440,
+            359,
+            683,
+            389
+          ]
+        },
+        "father_name": {
+          "value": "Shaurya Yohannan",
+          "bbox": [
+            440,
+            463,
+            795,
+            501
+          ]
+        },
+        "dob": {
+          "value": "07/12/1997",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "gender": {
+          "value": "Male",
+          "bbox": [
+            440,
+            671,
+            531,
+            701
+          ]
+        },
+        "id_number": {
+          "value": "5240 8240 0842",
+          "bbox": [
+            440,
+            775,
+            744,
+            805
+          ]
+        },
+        "house_no": {
+          "value": "34",
+          "bbox": [
+            440,
+            879,
+            487,
+            909
+          ]
+        },
+        "locality": {
+          "value": "Kannan Street",
+          "bbox": [
+            510,
+            879,
+            779,
+            909
+          ]
+        },
+        "city": {
+          "value": "Shivpuri",
+          "bbox": [
+            802,
+            879,
+            954,
+            917
+          ]
+        },
+        "state": {
+          "value": "Andhra Pradesh",
+          "bbox": [
+            439,
+            937,
+            744,
+            967
+          ]
+        },
+        "pincode": {
+          "value": "562729",
+          "bbox": [
+            767,
+            937,
+            907,
+            967
+          ]
+        },
+        "address": {
+          "value": "34, Kannan Street, Shivpuri, Andhra Pradesh, 562729",
+          "bbox": [
+            439,
+            879,
+            954,
+            967
+          ]
+        }
+      }
+    },
+    "address_proof": {
+      "file": "address_proof.png",
+      "fields": {
+        "name": {
+          "value": "Patrick Misra",
+          "bbox": [
+            440,
+            359,
+            683,
+            389
+          ]
+        },
+        "house_no": {
+          "value": "34",
+          "bbox": [
+            440,
+            463,
+            487,
+            493
+          ]
+        },
+        "locality": {
+          "value": "Kannan St",
+          "bbox": [
+            510,
+            463,
+            707,
+            493
+          ]
+        },
+        "city": {
+          "value": "Shivpuri",
+          "bbox": [
+            730,
+            463,
+            882,
+            501
+          ]
+        },
+        "state": {
+          "value": "Andhra Pradesh",
+          "bbox": [
+            439,
+            521,
+            744,
+            551
+          ]
+        },
+        "pincode": {
+          "value": "562729",
+          "bbox": [
+            767,
+            521,
+            907,
+            551
+          ]
+        },
+        "address": {
+          "value": "34, Kannan St, Shivpuri, Andhra Pradesh, 562729",
+          "bbox": [
+            439,
+            463,
+            907,
+            551
+          ]
+        },
+        "bill_date": {
+          "value": "22/02/2025",
+          "bbox": [
+            440,
+            625,
+            650,
+            655
+          ]
+        },
+        "account_number": {
+          "value": "77752047116",
+          "bbox": [
+            440,
+            729,
+            694,
+            759
+          ]
+        }
+      }
+    },
+    "income_certificate": {
+      "file": "income_certificate.png",
+      "fields": {
+        "name": {
+          "value": "Patrick Misra",
+          "bbox": [
+            440,
+            359,
+            683,
+            389
+          ]
+        },
+        "father_name": {
+          "value": "Shaurya Yohannan",
+          "bbox": [
+            440,
+            463,
+            795,
+            501
+          ]
+        },
+        "dob": {
+          "value": "07/12/1997",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "id_number": {
+          "value": "5240 8240 0842",
+          "bbox": [
+            440,
+            671,
+            744,
+            701
+          ]
+        },
+        "annual_income": {
+          "value": "Rs. 7,32,000",
+          "bbox": [
+            440,
+            775,
+            678,
+            811
+          ]
+        },
+        "issue_date": {
+          "value": "07/01/2025",
+          "bbox": [
+            440,
+            879,
+            650,
+            909
+          ]
+        },
+        "house_no": {
+          "value": "34",
+          "bbox": [
+            440,
+            983,
+            487,
+            1013
+          ]
+        },
+        "locality": {
+          "value": "Kannan Street",
+          "bbox": [
+            510,
+            983,
+            779,
+            1013
+          ]
+        },
+        "city": {
+          "value": "Shivpuri",
+          "bbox": [
+            802,
+            983,
+            954,
+            1021
+          ]
+        },
+        "state": {
+          "value": "Andhra Pradesh",
+          "bbox": [
+            439,
+            1041,
+            744,
+            1071
+          ]
+        },
+        "pincode": {
+          "value": "562729",
+          "bbox": [
+            767,
+            1041,
+            907,
+            1071
+          ]
+        },
+        "address": {
+          "value": "34, Kannan Street, Shivpuri, Andhra Pradesh, 562729",
+          "bbox": [
+            439,
+            983,
+            954,
+            1071
+          ]
+        }
+      }
+    }
+  },
+  "injected": [
+    {
+      "type": "address_abbreviation",
+      "field": "address",
+      "is_conflict": false,
+      "severity": null,
+      "docs": [
+        "id_card",
+        "address_proof"
+      ],
+      "values": {
+        "id_card": "34, Kannan Street, Shivpuri, Andhra Pradesh, 562729",
+        "address_proof": "34, Kannan St, Shivpuri, Andhra Pradesh, 562729"
+      }
+    }
+  ]
+}

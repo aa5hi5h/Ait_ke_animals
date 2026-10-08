@@ -1,0 +1,325 @@
+{
+  "bundle_id": "bundle_0027",
+  "scenario": "name_abbreviation",
+  "documents": {
+    "id_card": {
+      "file": "id_card.png",
+      "fields": {
+        "name": {
+          "value": "A. Palla",
+          "bbox": [
+            439,
+            359,
+            585,
+            389
+          ]
+        },
+        "father_name": {
+          "value": "Bakhshi Baria",
+          "bbox": [
+            440,
+            463,
+            699,
+            493
+          ]
+        },
+        "dob": {
+          "value": "18/11/1962",
+          "bbox": [
+            440,
+            567,
+            647,
+            597
+          ]
+        },
+        "gender": {
+          "value": "Male",
+          "bbox": [
+            440,
+            671,
+            531,
+            701
+          ]
+        },
+        "id_number": {
+          "value": "4123 2812 0679",
+          "bbox": [
+            440,
+            775,
+            744,
+            805
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 923",
+          "bbox": [
+            440,
+            879,
+            629,
+            909
+          ]
+        },
+        "locality": {
+          "value": "Iyengar Ganj Street",
+          "bbox": [
+            652,
+            879,
+            1017,
+            917
+          ]
+        },
+        "city": {
+          "value": "Bhalswa Jahangir Pur",
+          "bbox": [
+            440,
+            937,
+            850,
+            975
+          ]
+        },
+        "state": {
+          "value": "Sikkim",
+          "bbox": [
+            872,
+            937,
+            996,
+            967
+          ]
+        },
+        "pincode": {
+          "value": "937452",
+          "bbox": [
+            1019,
+            937,
+            1159,
+            967
+          ]
+        },
+        "address": {
+          "value": "H.No. 923, Iyengar Ganj Street, Bhalswa Jahangir Pur, Sikkim, 937452",
+          "bbox": [
+            440,
+            879,
+            1159,
+            975
+          ]
+        }
+      }
+    },
+    "address_proof": {
+      "file": "address_proof.png",
+      "fields": {
+        "name": {
+          "value": "Atharv Palla",
+          "bbox": [
+            439,
+            359,
+            666,
+            389
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 923",
+          "bbox": [
+            440,
+            463,
+            629,
+            493
+          ]
+        },
+        "locality": {
+          "value": "Iyengar Ganj Street",
+          "bbox": [
+            652,
+            463,
+            1017,
+            501
+          ]
+        },
+        "city": {
+          "value": "Bhalswa Jahangir Pur",
+          "bbox": [
+            440,
+            521,
+            850,
+            559
+          ]
+        },
+        "state": {
+          "value": "Sikkim",
+          "bbox": [
+            872,
+            521,
+            996,
+            551
+          ]
+        },
+        "pincode": {
+          "value": "937452",
+          "bbox": [
+            1019,
+            521,
+            1159,
+            551
+          ]
+        },
+        "address": {
+          "value": "H.No. 923, Iyengar Ganj Street, Bhalswa Jahangir Pur, Sikkim, 937452",
+          "bbox": [
+            440,
+            463,
+            1159,
+            559
+          ]
+        },
+        "bill_date": {
+          "value": "30/05/2025",
+          "bbox": [
+            440,
+            625,
+            650,
+            655
+          ]
+        },
+        "account_number": {
+          "value": "44713493618",
+          "bbox": [
+            440,
+            729,
+            697,
+            759
+          ]
+        }
+      }
+    },
+    "income_certificate": {
+      "file": "income_certificate.png",
+      "fields": {
+        "name": {
+          "value": "Atharv Palla",
+          "bbox": [
+            439,
+            359,
+            666,
+            389
+          ]
+        },
+        "father_name": {
+          "value": "Bakhshi Baria",
+          "bbox": [
+            440,
+            463,
+            699,
+            493
+          ]
+        },
+        "dob": {
+          "value": "18/11/1962",
+          "bbox": [
+            440,
+            567,
+            647,
+            597
+          ]
+        },
+        "id_number": {
+          "value": "4123 2812 0679",
+          "bbox": [
+            440,
+            671,
+            744,
+            701
+          ]
+        },
+        "annual_income": {
+          "value": "Rs. 6,24,000",
+          "bbox": [
+            440,
+            775,
+            678,
+            811
+          ]
+        },
+        "issue_date": {
+          "value": "17/01/2025",
+          "bbox": [
+            440,
+            879,
+            650,
+            909
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 923",
+          "bbox": [
+            440,
+            983,
+            629,
+            1013
+          ]
+        },
+        "locality": {
+          "value": "Iyengar Ganj Street",
+          "bbox": [
+            652,
+            983,
+            1017,
+            1021
+          ]
+        },
+        "city": {
+          "value": "Bhalswa Jahangir Pur",
+          "bbox": [
+            440,
+            1041,
+            850,
+            1079
+          ]
+        },
+        "state": {
+          "value": "Sikkim",
+          "bbox": [
+            872,
+            1041,
+            996,
+            1071
+          ]
+        },
+        "pincode": {
+          "value": "937452",
+          "bbox": [
+            1019,
+            1041,
+            1159,
+            1071
+          ]
+        },
+        "address": {
+          "value": "H.No. 923, Iyengar Ganj Street, Bhalswa Jahangir Pur, Sikkim, 937452",
+          "bbox": [
+            440,
+            983,
+            1159,
+            1079
+          ]
+        }
+      }
+    }
+  },
+  "injected": [
+    {
+      "type": "name_abbreviation",
+      "field": "name",
+      "is_conflict": false,
+      "severity": null,
+      "docs": [
+        "id_card",
+        "address_proof"
+      ],
+      "values": {
+        "id_card": "A. Palla",
+        "address_proof": "Atharv Palla"
+      }
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Environment variables
+.env
+.env.*
+
+# Node / frontend
+node_modules/
+frontend/dist/
+npm-debug.log*
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Uvicorn
+uvicorn.log
+
+# Generated OCR outputs (synthetic data and labels stay tracked)
+ocr_results/
+
+# Generated field extraction outputs
+extraction_results/
+
+# Generated normalization outputs
+normalization_results/
+
+# Generated detection outputs
+detection_results/

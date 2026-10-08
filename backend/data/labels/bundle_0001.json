@@ -1,0 +1,325 @@
+{
+  "bundle_id": "bundle_0001",
+  "scenario": "name_order_or_case",
+  "documents": {
+    "id_card": {
+      "file": "id_card.png",
+      "fields": {
+        "name": {
+          "value": "Advik Maharaj",
+          "bbox": [
+            439,
+            359,
+            706,
+            397
+          ]
+        },
+        "father_name": {
+          "value": "Isaac Dewan",
+          "bbox": [
+            440,
+            463,
+            683,
+            493
+          ]
+        },
+        "dob": {
+          "value": "29/09/1967",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "gender": {
+          "value": "Male",
+          "bbox": [
+            440,
+            671,
+            531,
+            701
+          ]
+        },
+        "id_number": {
+          "value": "6184 9593 1034",
+          "bbox": [
+            440,
+            775,
+            744,
+            805
+          ]
+        },
+        "house_no": {
+          "value": "60/01",
+          "bbox": [
+            440,
+            879,
+            545,
+            909
+          ]
+        },
+        "locality": {
+          "value": "Chahal Circle Road",
+          "bbox": [
+            568,
+            879,
+            932,
+            909
+          ]
+        },
+        "city": {
+          "value": "Muzaffarpur",
+          "bbox": [
+            440,
+            937,
+            664,
+            975
+          ]
+        },
+        "state": {
+          "value": "Mizoram",
+          "bbox": [
+            687,
+            937,
+            848,
+            967
+          ]
+        },
+        "pincode": {
+          "value": "838637",
+          "bbox": [
+            871,
+            937,
+            1011,
+            967
+          ]
+        },
+        "address": {
+          "value": "60/01, Chahal Circle Road, Muzaffarpur, Mizoram, 838637",
+          "bbox": [
+            440,
+            879,
+            1011,
+            975
+          ]
+        }
+      }
+    },
+    "address_proof": {
+      "file": "address_proof.png",
+      "fields": {
+        "name": {
+          "value": "Advik Maharaj",
+          "bbox": [
+            439,
+            359,
+            706,
+            397
+          ]
+        },
+        "house_no": {
+          "value": "60/01",
+          "bbox": [
+            440,
+            463,
+            545,
+            493
+          ]
+        },
+        "locality": {
+          "value": "Chahal Circle Road",
+          "bbox": [
+            568,
+            463,
+            932,
+            493
+          ]
+        },
+        "city": {
+          "value": "Muzaffarpur",
+          "bbox": [
+            440,
+            521,
+            664,
+            559
+          ]
+        },
+        "state": {
+          "value": "Mizoram",
+          "bbox": [
+            687,
+            521,
+            848,
+            551
+          ]
+        },
+        "pincode": {
+          "value": "838637",
+          "bbox": [
+            871,
+            521,
+            1011,
+            551
+          ]
+        },
+        "address": {
+          "value": "60/01, Chahal Circle Road, Muzaffarpur, Mizoram, 838637",
+          "bbox": [
+            440,
+            463,
+            1011,
+            559
+          ]
+        },
+        "bill_date": {
+          "value": "30/04/2025",
+          "bbox": [
+            440,
+            625,
+            650,
+            655
+          ]
+        },
+        "account_number": {
+          "value": "47525534192",
+          "bbox": [
+            440,
+            729,
+            697,
+            759
+          ]
+        }
+      }
+    },
+    "income_certificate": {
+      "file": "income_certificate.png",
+      "fields": {
+        "name": {
+          "value": "MAHARAJ ADVIK",
+          "bbox": [
+            440,
+            359,
+            776,
+            389
+          ]
+        },
+        "father_name": {
+          "value": "Isaac Dewan",
+          "bbox": [
+            440,
+            463,
+            683,
+            493
+          ]
+        },
+        "dob": {
+          "value": "29/09/1967",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "id_number": {
+          "value": "6184 9593 1034",
+          "bbox": [
+            440,
+            671,
+            744,
+            701
+          ]
+        },
+        "annual_income": {
+          "value": "Rs. 9,28,000",
+          "bbox": [
+            440,
+            775,
+            678,
+            811
+          ]
+        },
+        "issue_date": {
+          "value": "21/02/2025",
+          "bbox": [
+            440,
+            879,
+            650,
+            909
+          ]
+        },
+        "house_no": {
+          "value": "60/01",
+          "bbox": [
+            440,
+            983,
+            545,
+            1013
+          ]
+        },
+        "locality": {
+          "value": "Chahal Circle Road",
+          "bbox": [
+            568,
+            983,
+            932,
+            1013
+          ]
+        },
+        "city": {
+          "value": "Muzaffarpur",
+          "bbox": [
+            440,
+            1041,
+            664,
+            1079
+          ]
+        },
+        "state": {
+          "value": "Mizoram",
+          "bbox": [
+            687,
+            1041,
+            848,
+            1071
+          ]
+        },
+        "pincode": {
+          "value": "838637",
+          "bbox": [
+            871,
+            1041,
+            1011,
+            1071
+          ]
+        },
+        "address": {
+          "value": "60/01, Chahal Circle Road, Muzaffarpur, Mizoram, 838637",
+          "bbox": [
+            440,
+            983,
+            1011,
+            1079
+          ]
+        }
+      }
+    }
+  },
+  "injected": [
+    {
+      "type": "name_order_or_case",
+      "field": "name",
+      "is_conflict": false,
+      "severity": null,
+      "docs": [
+        "id_card",
+        "income_certificate"
+      ],
+      "values": {
+        "id_card": "Advik Maharaj",
+        "income_certificate": "MAHARAJ ADVIK"
+      }
+    }
+  ]
+}

@@ -1,0 +1,310 @@
+{
+  "bundle_id": "bundle_0007",
+  "scenario": "none",
+  "documents": {
+    "id_card": {
+      "file": "id_card.png",
+      "fields": {
+        "name": {
+          "value": "Neel Suresh",
+          "bbox": [
+            440,
+            359,
+            671,
+            389
+          ]
+        },
+        "father_name": {
+          "value": "Daksh Patil",
+          "bbox": [
+            440,
+            463,
+            652,
+            493
+          ]
+        },
+        "dob": {
+          "value": "11/09/1981",
+          "bbox": [
+            440,
+            567,
+            647,
+            597
+          ]
+        },
+        "gender": {
+          "value": "Male",
+          "bbox": [
+            440,
+            671,
+            531,
+            701
+          ]
+        },
+        "id_number": {
+          "value": "1065 1333 8726",
+          "bbox": [
+            440,
+            775,
+            744,
+            805
+          ]
+        },
+        "house_no": {
+          "value": "911",
+          "bbox": [
+            440,
+            879,
+            507,
+            909
+          ]
+        },
+        "locality": {
+          "value": "Bhardwaj Ganj Road",
+          "bbox": [
+            530,
+            879,
+            918,
+            917
+          ]
+        },
+        "city": {
+          "value": "Coimbatore",
+          "bbox": [
+            941,
+            879,
+            1158,
+            909
+          ]
+        },
+        "state": {
+          "value": "Tripura",
+          "bbox": [
+            440,
+            937,
+            571,
+            975
+          ]
+        },
+        "pincode": {
+          "value": "278248",
+          "bbox": [
+            595,
+            937,
+            735,
+            967
+          ]
+        },
+        "address": {
+          "value": "911, Bhardwaj Ganj Road, Coimbatore, Tripura, 278248",
+          "bbox": [
+            440,
+            879,
+            1158,
+            975
+          ]
+        }
+      }
+    },
+    "address_proof": {
+      "file": "address_proof.png",
+      "fields": {
+        "name": {
+          "value": "Neel Suresh",
+          "bbox": [
+            440,
+            359,
+            671,
+            389
+          ]
+        },
+        "house_no": {
+          "value": "911",
+          "bbox": [
+            440,
+            463,
+            507,
+            493
+          ]
+        },
+        "locality": {
+          "value": "Bhardwaj Ganj Road",
+          "bbox": [
+            530,
+            463,
+            918,
+            501
+          ]
+        },
+        "city": {
+          "value": "Coimbatore",
+          "bbox": [
+            941,
+            463,
+            1158,
+            493
+          ]
+        },
+        "state": {
+          "value": "Tripura",
+          "bbox": [
+            440,
+            521,
+            571,
+            559
+          ]
+        },
+        "pincode": {
+          "value": "278248",
+          "bbox": [
+            595,
+            521,
+            735,
+            551
+          ]
+        },
+        "address": {
+          "value": "911, Bhardwaj Ganj Road, Coimbatore, Tripura, 278248",
+          "bbox": [
+            440,
+            463,
+            1158,
+            559
+          ]
+        },
+        "bill_date": {
+          "value": "23/05/2025",
+          "bbox": [
+            440,
+            625,
+            650,
+            655
+          ]
+        },
+        "account_number": {
+          "value": "17810801326",
+          "bbox": [
+            440,
+            729,
+            697,
+            759
+          ]
+        }
+      }
+    },
+    "income_certificate": {
+      "file": "income_certificate.png",
+      "fields": {
+        "name": {
+          "value": "Neel Suresh",
+          "bbox": [
+            440,
+            359,
+            671,
+            389
+          ]
+        },
+        "father_name": {
+          "value": "Daksh Patil",
+          "bbox": [
+            440,
+            463,
+            652,
+            493
+          ]
+        },
+        "dob": {
+          "value": "11/09/1981",
+          "bbox": [
+            440,
+            567,
+            647,
+            597
+          ]
+        },
+        "id_number": {
+          "value": "1065 1333 8726",
+          "bbox": [
+            440,
+            671,
+            744,
+            701
+          ]
+        },
+        "annual_income": {
+          "value": "Rs. 6,61,000",
+          "bbox": [
+            440,
+            775,
+            678,
+            811
+          ]
+        },
+        "issue_date": {
+          "value": "25/08/2025",
+          "bbox": [
+            440,
+            879,
+            650,
+            909
+          ]
+        },
+        "house_no": {
+          "value": "911",
+          "bbox": [
+            440,
+            983,
+            507,
+            1013
+          ]
+        },
+        "locality": {
+          "value": "Bhardwaj Ganj Road",
+          "bbox": [
+            530,
+            983,
+            918,
+            1021
+          ]
+        },
+        "city": {
+          "value": "Coimbatore",
+          "bbox": [
+            941,
+            983,
+            1158,
+            1013
+          ]
+        },
+        "state": {
+          "value": "Tripura",
+          "bbox": [
+            440,
+            1041,
+            571,
+            1079
+          ]
+        },
+        "pincode": {
+          "value": "278248",
+          "bbox": [
+            595,
+            1041,
+            735,
+            1071
+          ]
+        },
+        "address": {
+          "value": "911, Bhardwaj Ganj Road, Coimbatore, Tripura, 278248",
+          "bbox": [
+            440,
+            983,
+            1158,
+            1079
+          ]
+        }
+      }
+    }
+  },
+  "injected": []
+}

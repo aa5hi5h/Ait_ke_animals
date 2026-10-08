@@ -1,0 +1,325 @@
+{
+  "bundle_id": "bundle_0013",
+  "scenario": "name_abbreviation",
+  "documents": {
+    "id_card": {
+      "file": "id_card.png",
+      "fields": {
+        "name": {
+          "value": "Chaitaly Saini",
+          "bbox": [
+            440,
+            359,
+            697,
+            397
+          ]
+        },
+        "father_name": {
+          "value": "Kalpit Jayaraman",
+          "bbox": [
+            440,
+            463,
+            765,
+            501
+          ]
+        },
+        "dob": {
+          "value": "24/02/1982",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "gender": {
+          "value": "Female",
+          "bbox": [
+            440,
+            671,
+            580,
+            701
+          ]
+        },
+        "id_number": {
+          "value": "5433 0365 4145",
+          "bbox": [
+            440,
+            775,
+            744,
+            805
+          ]
+        },
+        "house_no": {
+          "value": "24",
+          "bbox": [
+            440,
+            879,
+            487,
+            909
+          ]
+        },
+        "locality": {
+          "value": "Lanka Ganj Street",
+          "bbox": [
+            510,
+            879,
+            849,
+            917
+          ]
+        },
+        "city": {
+          "value": "Satna",
+          "bbox": [
+            872,
+            879,
+            982,
+            909
+          ]
+        },
+        "state": {
+          "value": "Tripura",
+          "bbox": [
+            1005,
+            879,
+            1136,
+            917
+          ]
+        },
+        "pincode": {
+          "value": "079911",
+          "bbox": [
+            440,
+            937,
+            577,
+            967
+          ]
+        },
+        "address": {
+          "value": "24, Lanka Ganj Street, Satna, Tripura, 079911",
+          "bbox": [
+            440,
+            879,
+            1136,
+            967
+          ]
+        }
+      }
+    },
+    "address_proof": {
+      "file": "address_proof.png",
+      "fields": {
+        "name": {
+          "value": "C. Saini",
+          "bbox": [
+            440,
+            359,
+            587,
+            389
+          ]
+        },
+        "house_no": {
+          "value": "24",
+          "bbox": [
+            440,
+            463,
+            487,
+            493
+          ]
+        },
+        "locality": {
+          "value": "Lanka Ganj Street",
+          "bbox": [
+            510,
+            463,
+            849,
+            501
+          ]
+        },
+        "city": {
+          "value": "Satna",
+          "bbox": [
+            872,
+            463,
+            982,
+            493
+          ]
+        },
+        "state": {
+          "value": "Tripura",
+          "bbox": [
+            1005,
+            463,
+            1136,
+            501
+          ]
+        },
+        "pincode": {
+          "value": "079911",
+          "bbox": [
+            440,
+            521,
+            577,
+            551
+          ]
+        },
+        "address": {
+          "value": "24, Lanka Ganj Street, Satna, Tripura, 079911",
+          "bbox": [
+            440,
+            463,
+            1136,
+            551
+          ]
+        },
+        "bill_date": {
+          "value": "02/10/2025",
+          "bbox": [
+            440,
+            625,
+            650,
+            655
+          ]
+        },
+        "account_number": {
+          "value": "14294019655",
+          "bbox": [
+            440,
+            729,
+            697,
+            759
+          ]
+        }
+      }
+    },
+    "income_certificate": {
+      "file": "income_certificate.png",
+      "fields": {
+        "name": {
+          "value": "Chaitaly Saini",
+          "bbox": [
+            440,
+            359,
+            697,
+            397
+          ]
+        },
+        "father_name": {
+          "value": "Kalpit Jayaraman",
+          "bbox": [
+            440,
+            463,
+            765,
+            501
+          ]
+        },
+        "dob": {
+          "value": "24/02/1982",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "id_number": {
+          "value": "5433 0365 4145",
+          "bbox": [
+            440,
+            671,
+            744,
+            701
+          ]
+        },
+        "annual_income": {
+          "value": "Rs. 2,06,000",
+          "bbox": [
+            440,
+            775,
+            678,
+            811
+          ]
+        },
+        "issue_date": {
+          "value": "19/06/2025",
+          "bbox": [
+            440,
+            879,
+            650,
+            909
+          ]
+        },
+        "house_no": {
+          "value": "24",
+          "bbox": [
+            440,
+            983,
+            487,
+            1013
+          ]
+        },
+        "locality": {
+          "value": "Lanka Ganj Street",
+          "bbox": [
+            510,
+            983,
+            849,
+            1021
+          ]
+        },
+        "city": {
+          "value": "Satna",
+          "bbox": [
+            872,
+            983,
+            982,
+            1013
+          ]
+        },
+        "state": {
+          "value": "Tripura",
+          "bbox": [
+            1005,
+            983,
+            1136,
+            1021
+          ]
+        },
+        "pincode": {
+          "value": "079911",
+          "bbox": [
+            440,
+            1041,
+            577,
+            1071
+          ]
+        },
+        "address": {
+          "value": "24, Lanka Ganj Street, Satna, Tripura, 079911",
+          "bbox": [
+            440,
+            983,
+            1136,
+            1071
+          ]
+        }
+      }
+    }
+  },
+  "injected": [
+    {
+      "type": "name_abbreviation",
+      "field": "name",
+      "is_conflict": false,
+      "severity": null,
+      "docs": [
+        "id_card",
+        "address_proof"
+      ],
+      "values": {
+        "id_card": "Chaitaly Saini",
+        "address_proof": "C. Saini"
+      }
+    }
+  ]
+}

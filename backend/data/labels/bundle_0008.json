@@ -1,0 +1,325 @@
+{
+  "bundle_id": "bundle_0008",
+  "scenario": "pincode_mismatch",
+  "documents": {
+    "id_card": {
+      "file": "id_card.png",
+      "fields": {
+        "name": {
+          "value": "Jagvi Zacharia",
+          "bbox": [
+            440,
+            359,
+            713,
+            397
+          ]
+        },
+        "father_name": {
+          "value": "Nachiket Rastogi",
+          "bbox": [
+            440,
+            463,
+            757,
+            501
+          ]
+        },
+        "dob": {
+          "value": "28/12/2004",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "gender": {
+          "value": "Female",
+          "bbox": [
+            440,
+            671,
+            580,
+            701
+          ]
+        },
+        "id_number": {
+          "value": "7360 2606 4746",
+          "bbox": [
+            440,
+            775,
+            744,
+            805
+          ]
+        },
+        "house_no": {
+          "value": "71/33",
+          "bbox": [
+            440,
+            879,
+            545,
+            909
+          ]
+        },
+        "locality": {
+          "value": "Sarma Path Street",
+          "bbox": [
+            568,
+            879,
+            914,
+            909
+          ]
+        },
+        "city": {
+          "value": "Sonipat",
+          "bbox": [
+            937,
+            879,
+            1080,
+            917
+          ]
+        },
+        "state": {
+          "value": "Andhra Pradesh",
+          "bbox": [
+            439,
+            937,
+            744,
+            967
+          ]
+        },
+        "pincode": {
+          "value": "930103",
+          "bbox": [
+            767,
+            937,
+            907,
+            967
+          ]
+        },
+        "address": {
+          "value": "71/33, Sarma Path Street, Sonipat, Andhra Pradesh, 930103",
+          "bbox": [
+            439,
+            879,
+            1080,
+            967
+          ]
+        }
+      }
+    },
+    "address_proof": {
+      "file": "address_proof.png",
+      "fields": {
+        "name": {
+          "value": "Jagvi Zacharia",
+          "bbox": [
+            440,
+            359,
+            713,
+            397
+          ]
+        },
+        "house_no": {
+          "value": "71/33",
+          "bbox": [
+            440,
+            463,
+            545,
+            493
+          ]
+        },
+        "locality": {
+          "value": "Sarma Path Street",
+          "bbox": [
+            568,
+            463,
+            914,
+            493
+          ]
+        },
+        "city": {
+          "value": "Sonipat",
+          "bbox": [
+            937,
+            463,
+            1080,
+            501
+          ]
+        },
+        "state": {
+          "value": "Andhra Pradesh",
+          "bbox": [
+            439,
+            521,
+            744,
+            551
+          ]
+        },
+        "pincode": {
+          "value": "930103",
+          "bbox": [
+            767,
+            521,
+            907,
+            551
+          ]
+        },
+        "address": {
+          "value": "71/33, Sarma Path Street, Sonipat, Andhra Pradesh, 930103",
+          "bbox": [
+            439,
+            463,
+            1080,
+            551
+          ]
+        },
+        "bill_date": {
+          "value": "21/03/2025",
+          "bbox": [
+            440,
+            625,
+            650,
+            655
+          ]
+        },
+        "account_number": {
+          "value": "30980500978",
+          "bbox": [
+            440,
+            729,
+            697,
+            759
+          ]
+        }
+      }
+    },
+    "income_certificate": {
+      "file": "income_certificate.png",
+      "fields": {
+        "name": {
+          "value": "Jagvi Zacharia",
+          "bbox": [
+            440,
+            359,
+            713,
+            397
+          ]
+        },
+        "father_name": {
+          "value": "Nachiket Rastogi",
+          "bbox": [
+            440,
+            463,
+            757,
+            501
+          ]
+        },
+        "dob": {
+          "value": "28/12/2004",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "id_number": {
+          "value": "7360 2606 4746",
+          "bbox": [
+            440,
+            671,
+            744,
+            701
+          ]
+        },
+        "annual_income": {
+          "value": "Rs. 7,57,000",
+          "bbox": [
+            440,
+            775,
+            678,
+            811
+          ]
+        },
+        "issue_date": {
+          "value": "08/04/2025",
+          "bbox": [
+            440,
+            879,
+            650,
+            909
+          ]
+        },
+        "house_no": {
+          "value": "71/33",
+          "bbox": [
+            440,
+            983,
+            545,
+            1013
+          ]
+        },
+        "locality": {
+          "value": "Sarma Path Street",
+          "bbox": [
+            568,
+            983,
+            914,
+            1013
+          ]
+        },
+        "city": {
+          "value": "Sonipat",
+          "bbox": [
+            937,
+            983,
+            1080,
+            1021
+          ]
+        },
+        "state": {
+          "value": "Andhra Pradesh",
+          "bbox": [
+            439,
+            1041,
+            744,
+            1071
+          ]
+        },
+        "pincode": {
+          "value": "265080",
+          "bbox": [
+            767,
+            1041,
+            907,
+            1071
+          ]
+        },
+        "address": {
+          "value": "71/33, Sarma Path Street, Sonipat, Andhra Pradesh, 265080",
+          "bbox": [
+            439,
+            983,
+            1080,
+            1071
+          ]
+        }
+      }
+    }
+  },
+  "injected": [
+    {
+      "type": "pincode_mismatch",
+      "field": "pincode",
+      "is_conflict": true,
+      "severity": "MEDIUM",
+      "docs": [
+        "id_card",
+        "income_certificate"
+      ],
+      "values": {
+        "id_card": "930103",
+        "income_certificate": "265080"
+      }
+    }
+  ]
+}

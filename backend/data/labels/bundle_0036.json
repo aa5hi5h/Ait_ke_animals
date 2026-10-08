@@ -1,0 +1,325 @@
+{
+  "bundle_id": "bundle_0036",
+  "scenario": "pincode_mismatch",
+  "documents": {
+    "id_card": {
+      "file": "id_card.png",
+      "fields": {
+        "name": {
+          "value": "Mugdha Bali",
+          "bbox": [
+            440,
+            359,
+            673,
+            397
+          ]
+        },
+        "father_name": {
+          "value": "Maanas Mandal",
+          "bbox": [
+            440,
+            463,
+            739,
+            493
+          ]
+        },
+        "dob": {
+          "value": "01/09/1991",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "gender": {
+          "value": "Female",
+          "bbox": [
+            440,
+            671,
+            580,
+            701
+          ]
+        },
+        "id_number": {
+          "value": "0640 9097 4395",
+          "bbox": [
+            440,
+            775,
+            744,
+            805
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 93",
+          "bbox": [
+            440,
+            879,
+            606,
+            909
+          ]
+        },
+        "locality": {
+          "value": "Kaur Zila Road",
+          "bbox": [
+            629,
+            879,
+            909,
+            909
+          ]
+        },
+        "city": {
+          "value": "Raipur",
+          "bbox": [
+            933,
+            879,
+            1058,
+            917
+          ]
+        },
+        "state": {
+          "value": "Nagaland",
+          "bbox": [
+            440,
+            937,
+            620,
+            975
+          ]
+        },
+        "pincode": {
+          "value": "242102",
+          "bbox": [
+            643,
+            937,
+            783,
+            967
+          ]
+        },
+        "address": {
+          "value": "H.No. 93, Kaur Zila Road, Raipur, Nagaland, 242102",
+          "bbox": [
+            440,
+            879,
+            1058,
+            975
+          ]
+        }
+      }
+    },
+    "address_proof": {
+      "file": "address_proof.png",
+      "fields": {
+        "name": {
+          "value": "Mugdha Bali",
+          "bbox": [
+            440,
+            359,
+            673,
+            397
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 93",
+          "bbox": [
+            440,
+            463,
+            606,
+            493
+          ]
+        },
+        "locality": {
+          "value": "Kaur Zila Road",
+          "bbox": [
+            629,
+            463,
+            909,
+            493
+          ]
+        },
+        "city": {
+          "value": "Raipur",
+          "bbox": [
+            933,
+            463,
+            1058,
+            501
+          ]
+        },
+        "state": {
+          "value": "Nagaland",
+          "bbox": [
+            440,
+            521,
+            620,
+            559
+          ]
+        },
+        "pincode": {
+          "value": "242102",
+          "bbox": [
+            643,
+            521,
+            783,
+            551
+          ]
+        },
+        "address": {
+          "value": "H.No. 93, Kaur Zila Road, Raipur, Nagaland, 242102",
+          "bbox": [
+            440,
+            463,
+            1058,
+            559
+          ]
+        },
+        "bill_date": {
+          "value": "08/04/2025",
+          "bbox": [
+            440,
+            625,
+            650,
+            655
+          ]
+        },
+        "account_number": {
+          "value": "10470952145",
+          "bbox": [
+            440,
+            729,
+            697,
+            759
+          ]
+        }
+      }
+    },
+    "income_certificate": {
+      "file": "income_certificate.png",
+      "fields": {
+        "name": {
+          "value": "Mugdha Bali",
+          "bbox": [
+            440,
+            359,
+            673,
+            397
+          ]
+        },
+        "father_name": {
+          "value": "Maanas Mandal",
+          "bbox": [
+            440,
+            463,
+            739,
+            493
+          ]
+        },
+        "dob": {
+          "value": "01/09/1991",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "id_number": {
+          "value": "0640 9097 4395",
+          "bbox": [
+            440,
+            671,
+            744,
+            701
+          ]
+        },
+        "annual_income": {
+          "value": "Rs. 4,30,000",
+          "bbox": [
+            440,
+            775,
+            678,
+            811
+          ]
+        },
+        "issue_date": {
+          "value": "09/05/2025",
+          "bbox": [
+            440,
+            879,
+            650,
+            909
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 93",
+          "bbox": [
+            440,
+            983,
+            606,
+            1013
+          ]
+        },
+        "locality": {
+          "value": "Kaur Zila Road",
+          "bbox": [
+            629,
+            983,
+            909,
+            1013
+          ]
+        },
+        "city": {
+          "value": "Raipur",
+          "bbox": [
+            933,
+            983,
+            1058,
+            1021
+          ]
+        },
+        "state": {
+          "value": "Nagaland",
+          "bbox": [
+            440,
+            1041,
+            620,
+            1079
+          ]
+        },
+        "pincode": {
+          "value": "535686",
+          "bbox": [
+            643,
+            1041,
+            783,
+            1071
+          ]
+        },
+        "address": {
+          "value": "H.No. 93, Kaur Zila Road, Raipur, Nagaland, 535686",
+          "bbox": [
+            440,
+            983,
+            1058,
+            1079
+          ]
+        }
+      }
+    }
+  },
+  "injected": [
+    {
+      "type": "pincode_mismatch",
+      "field": "pincode",
+      "is_conflict": true,
+      "severity": "MEDIUM",
+      "docs": [
+        "id_card",
+        "income_certificate"
+      ],
+      "values": {
+        "id_card": "242102",
+        "income_certificate": "535686"
+      }
+    }
+  ]
+}

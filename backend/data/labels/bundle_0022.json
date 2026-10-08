@@ -1,0 +1,325 @@
+{
+  "bundle_id": "bundle_0022",
+  "scenario": "id_number_mismatch",
+  "documents": {
+    "id_card": {
+      "file": "id_card.png",
+      "fields": {
+        "name": {
+          "value": "Keya Divan",
+          "bbox": [
+            440,
+            359,
+            655,
+            397
+          ]
+        },
+        "father_name": {
+          "value": "Chatresh Sandal",
+          "bbox": [
+            440,
+            463,
+            753,
+            493
+          ]
+        },
+        "dob": {
+          "value": "30/08/1975",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "gender": {
+          "value": "Female",
+          "bbox": [
+            440,
+            671,
+            580,
+            701
+          ]
+        },
+        "id_number": {
+          "value": "5726 2849 8776",
+          "bbox": [
+            440,
+            775,
+            744,
+            805
+          ]
+        },
+        "house_no": {
+          "value": "08",
+          "bbox": [
+            440,
+            879,
+            487,
+            909
+          ]
+        },
+        "locality": {
+          "value": "Vasa Street",
+          "bbox": [
+            510,
+            879,
+            727,
+            909
+          ]
+        },
+        "city": {
+          "value": "Bhilai",
+          "bbox": [
+            750,
+            879,
+            853,
+            909
+          ]
+        },
+        "state": {
+          "value": "Manipur",
+          "bbox": [
+            876,
+            879,
+            1029,
+            917
+          ]
+        },
+        "pincode": {
+          "value": "788957",
+          "bbox": [
+            440,
+            937,
+            580,
+            967
+          ]
+        },
+        "address": {
+          "value": "08, Vasa Street, Bhilai, Manipur, 788957",
+          "bbox": [
+            440,
+            879,
+            1029,
+            967
+          ]
+        }
+      }
+    },
+    "address_proof": {
+      "file": "address_proof.png",
+      "fields": {
+        "name": {
+          "value": "Keya Divan",
+          "bbox": [
+            440,
+            359,
+            655,
+            397
+          ]
+        },
+        "house_no": {
+          "value": "08",
+          "bbox": [
+            440,
+            463,
+            487,
+            493
+          ]
+        },
+        "locality": {
+          "value": "Vasa Street",
+          "bbox": [
+            510,
+            463,
+            727,
+            493
+          ]
+        },
+        "city": {
+          "value": "Bhilai",
+          "bbox": [
+            750,
+            463,
+            853,
+            493
+          ]
+        },
+        "state": {
+          "value": "Manipur",
+          "bbox": [
+            876,
+            463,
+            1029,
+            501
+          ]
+        },
+        "pincode": {
+          "value": "788957",
+          "bbox": [
+            440,
+            521,
+            580,
+            551
+          ]
+        },
+        "address": {
+          "value": "08, Vasa Street, Bhilai, Manipur, 788957",
+          "bbox": [
+            440,
+            463,
+            1029,
+            551
+          ]
+        },
+        "bill_date": {
+          "value": "18/05/2025",
+          "bbox": [
+            440,
+            625,
+            650,
+            655
+          ]
+        },
+        "account_number": {
+          "value": "14737996507",
+          "bbox": [
+            440,
+            729,
+            697,
+            759
+          ]
+        }
+      }
+    },
+    "income_certificate": {
+      "file": "income_certificate.png",
+      "fields": {
+        "name": {
+          "value": "Keya Divan",
+          "bbox": [
+            440,
+            359,
+            655,
+            397
+          ]
+        },
+        "father_name": {
+          "value": "Chatresh Sandal",
+          "bbox": [
+            440,
+            463,
+            753,
+            493
+          ]
+        },
+        "dob": {
+          "value": "30/08/1975",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "id_number": {
+          "value": "5706 2849 8776",
+          "bbox": [
+            440,
+            671,
+            744,
+            701
+          ]
+        },
+        "annual_income": {
+          "value": "Rs. 6,52,000",
+          "bbox": [
+            440,
+            775,
+            678,
+            811
+          ]
+        },
+        "issue_date": {
+          "value": "15/06/2025",
+          "bbox": [
+            440,
+            879,
+            650,
+            909
+          ]
+        },
+        "house_no": {
+          "value": "08",
+          "bbox": [
+            440,
+            983,
+            487,
+            1013
+          ]
+        },
+        "locality": {
+          "value": "Vasa Street",
+          "bbox": [
+            510,
+            983,
+            727,
+            1013
+          ]
+        },
+        "city": {
+          "value": "Bhilai",
+          "bbox": [
+            750,
+            983,
+            853,
+            1013
+          ]
+        },
+        "state": {
+          "value": "Manipur",
+          "bbox": [
+            876,
+            983,
+            1029,
+            1021
+          ]
+        },
+        "pincode": {
+          "value": "788957",
+          "bbox": [
+            440,
+            1041,
+            580,
+            1071
+          ]
+        },
+        "address": {
+          "value": "08, Vasa Street, Bhilai, Manipur, 788957",
+          "bbox": [
+            440,
+            983,
+            1029,
+            1071
+          ]
+        }
+      }
+    }
+  },
+  "injected": [
+    {
+      "type": "id_number_mismatch",
+      "field": "id_number",
+      "is_conflict": true,
+      "severity": "HIGH",
+      "docs": [
+        "id_card",
+        "income_certificate"
+      ],
+      "values": {
+        "id_card": "5726 2849 8776",
+        "income_certificate": "5706 2849 8776"
+      }
+    }
+  ]
+}

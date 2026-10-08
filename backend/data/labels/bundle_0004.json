@@ -1,0 +1,325 @@
+{
+  "bundle_id": "bundle_0004",
+  "scenario": "address_abbreviation",
+  "documents": {
+    "id_card": {
+      "file": "id_card.png",
+      "fields": {
+        "name": {
+          "value": "Lopa Kanda",
+          "bbox": [
+            440,
+            359,
+            667,
+            397
+          ]
+        },
+        "father_name": {
+          "value": "Ayaan Karnik",
+          "bbox": [
+            439,
+            463,
+            689,
+            501
+          ]
+        },
+        "dob": {
+          "value": "14/12/1962",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "gender": {
+          "value": "Female",
+          "bbox": [
+            440,
+            671,
+            580,
+            701
+          ]
+        },
+        "id_number": {
+          "value": "2704 8281 4893",
+          "bbox": [
+            440,
+            775,
+            744,
+            805
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 13",
+          "bbox": [
+            440,
+            879,
+            606,
+            909
+          ]
+        },
+        "locality": {
+          "value": "Rattan Path Rd",
+          "bbox": [
+            629,
+            879,
+            916,
+            909
+          ]
+        },
+        "city": {
+          "value": "Rajpur Sonarpur",
+          "bbox": [
+            440,
+            937,
+            749,
+            975
+          ]
+        },
+        "state": {
+          "value": "Rajasthan",
+          "bbox": [
+            772,
+            937,
+            961,
+            975
+          ]
+        },
+        "pincode": {
+          "value": "672423",
+          "bbox": [
+            984,
+            937,
+            1124,
+            967
+          ]
+        },
+        "address": {
+          "value": "H.No. 13, Rattan Path Rd, Rajpur Sonarpur, Rajasthan, 672423",
+          "bbox": [
+            440,
+            879,
+            1124,
+            975
+          ]
+        }
+      }
+    },
+    "address_proof": {
+      "file": "address_proof.png",
+      "fields": {
+        "name": {
+          "value": "Lopa Kanda",
+          "bbox": [
+            440,
+            359,
+            667,
+            397
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 13",
+          "bbox": [
+            440,
+            463,
+            606,
+            493
+          ]
+        },
+        "locality": {
+          "value": "Rattan Path Road",
+          "bbox": [
+            629,
+            463,
+            963,
+            493
+          ]
+        },
+        "city": {
+          "value": "Rajpur Sonarpur",
+          "bbox": [
+            440,
+            521,
+            749,
+            559
+          ]
+        },
+        "state": {
+          "value": "Rajasthan",
+          "bbox": [
+            772,
+            521,
+            961,
+            559
+          ]
+        },
+        "pincode": {
+          "value": "672423",
+          "bbox": [
+            984,
+            521,
+            1124,
+            551
+          ]
+        },
+        "address": {
+          "value": "H.No. 13, Rattan Path Road, Rajpur Sonarpur, Rajasthan, 672423",
+          "bbox": [
+            440,
+            463,
+            1124,
+            559
+          ]
+        },
+        "bill_date": {
+          "value": "11/07/2025",
+          "bbox": [
+            440,
+            625,
+            647,
+            655
+          ]
+        },
+        "account_number": {
+          "value": "95701543039",
+          "bbox": [
+            440,
+            729,
+            697,
+            759
+          ]
+        }
+      }
+    },
+    "income_certificate": {
+      "file": "income_certificate.png",
+      "fields": {
+        "name": {
+          "value": "Lopa Kanda",
+          "bbox": [
+            440,
+            359,
+            667,
+            397
+          ]
+        },
+        "father_name": {
+          "value": "Ayaan Karnik",
+          "bbox": [
+            439,
+            463,
+            689,
+            501
+          ]
+        },
+        "dob": {
+          "value": "14/12/1962",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "id_number": {
+          "value": "2704 8281 4893",
+          "bbox": [
+            440,
+            671,
+            744,
+            701
+          ]
+        },
+        "annual_income": {
+          "value": "Rs. 1,51,000",
+          "bbox": [
+            440,
+            775,
+            678,
+            811
+          ]
+        },
+        "issue_date": {
+          "value": "24/03/2025",
+          "bbox": [
+            440,
+            879,
+            650,
+            909
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 13",
+          "bbox": [
+            440,
+            983,
+            606,
+            1013
+          ]
+        },
+        "locality": {
+          "value": "Rattan Path Road",
+          "bbox": [
+            629,
+            983,
+            963,
+            1013
+          ]
+        },
+        "city": {
+          "value": "Rajpur Sonarpur",
+          "bbox": [
+            440,
+            1041,
+            749,
+            1079
+          ]
+        },
+        "state": {
+          "value": "Rajasthan",
+          "bbox": [
+            772,
+            1041,
+            961,
+            1079
+          ]
+        },
+        "pincode": {
+          "value": "672423",
+          "bbox": [
+            984,
+            1041,
+            1124,
+            1071
+          ]
+        },
+        "address": {
+          "value": "H.No. 13, Rattan Path Road, Rajpur Sonarpur, Rajasthan, 672423",
+          "bbox": [
+            440,
+            983,
+            1124,
+            1079
+          ]
+        }
+      }
+    }
+  },
+  "injected": [
+    {
+      "type": "address_abbreviation",
+      "field": "address",
+      "is_conflict": false,
+      "severity": null,
+      "docs": [
+        "id_card",
+        "address_proof"
+      ],
+      "values": {
+        "id_card": "H.No. 13, Rattan Path Rd, Rajpur Sonarpur, Rajasthan, 672423",
+        "address_proof": "H.No. 13, Rattan Path Road, Rajpur Sonarpur, Rajasthan, 672423"
+      }
+    }
+  ]
+}

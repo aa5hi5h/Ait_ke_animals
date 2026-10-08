@@ -1,0 +1,325 @@
+{
+  "bundle_id": "bundle_0033",
+  "scenario": "city_mismatch",
+  "documents": {
+    "id_card": {
+      "file": "id_card.png",
+      "fields": {
+        "name": {
+          "value": "Manbir Karan",
+          "bbox": [
+            440,
+            359,
+            692,
+            389
+          ]
+        },
+        "father_name": {
+          "value": "Gaurav Mittal",
+          "bbox": [
+            440,
+            463,
+            690,
+            493
+          ]
+        },
+        "dob": {
+          "value": "24/09/1961",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "gender": {
+          "value": "Male",
+          "bbox": [
+            440,
+            671,
+            531,
+            701
+          ]
+        },
+        "id_number": {
+          "value": "7028 9517 1870",
+          "bbox": [
+            440,
+            775,
+            744,
+            805
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 00",
+          "bbox": [
+            440,
+            879,
+            606,
+            909
+          ]
+        },
+        "locality": {
+          "value": "Date Circle Road",
+          "bbox": [
+            629,
+            879,
+            949,
+            909
+          ]
+        },
+        "city": {
+          "value": "Cuttack",
+          "bbox": [
+            972,
+            879,
+            1114,
+            909
+          ]
+        },
+        "state": {
+          "value": "Rajasthan",
+          "bbox": [
+            440,
+            937,
+            629,
+            975
+          ]
+        },
+        "pincode": {
+          "value": "109477",
+          "bbox": [
+            652,
+            937,
+            792,
+            967
+          ]
+        },
+        "address": {
+          "value": "H.No. 00, Date Circle Road, Cuttack, Rajasthan, 109477",
+          "bbox": [
+            440,
+            879,
+            1114,
+            975
+          ]
+        }
+      }
+    },
+    "address_proof": {
+      "file": "address_proof.png",
+      "fields": {
+        "name": {
+          "value": "Manbir Karan",
+          "bbox": [
+            440,
+            359,
+            692,
+            389
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 00",
+          "bbox": [
+            440,
+            463,
+            606,
+            493
+          ]
+        },
+        "locality": {
+          "value": "Date Circle Road",
+          "bbox": [
+            629,
+            463,
+            949,
+            493
+          ]
+        },
+        "city": {
+          "value": "Cuttack",
+          "bbox": [
+            972,
+            463,
+            1114,
+            493
+          ]
+        },
+        "state": {
+          "value": "Rajasthan",
+          "bbox": [
+            440,
+            521,
+            629,
+            559
+          ]
+        },
+        "pincode": {
+          "value": "109477",
+          "bbox": [
+            652,
+            521,
+            792,
+            551
+          ]
+        },
+        "address": {
+          "value": "H.No. 00, Date Circle Road, Cuttack, Rajasthan, 109477",
+          "bbox": [
+            440,
+            463,
+            1114,
+            559
+          ]
+        },
+        "bill_date": {
+          "value": "29/07/2025",
+          "bbox": [
+            440,
+            625,
+            650,
+            655
+          ]
+        },
+        "account_number": {
+          "value": "74596158657",
+          "bbox": [
+            440,
+            729,
+            697,
+            759
+          ]
+        }
+      }
+    },
+    "income_certificate": {
+      "file": "income_certificate.png",
+      "fields": {
+        "name": {
+          "value": "Manbir Karan",
+          "bbox": [
+            440,
+            359,
+            692,
+            389
+          ]
+        },
+        "father_name": {
+          "value": "Gaurav Mittal",
+          "bbox": [
+            440,
+            463,
+            690,
+            493
+          ]
+        },
+        "dob": {
+          "value": "24/09/1961",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "id_number": {
+          "value": "7028 9517 1870",
+          "bbox": [
+            440,
+            671,
+            744,
+            701
+          ]
+        },
+        "annual_income": {
+          "value": "Rs. 3,03,000",
+          "bbox": [
+            440,
+            775,
+            678,
+            811
+          ]
+        },
+        "issue_date": {
+          "value": "21/03/2025",
+          "bbox": [
+            440,
+            879,
+            650,
+            909
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 00",
+          "bbox": [
+            440,
+            983,
+            606,
+            1013
+          ]
+        },
+        "locality": {
+          "value": "Date Circle Road",
+          "bbox": [
+            629,
+            983,
+            949,
+            1013
+          ]
+        },
+        "city": {
+          "value": "Mumbai",
+          "bbox": [
+            972,
+            983,
+            1121,
+            1013
+          ]
+        },
+        "state": {
+          "value": "Rajasthan",
+          "bbox": [
+            440,
+            1041,
+            629,
+            1079
+          ]
+        },
+        "pincode": {
+          "value": "109477",
+          "bbox": [
+            652,
+            1041,
+            792,
+            1071
+          ]
+        },
+        "address": {
+          "value": "H.No. 00, Date Circle Road, Mumbai, Rajasthan, 109477",
+          "bbox": [
+            440,
+            983,
+            1121,
+            1079
+          ]
+        }
+      }
+    }
+  },
+  "injected": [
+    {
+      "type": "city_mismatch",
+      "field": "city",
+      "is_conflict": true,
+      "severity": "MEDIUM",
+      "docs": [
+        "id_card",
+        "income_certificate"
+      ],
+      "values": {
+        "id_card": "Cuttack",
+        "income_certificate": "Mumbai"
+      }
+    }
+  ]
+}

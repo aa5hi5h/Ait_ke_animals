@@ -1,0 +1,325 @@
+{
+  "bundle_id": "bundle_0034",
+  "scenario": "address_word_order",
+  "documents": {
+    "id_card": {
+      "file": "id_card.png",
+      "fields": {
+        "name": {
+          "value": "Onkar Gour",
+          "bbox": [
+            440,
+            359,
+            660,
+            389
+          ]
+        },
+        "father_name": {
+          "value": "Jonathan Sridhar",
+          "bbox": [
+            440,
+            463,
+            761,
+            493
+          ]
+        },
+        "dob": {
+          "value": "13/07/1968",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "gender": {
+          "value": "Male",
+          "bbox": [
+            440,
+            671,
+            531,
+            701
+          ]
+        },
+        "id_number": {
+          "value": "3431 6117 2400",
+          "bbox": [
+            440,
+            775,
+            741,
+            805
+          ]
+        },
+        "house_no": {
+          "value": "19",
+          "bbox": [
+            440,
+            879,
+            487,
+            909
+          ]
+        },
+        "locality": {
+          "value": "Rattan Zila Street",
+          "bbox": [
+            510,
+            879,
+            837,
+            909
+          ]
+        },
+        "city": {
+          "value": "Saharanpur",
+          "bbox": [
+            860,
+            879,
+            1081,
+            917
+          ]
+        },
+        "state": {
+          "value": "Chhattisgarh",
+          "bbox": [
+            440,
+            937,
+            678,
+            975
+          ]
+        },
+        "pincode": {
+          "value": "131869",
+          "bbox": [
+            701,
+            937,
+            841,
+            967
+          ]
+        },
+        "address": {
+          "value": "19, Rattan Zila Street, Saharanpur, Chhattisgarh, 131869",
+          "bbox": [
+            440,
+            879,
+            1081,
+            975
+          ]
+        }
+      }
+    },
+    "address_proof": {
+      "file": "address_proof.png",
+      "fields": {
+        "name": {
+          "value": "Onkar Gour",
+          "bbox": [
+            440,
+            359,
+            660,
+            389
+          ]
+        },
+        "house_no": {
+          "value": "19",
+          "bbox": [
+            440,
+            463,
+            487,
+            493
+          ]
+        },
+        "locality": {
+          "value": "Rattan Zila Street",
+          "bbox": [
+            510,
+            463,
+            837,
+            493
+          ]
+        },
+        "city": {
+          "value": "Saharanpur",
+          "bbox": [
+            860,
+            463,
+            1081,
+            501
+          ]
+        },
+        "state": {
+          "value": "Chhattisgarh",
+          "bbox": [
+            440,
+            521,
+            678,
+            559
+          ]
+        },
+        "pincode": {
+          "value": "131869",
+          "bbox": [
+            701,
+            521,
+            841,
+            551
+          ]
+        },
+        "address": {
+          "value": "19, Rattan Zila Street, Saharanpur, Chhattisgarh, 131869",
+          "bbox": [
+            440,
+            463,
+            1081,
+            559
+          ]
+        },
+        "bill_date": {
+          "value": "29/01/2025",
+          "bbox": [
+            440,
+            625,
+            650,
+            655
+          ]
+        },
+        "account_number": {
+          "value": "56238692221",
+          "bbox": [
+            440,
+            729,
+            697,
+            759
+          ]
+        }
+      }
+    },
+    "income_certificate": {
+      "file": "income_certificate.png",
+      "fields": {
+        "name": {
+          "value": "Onkar Gour",
+          "bbox": [
+            440,
+            359,
+            660,
+            389
+          ]
+        },
+        "father_name": {
+          "value": "Jonathan Sridhar",
+          "bbox": [
+            440,
+            463,
+            761,
+            493
+          ]
+        },
+        "dob": {
+          "value": "13/07/1968",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "id_number": {
+          "value": "3431 6117 2400",
+          "bbox": [
+            440,
+            671,
+            741,
+            701
+          ]
+        },
+        "annual_income": {
+          "value": "Rs. 8,84,000",
+          "bbox": [
+            440,
+            775,
+            678,
+            811
+          ]
+        },
+        "issue_date": {
+          "value": "31/05/2025",
+          "bbox": [
+            440,
+            879,
+            650,
+            909
+          ]
+        },
+        "state": {
+          "value": "Chhattisgarh",
+          "bbox": [
+            440,
+            983,
+            678,
+            1021
+          ]
+        },
+        "city": {
+          "value": "Saharanpur",
+          "bbox": [
+            701,
+            983,
+            922,
+            1021
+          ]
+        },
+        "house_no": {
+          "value": "19",
+          "bbox": [
+            944,
+            983,
+            991,
+            1013
+          ]
+        },
+        "locality": {
+          "value": "Rattan Zila Street",
+          "bbox": [
+            440,
+            1041,
+            767,
+            1071
+          ]
+        },
+        "pincode": {
+          "value": "131869",
+          "bbox": [
+            790,
+            1041,
+            930,
+            1071
+          ]
+        },
+        "address": {
+          "value": "Chhattisgarh, Saharanpur, 19, Rattan Zila Street, 131869",
+          "bbox": [
+            440,
+            983,
+            991,
+            1071
+          ]
+        }
+      }
+    }
+  },
+  "injected": [
+    {
+      "type": "address_word_order",
+      "field": "address",
+      "is_conflict": false,
+      "severity": null,
+      "docs": [
+        "id_card",
+        "income_certificate"
+      ],
+      "values": {
+        "id_card": "19, Rattan Zila Street, Saharanpur, Chhattisgarh, 131869",
+        "income_certificate": "Chhattisgarh, Saharanpur, 19, Rattan Zila Street, 131869"
+      }
+    }
+  ]
+}

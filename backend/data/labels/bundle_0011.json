@@ -1,0 +1,325 @@
+{
+  "bundle_id": "bundle_0011",
+  "scenario": "id_number_mismatch",
+  "documents": {
+    "id_card": {
+      "file": "id_card.png",
+      "fields": {
+        "name": {
+          "value": "Advika Chander",
+          "bbox": [
+            439,
+            359,
+            740,
+            389
+          ]
+        },
+        "father_name": {
+          "value": "Fiyaz Ray",
+          "bbox": [
+            440,
+            463,
+            627,
+            501
+          ]
+        },
+        "dob": {
+          "value": "25/10/1993",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "gender": {
+          "value": "Female",
+          "bbox": [
+            440,
+            671,
+            580,
+            701
+          ]
+        },
+        "id_number": {
+          "value": "8740 1640 0524",
+          "bbox": [
+            440,
+            775,
+            744,
+            805
+          ]
+        },
+        "house_no": {
+          "value": "02",
+          "bbox": [
+            440,
+            879,
+            487,
+            909
+          ]
+        },
+        "locality": {
+          "value": "Kala Chowk Road",
+          "bbox": [
+            510,
+            879,
+            846,
+            909
+          ]
+        },
+        "city": {
+          "value": "Delhi",
+          "bbox": [
+            870,
+            879,
+            966,
+            909
+          ]
+        },
+        "state": {
+          "value": "Madhya Pradesh",
+          "bbox": [
+            440,
+            937,
+            758,
+            975
+          ]
+        },
+        "pincode": {
+          "value": "746872",
+          "bbox": [
+            781,
+            937,
+            921,
+            967
+          ]
+        },
+        "address": {
+          "value": "02, Kala Chowk Road, Delhi, Madhya Pradesh, 746872",
+          "bbox": [
+            440,
+            879,
+            966,
+            975
+          ]
+        }
+      }
+    },
+    "address_proof": {
+      "file": "address_proof.png",
+      "fields": {
+        "name": {
+          "value": "Advika Chander",
+          "bbox": [
+            439,
+            359,
+            740,
+            389
+          ]
+        },
+        "house_no": {
+          "value": "02",
+          "bbox": [
+            440,
+            463,
+            487,
+            493
+          ]
+        },
+        "locality": {
+          "value": "Kala Chowk Road",
+          "bbox": [
+            510,
+            463,
+            846,
+            493
+          ]
+        },
+        "city": {
+          "value": "Delhi",
+          "bbox": [
+            870,
+            463,
+            966,
+            493
+          ]
+        },
+        "state": {
+          "value": "Madhya Pradesh",
+          "bbox": [
+            440,
+            521,
+            758,
+            559
+          ]
+        },
+        "pincode": {
+          "value": "746872",
+          "bbox": [
+            781,
+            521,
+            921,
+            551
+          ]
+        },
+        "address": {
+          "value": "02, Kala Chowk Road, Delhi, Madhya Pradesh, 746872",
+          "bbox": [
+            440,
+            463,
+            966,
+            559
+          ]
+        },
+        "bill_date": {
+          "value": "15/08/2025",
+          "bbox": [
+            440,
+            625,
+            650,
+            655
+          ]
+        },
+        "account_number": {
+          "value": "80112805982",
+          "bbox": [
+            440,
+            729,
+            694,
+            759
+          ]
+        }
+      }
+    },
+    "income_certificate": {
+      "file": "income_certificate.png",
+      "fields": {
+        "name": {
+          "value": "Advika Chander",
+          "bbox": [
+            439,
+            359,
+            740,
+            389
+          ]
+        },
+        "father_name": {
+          "value": "Fiyaz Ray",
+          "bbox": [
+            440,
+            463,
+            627,
+            501
+          ]
+        },
+        "dob": {
+          "value": "25/10/1993",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "id_number": {
+          "value": "8750 1640 0524",
+          "bbox": [
+            440,
+            671,
+            744,
+            701
+          ]
+        },
+        "annual_income": {
+          "value": "Rs. 10,25,000",
+          "bbox": [
+            440,
+            775,
+            702,
+            811
+          ]
+        },
+        "issue_date": {
+          "value": "10/10/2025",
+          "bbox": [
+            440,
+            879,
+            650,
+            909
+          ]
+        },
+        "house_no": {
+          "value": "02",
+          "bbox": [
+            440,
+            983,
+            487,
+            1013
+          ]
+        },
+        "locality": {
+          "value": "Kala Chowk Road",
+          "bbox": [
+            510,
+            983,
+            846,
+            1013
+          ]
+        },
+        "city": {
+          "value": "Delhi",
+          "bbox": [
+            870,
+            983,
+            966,
+            1013
+          ]
+        },
+        "state": {
+          "value": "Madhya Pradesh",
+          "bbox": [
+            440,
+            1041,
+            758,
+            1079
+          ]
+        },
+        "pincode": {
+          "value": "746872",
+          "bbox": [
+            781,
+            1041,
+            921,
+            1071
+          ]
+        },
+        "address": {
+          "value": "02, Kala Chowk Road, Delhi, Madhya Pradesh, 746872",
+          "bbox": [
+            440,
+            983,
+            966,
+            1079
+          ]
+        }
+      }
+    }
+  },
+  "injected": [
+    {
+      "type": "id_number_mismatch",
+      "field": "id_number",
+      "is_conflict": true,
+      "severity": "HIGH",
+      "docs": [
+        "id_card",
+        "income_certificate"
+      ],
+      "values": {
+        "id_card": "8740 1640 0524",
+        "income_certificate": "8750 1640 0524"
+      }
+    }
+  ]
+}
