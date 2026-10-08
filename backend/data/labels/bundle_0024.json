@@ -1,0 +1,325 @@
+{
+  "bundle_id": "bundle_0024",
+  "scenario": "dob_mismatch",
+  "documents": {
+    "id_card": {
+      "file": "id_card.png",
+      "fields": {
+        "name": {
+          "value": "Forum Kashyap",
+          "bbox": [
+            440,
+            359,
+            736,
+            397
+          ]
+        },
+        "father_name": {
+          "value": "Faraj Kala",
+          "bbox": [
+            440,
+            463,
+            631,
+            501
+          ]
+        },
+        "dob": {
+          "value": "10/02/1965",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "gender": {
+          "value": "Female",
+          "bbox": [
+            440,
+            671,
+            580,
+            701
+          ]
+        },
+        "id_number": {
+          "value": "7885 6855 7444",
+          "bbox": [
+            440,
+            775,
+            744,
+            805
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 87",
+          "bbox": [
+            440,
+            879,
+            606,
+            909
+          ]
+        },
+        "locality": {
+          "value": "Reddy Marg Road",
+          "bbox": [
+            629,
+            879,
+            970,
+            917
+          ]
+        },
+        "city": {
+          "value": "Ghaziabad",
+          "bbox": [
+            440,
+            937,
+            643,
+            967
+          ]
+        },
+        "state": {
+          "value": "Gujarat",
+          "bbox": [
+            666,
+            937,
+            804,
+            975
+          ]
+        },
+        "pincode": {
+          "value": "690967",
+          "bbox": [
+            828,
+            937,
+            968,
+            967
+          ]
+        },
+        "address": {
+          "value": "H.No. 87, Reddy Marg Road, Ghaziabad, Gujarat, 690967",
+          "bbox": [
+            440,
+            879,
+            970,
+            975
+          ]
+        }
+      }
+    },
+    "address_proof": {
+      "file": "address_proof.png",
+      "fields": {
+        "name": {
+          "value": "Forum Kashyap",
+          "bbox": [
+            440,
+            359,
+            736,
+            397
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 87",
+          "bbox": [
+            440,
+            463,
+            606,
+            493
+          ]
+        },
+        "locality": {
+          "value": "Reddy Marg Road",
+          "bbox": [
+            629,
+            463,
+            970,
+            501
+          ]
+        },
+        "city": {
+          "value": "Ghaziabad",
+          "bbox": [
+            440,
+            521,
+            643,
+            551
+          ]
+        },
+        "state": {
+          "value": "Gujarat",
+          "bbox": [
+            666,
+            521,
+            804,
+            559
+          ]
+        },
+        "pincode": {
+          "value": "690967",
+          "bbox": [
+            828,
+            521,
+            968,
+            551
+          ]
+        },
+        "address": {
+          "value": "H.No. 87, Reddy Marg Road, Ghaziabad, Gujarat, 690967",
+          "bbox": [
+            440,
+            463,
+            970,
+            559
+          ]
+        },
+        "bill_date": {
+          "value": "03/03/2025",
+          "bbox": [
+            440,
+            625,
+            650,
+            655
+          ]
+        },
+        "account_number": {
+          "value": "18233749894",
+          "bbox": [
+            440,
+            729,
+            697,
+            759
+          ]
+        }
+      }
+    },
+    "income_certificate": {
+      "file": "income_certificate.png",
+      "fields": {
+        "name": {
+          "value": "Forum Kashyap",
+          "bbox": [
+            440,
+            359,
+            736,
+            397
+          ]
+        },
+        "father_name": {
+          "value": "Faraj Kala",
+          "bbox": [
+            440,
+            463,
+            631,
+            501
+          ]
+        },
+        "dob": {
+          "value": "20/02/1965",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "id_number": {
+          "value": "7885 6855 7444",
+          "bbox": [
+            440,
+            671,
+            744,
+            701
+          ]
+        },
+        "annual_income": {
+          "value": "Rs. 7,96,000",
+          "bbox": [
+            440,
+            775,
+            678,
+            811
+          ]
+        },
+        "issue_date": {
+          "value": "09/04/2025",
+          "bbox": [
+            440,
+            879,
+            650,
+            909
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 87",
+          "bbox": [
+            440,
+            983,
+            606,
+            1013
+          ]
+        },
+        "locality": {
+          "value": "Reddy Marg Road",
+          "bbox": [
+            629,
+            983,
+            970,
+            1021
+          ]
+        },
+        "city": {
+          "value": "Ghaziabad",
+          "bbox": [
+            440,
+            1041,
+            643,
+            1071
+          ]
+        },
+        "state": {
+          "value": "Gujarat",
+          "bbox": [
+            666,
+            1041,
+            804,
+            1079
+          ]
+        },
+        "pincode": {
+          "value": "690967",
+          "bbox": [
+            828,
+            1041,
+            968,
+            1071
+          ]
+        },
+        "address": {
+          "value": "H.No. 87, Reddy Marg Road, Ghaziabad, Gujarat, 690967",
+          "bbox": [
+            440,
+            983,
+            970,
+            1079
+          ]
+        }
+      }
+    }
+  },
+  "injected": [
+    {
+      "type": "dob_mismatch",
+      "field": "dob",
+      "is_conflict": true,
+      "severity": "HIGH",
+      "docs": [
+        "id_card",
+        "income_certificate"
+      ],
+      "values": {
+        "id_card": "10/02/1965",
+        "income_certificate": "20/02/1965"
+      }
+    }
+  ]
+}

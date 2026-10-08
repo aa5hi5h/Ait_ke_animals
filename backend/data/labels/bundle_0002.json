@@ -1,0 +1,325 @@
+{
+  "bundle_id": "bundle_0002",
+  "scenario": "name_abbreviation",
+  "documents": {
+    "id_card": {
+      "file": "id_card.png",
+      "fields": {
+        "name": {
+          "value": "Aarush Dutta",
+          "bbox": [
+            439,
+            359,
+            685,
+            389
+          ]
+        },
+        "father_name": {
+          "value": "Onkar Mall",
+          "bbox": [
+            440,
+            463,
+            643,
+            493
+          ]
+        },
+        "dob": {
+          "value": "08/05/1971",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "gender": {
+          "value": "Male",
+          "bbox": [
+            440,
+            671,
+            531,
+            701
+          ]
+        },
+        "id_number": {
+          "value": "2764 8350 3056",
+          "bbox": [
+            440,
+            775,
+            744,
+            805
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 161",
+          "bbox": [
+            440,
+            879,
+            629,
+            909
+          ]
+        },
+        "locality": {
+          "value": "Nayar Ganj Street",
+          "bbox": [
+            652,
+            879,
+            988,
+            917
+          ]
+        },
+        "city": {
+          "value": "Hapur",
+          "bbox": [
+            1012,
+            879,
+            1127,
+            917
+          ]
+        },
+        "state": {
+          "value": "Punjab",
+          "bbox": [
+            440,
+            937,
+            571,
+            975
+          ]
+        },
+        "pincode": {
+          "value": "078161",
+          "bbox": [
+            594,
+            937,
+            734,
+            967
+          ]
+        },
+        "address": {
+          "value": "H.No. 161, Nayar Ganj Street, Hapur, Punjab, 078161",
+          "bbox": [
+            440,
+            879,
+            1127,
+            975
+          ]
+        }
+      }
+    },
+    "address_proof": {
+      "file": "address_proof.png",
+      "fields": {
+        "name": {
+          "value": "Aarush Dutta",
+          "bbox": [
+            439,
+            359,
+            685,
+            389
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 161",
+          "bbox": [
+            440,
+            463,
+            629,
+            493
+          ]
+        },
+        "locality": {
+          "value": "Nayar Ganj Street",
+          "bbox": [
+            652,
+            463,
+            988,
+            501
+          ]
+        },
+        "city": {
+          "value": "Hapur",
+          "bbox": [
+            1012,
+            463,
+            1127,
+            501
+          ]
+        },
+        "state": {
+          "value": "Punjab",
+          "bbox": [
+            440,
+            521,
+            571,
+            559
+          ]
+        },
+        "pincode": {
+          "value": "078161",
+          "bbox": [
+            594,
+            521,
+            734,
+            551
+          ]
+        },
+        "address": {
+          "value": "H.No. 161, Nayar Ganj Street, Hapur, Punjab, 078161",
+          "bbox": [
+            440,
+            463,
+            1127,
+            559
+          ]
+        },
+        "bill_date": {
+          "value": "03/02/2025",
+          "bbox": [
+            440,
+            625,
+            650,
+            655
+          ]
+        },
+        "account_number": {
+          "value": "37672423884",
+          "bbox": [
+            440,
+            729,
+            697,
+            759
+          ]
+        }
+      }
+    },
+    "income_certificate": {
+      "file": "income_certificate.png",
+      "fields": {
+        "name": {
+          "value": "A. Dutta",
+          "bbox": [
+            439,
+            359,
+            592,
+            389
+          ]
+        },
+        "father_name": {
+          "value": "Onkar Mall",
+          "bbox": [
+            440,
+            463,
+            643,
+            493
+          ]
+        },
+        "dob": {
+          "value": "08/05/1971",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "id_number": {
+          "value": "2764 8350 3056",
+          "bbox": [
+            440,
+            671,
+            744,
+            701
+          ]
+        },
+        "annual_income": {
+          "value": "Rs. 7,94,000",
+          "bbox": [
+            440,
+            775,
+            678,
+            811
+          ]
+        },
+        "issue_date": {
+          "value": "19/04/2025",
+          "bbox": [
+            440,
+            879,
+            650,
+            909
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 161",
+          "bbox": [
+            440,
+            983,
+            629,
+            1013
+          ]
+        },
+        "locality": {
+          "value": "Nayar Ganj Street",
+          "bbox": [
+            652,
+            983,
+            988,
+            1021
+          ]
+        },
+        "city": {
+          "value": "Hapur",
+          "bbox": [
+            1012,
+            983,
+            1127,
+            1021
+          ]
+        },
+        "state": {
+          "value": "Punjab",
+          "bbox": [
+            440,
+            1041,
+            571,
+            1079
+          ]
+        },
+        "pincode": {
+          "value": "078161",
+          "bbox": [
+            594,
+            1041,
+            734,
+            1071
+          ]
+        },
+        "address": {
+          "value": "H.No. 161, Nayar Ganj Street, Hapur, Punjab, 078161",
+          "bbox": [
+            440,
+            983,
+            1127,
+            1079
+          ]
+        }
+      }
+    }
+  },
+  "injected": [
+    {
+      "type": "name_abbreviation",
+      "field": "name",
+      "is_conflict": false,
+      "severity": null,
+      "docs": [
+        "id_card",
+        "income_certificate"
+      ],
+      "values": {
+        "id_card": "Aarush Dutta",
+        "income_certificate": "A. Dutta"
+      }
+    }
+  ]
+}

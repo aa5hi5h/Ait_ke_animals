@@ -1,0 +1,325 @@
+{
+  "bundle_id": "bundle_0016",
+  "scenario": "address_word_order",
+  "documents": {
+    "id_card": {
+      "file": "id_card.png",
+      "fields": {
+        "name": {
+          "value": "Anita Pingle",
+          "bbox": [
+            439,
+            359,
+            664,
+            397
+          ]
+        },
+        "father_name": {
+          "value": "Tanveer Datta",
+          "bbox": [
+            440,
+            463,
+            701,
+            493
+          ]
+        },
+        "dob": {
+          "value": "13/08/1963",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "gender": {
+          "value": "Female",
+          "bbox": [
+            440,
+            671,
+            580,
+            701
+          ]
+        },
+        "id_number": {
+          "value": "3320 0379 1769",
+          "bbox": [
+            440,
+            775,
+            744,
+            805
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 533",
+          "bbox": [
+            440,
+            879,
+            629,
+            909
+          ]
+        },
+        "locality": {
+          "value": "Patla Road",
+          "bbox": [
+            652,
+            879,
+            860,
+            909
+          ]
+        },
+        "city": {
+          "value": "Raichur",
+          "bbox": [
+            884,
+            879,
+            1030,
+            909
+          ]
+        },
+        "state": {
+          "value": "Tripura",
+          "bbox": [
+            440,
+            937,
+            571,
+            975
+          ]
+        },
+        "pincode": {
+          "value": "923226",
+          "bbox": [
+            595,
+            937,
+            735,
+            967
+          ]
+        },
+        "address": {
+          "value": "H.No. 533, Patla Road, Raichur, Tripura, 923226",
+          "bbox": [
+            440,
+            879,
+            1030,
+            975
+          ]
+        }
+      }
+    },
+    "address_proof": {
+      "file": "address_proof.png",
+      "fields": {
+        "name": {
+          "value": "Anita Pingle",
+          "bbox": [
+            439,
+            359,
+            664,
+            397
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 533",
+          "bbox": [
+            440,
+            463,
+            629,
+            493
+          ]
+        },
+        "locality": {
+          "value": "Patla Road",
+          "bbox": [
+            652,
+            463,
+            860,
+            493
+          ]
+        },
+        "city": {
+          "value": "Raichur",
+          "bbox": [
+            884,
+            463,
+            1030,
+            493
+          ]
+        },
+        "state": {
+          "value": "Tripura",
+          "bbox": [
+            440,
+            521,
+            571,
+            559
+          ]
+        },
+        "pincode": {
+          "value": "923226",
+          "bbox": [
+            595,
+            521,
+            735,
+            551
+          ]
+        },
+        "address": {
+          "value": "H.No. 533, Patla Road, Raichur, Tripura, 923226",
+          "bbox": [
+            440,
+            463,
+            1030,
+            559
+          ]
+        },
+        "bill_date": {
+          "value": "10/04/2025",
+          "bbox": [
+            440,
+            625,
+            650,
+            655
+          ]
+        },
+        "account_number": {
+          "value": "63201632870",
+          "bbox": [
+            440,
+            729,
+            697,
+            759
+          ]
+        }
+      }
+    },
+    "income_certificate": {
+      "file": "income_certificate.png",
+      "fields": {
+        "name": {
+          "value": "Anita Pingle",
+          "bbox": [
+            439,
+            359,
+            664,
+            397
+          ]
+        },
+        "father_name": {
+          "value": "Tanveer Datta",
+          "bbox": [
+            440,
+            463,
+            701,
+            493
+          ]
+        },
+        "dob": {
+          "value": "13/08/1963",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "id_number": {
+          "value": "3320 0379 1769",
+          "bbox": [
+            440,
+            671,
+            744,
+            701
+          ]
+        },
+        "annual_income": {
+          "value": "Rs. 11,62,000",
+          "bbox": [
+            440,
+            775,
+            698,
+            811
+          ]
+        },
+        "issue_date": {
+          "value": "16/07/2025",
+          "bbox": [
+            440,
+            879,
+            650,
+            909
+          ]
+        },
+        "locality": {
+          "value": "Patla Road",
+          "bbox": [
+            440,
+            983,
+            648,
+            1013
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 533",
+          "bbox": [
+            671,
+            983,
+            860,
+            1013
+          ]
+        },
+        "state": {
+          "value": "Tripura",
+          "bbox": [
+            884,
+            983,
+            1015,
+            1021
+          ]
+        },
+        "city": {
+          "value": "Raichur",
+          "bbox": [
+            440,
+            1041,
+            586,
+            1071
+          ]
+        },
+        "pincode": {
+          "value": "923226",
+          "bbox": [
+            608,
+            1041,
+            748,
+            1071
+          ]
+        },
+        "address": {
+          "value": "Patla Road, H.No. 533, Tripura, Raichur, 923226",
+          "bbox": [
+            440,
+            983,
+            1015,
+            1071
+          ]
+        }
+      }
+    }
+  },
+  "injected": [
+    {
+      "type": "address_word_order",
+      "field": "address",
+      "is_conflict": false,
+      "severity": null,
+      "docs": [
+        "id_card",
+        "income_certificate"
+      ],
+      "values": {
+        "id_card": "H.No. 533, Patla Road, Raichur, Tripura, 923226",
+        "income_certificate": "Patla Road, H.No. 533, Tripura, Raichur, 923226"
+      }
+    }
+  ]
+}

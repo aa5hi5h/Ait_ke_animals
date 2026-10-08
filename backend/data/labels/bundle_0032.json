@@ -1,0 +1,325 @@
+{
+  "bundle_id": "bundle_0032",
+  "scenario": "dob_mismatch",
+  "documents": {
+    "id_card": {
+      "file": "id_card.png",
+      "fields": {
+        "name": {
+          "value": "Qushi Setty",
+          "bbox": [
+            440,
+            359,
+            657,
+            397
+          ]
+        },
+        "father_name": {
+          "value": "Michael Krishnamurthy",
+          "bbox": [
+            440,
+            463,
+            867,
+            501
+          ]
+        },
+        "dob": {
+          "value": "16/06/1976",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "gender": {
+          "value": "Female",
+          "bbox": [
+            440,
+            671,
+            580,
+            701
+          ]
+        },
+        "id_number": {
+          "value": "6584 0449 9727",
+          "bbox": [
+            440,
+            775,
+            744,
+            805
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 18",
+          "bbox": [
+            440,
+            879,
+            606,
+            909
+          ]
+        },
+        "locality": {
+          "value": "Hans Zila Street",
+          "bbox": [
+            629,
+            879,
+            930,
+            909
+          ]
+        },
+        "city": {
+          "value": "Nellore",
+          "bbox": [
+            954,
+            879,
+            1087,
+            909
+          ]
+        },
+        "state": {
+          "value": "Gujarat",
+          "bbox": [
+            440,
+            937,
+            578,
+            975
+          ]
+        },
+        "pincode": {
+          "value": "498941",
+          "bbox": [
+            601,
+            937,
+            741,
+            967
+          ]
+        },
+        "address": {
+          "value": "H.No. 18, Hans Zila Street, Nellore, Gujarat, 498941",
+          "bbox": [
+            440,
+            879,
+            1087,
+            975
+          ]
+        }
+      }
+    },
+    "address_proof": {
+      "file": "address_proof.png",
+      "fields": {
+        "name": {
+          "value": "Qushi Setty",
+          "bbox": [
+            440,
+            359,
+            657,
+            397
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 18",
+          "bbox": [
+            440,
+            463,
+            606,
+            493
+          ]
+        },
+        "locality": {
+          "value": "Hans Zila Street",
+          "bbox": [
+            629,
+            463,
+            930,
+            493
+          ]
+        },
+        "city": {
+          "value": "Nellore",
+          "bbox": [
+            954,
+            463,
+            1087,
+            493
+          ]
+        },
+        "state": {
+          "value": "Gujarat",
+          "bbox": [
+            440,
+            521,
+            578,
+            559
+          ]
+        },
+        "pincode": {
+          "value": "498941",
+          "bbox": [
+            601,
+            521,
+            741,
+            551
+          ]
+        },
+        "address": {
+          "value": "H.No. 18, Hans Zila Street, Nellore, Gujarat, 498941",
+          "bbox": [
+            440,
+            463,
+            1087,
+            559
+          ]
+        },
+        "bill_date": {
+          "value": "26/06/2025",
+          "bbox": [
+            440,
+            625,
+            650,
+            655
+          ]
+        },
+        "account_number": {
+          "value": "75339636057",
+          "bbox": [
+            440,
+            729,
+            697,
+            759
+          ]
+        }
+      }
+    },
+    "income_certificate": {
+      "file": "income_certificate.png",
+      "fields": {
+        "name": {
+          "value": "Qushi Setty",
+          "bbox": [
+            440,
+            359,
+            657,
+            397
+          ]
+        },
+        "father_name": {
+          "value": "Michael Krishnamurthy",
+          "bbox": [
+            440,
+            463,
+            867,
+            501
+          ]
+        },
+        "dob": {
+          "value": "16/12/1976",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "id_number": {
+          "value": "6584 0449 9727",
+          "bbox": [
+            440,
+            671,
+            744,
+            701
+          ]
+        },
+        "annual_income": {
+          "value": "Rs. 9,22,000",
+          "bbox": [
+            440,
+            775,
+            678,
+            811
+          ]
+        },
+        "issue_date": {
+          "value": "20/06/2025",
+          "bbox": [
+            440,
+            879,
+            650,
+            909
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 18",
+          "bbox": [
+            440,
+            983,
+            606,
+            1013
+          ]
+        },
+        "locality": {
+          "value": "Hans Zila Street",
+          "bbox": [
+            629,
+            983,
+            930,
+            1013
+          ]
+        },
+        "city": {
+          "value": "Nellore",
+          "bbox": [
+            954,
+            983,
+            1087,
+            1013
+          ]
+        },
+        "state": {
+          "value": "Gujarat",
+          "bbox": [
+            440,
+            1041,
+            578,
+            1079
+          ]
+        },
+        "pincode": {
+          "value": "498941",
+          "bbox": [
+            601,
+            1041,
+            741,
+            1071
+          ]
+        },
+        "address": {
+          "value": "H.No. 18, Hans Zila Street, Nellore, Gujarat, 498941",
+          "bbox": [
+            440,
+            983,
+            1087,
+            1079
+          ]
+        }
+      }
+    }
+  },
+  "injected": [
+    {
+      "type": "dob_mismatch",
+      "field": "dob",
+      "is_conflict": true,
+      "severity": "HIGH",
+      "docs": [
+        "id_card",
+        "income_certificate"
+      ],
+      "values": {
+        "id_card": "16/06/1976",
+        "income_certificate": "16/12/1976"
+      }
+    }
+  ]
+}

@@ -1,0 +1,325 @@
+{
+  "bundle_id": "bundle_0030",
+  "scenario": "id_number_mismatch",
+  "documents": {
+    "id_card": {
+      "file": "id_card.png",
+      "fields": {
+        "name": {
+          "value": "Liam Seshadri",
+          "bbox": [
+            440,
+            359,
+            708,
+            389
+          ]
+        },
+        "father_name": {
+          "value": "Vincent Raghavan",
+          "bbox": [
+            440,
+            463,
+            782,
+            501
+          ]
+        },
+        "dob": {
+          "value": "30/08/1983",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "gender": {
+          "value": "Male",
+          "bbox": [
+            440,
+            671,
+            531,
+            701
+          ]
+        },
+        "id_number": {
+          "value": "1154 5168 0876",
+          "bbox": [
+            440,
+            775,
+            741,
+            805
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 27",
+          "bbox": [
+            440,
+            879,
+            606,
+            909
+          ]
+        },
+        "locality": {
+          "value": "Talwar Nagar Road",
+          "bbox": [
+            629,
+            879,
+            989,
+            917
+          ]
+        },
+        "city": {
+          "value": "Raichur",
+          "bbox": [
+            1012,
+            879,
+            1158,
+            909
+          ]
+        },
+        "state": {
+          "value": "Uttar Pradesh",
+          "bbox": [
+            440,
+            937,
+            699,
+            967
+          ]
+        },
+        "pincode": {
+          "value": "549480",
+          "bbox": [
+            722,
+            937,
+            862,
+            967
+          ]
+        },
+        "address": {
+          "value": "H.No. 27, Talwar Nagar Road, Raichur, Uttar Pradesh, 549480",
+          "bbox": [
+            440,
+            879,
+            1158,
+            967
+          ]
+        }
+      }
+    },
+    "address_proof": {
+      "file": "address_proof.png",
+      "fields": {
+        "name": {
+          "value": "Liam Seshadri",
+          "bbox": [
+            440,
+            359,
+            708,
+            389
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 27",
+          "bbox": [
+            440,
+            463,
+            606,
+            493
+          ]
+        },
+        "locality": {
+          "value": "Talwar Nagar Road",
+          "bbox": [
+            629,
+            463,
+            989,
+            501
+          ]
+        },
+        "city": {
+          "value": "Raichur",
+          "bbox": [
+            1012,
+            463,
+            1158,
+            493
+          ]
+        },
+        "state": {
+          "value": "Uttar Pradesh",
+          "bbox": [
+            440,
+            521,
+            699,
+            551
+          ]
+        },
+        "pincode": {
+          "value": "549480",
+          "bbox": [
+            722,
+            521,
+            862,
+            551
+          ]
+        },
+        "address": {
+          "value": "H.No. 27, Talwar Nagar Road, Raichur, Uttar Pradesh, 549480",
+          "bbox": [
+            440,
+            463,
+            1158,
+            551
+          ]
+        },
+        "bill_date": {
+          "value": "07/04/2025",
+          "bbox": [
+            440,
+            625,
+            650,
+            655
+          ]
+        },
+        "account_number": {
+          "value": "97703482477",
+          "bbox": [
+            440,
+            729,
+            697,
+            759
+          ]
+        }
+      }
+    },
+    "income_certificate": {
+      "file": "income_certificate.png",
+      "fields": {
+        "name": {
+          "value": "Liam Seshadri",
+          "bbox": [
+            440,
+            359,
+            708,
+            389
+          ]
+        },
+        "father_name": {
+          "value": "Vincent Raghavan",
+          "bbox": [
+            440,
+            463,
+            782,
+            501
+          ]
+        },
+        "dob": {
+          "value": "30/08/1983",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "id_number": {
+          "value": "7154 5168 0876",
+          "bbox": [
+            440,
+            671,
+            744,
+            701
+          ]
+        },
+        "annual_income": {
+          "value": "Rs. 8,90,000",
+          "bbox": [
+            440,
+            775,
+            678,
+            811
+          ]
+        },
+        "issue_date": {
+          "value": "23/09/2025",
+          "bbox": [
+            440,
+            879,
+            650,
+            909
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 27",
+          "bbox": [
+            440,
+            983,
+            606,
+            1013
+          ]
+        },
+        "locality": {
+          "value": "Talwar Nagar Road",
+          "bbox": [
+            629,
+            983,
+            989,
+            1021
+          ]
+        },
+        "city": {
+          "value": "Raichur",
+          "bbox": [
+            1012,
+            983,
+            1158,
+            1013
+          ]
+        },
+        "state": {
+          "value": "Uttar Pradesh",
+          "bbox": [
+            440,
+            1041,
+            699,
+            1071
+          ]
+        },
+        "pincode": {
+          "value": "549480",
+          "bbox": [
+            722,
+            1041,
+            862,
+            1071
+          ]
+        },
+        "address": {
+          "value": "H.No. 27, Talwar Nagar Road, Raichur, Uttar Pradesh, 549480",
+          "bbox": [
+            440,
+            983,
+            1158,
+            1071
+          ]
+        }
+      }
+    }
+  },
+  "injected": [
+    {
+      "type": "id_number_mismatch",
+      "field": "id_number",
+      "is_conflict": true,
+      "severity": "HIGH",
+      "docs": [
+        "id_card",
+        "income_certificate"
+      ],
+      "values": {
+        "id_card": "1154 5168 0876",
+        "income_certificate": "7154 5168 0876"
+      }
+    }
+  ]
+}

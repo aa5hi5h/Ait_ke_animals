@@ -1,0 +1,310 @@
+{
+  "bundle_id": "bundle_0023",
+  "scenario": "none",
+  "documents": {
+    "id_card": {
+      "file": "id_card.png",
+      "fields": {
+        "name": {
+          "value": "Udant Dutt",
+          "bbox": [
+            440,
+            359,
+            641,
+            389
+          ]
+        },
+        "father_name": {
+          "value": "Umang Lad",
+          "bbox": [
+            440,
+            463,
+            657,
+            501
+          ]
+        },
+        "dob": {
+          "value": "05/08/1977",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "gender": {
+          "value": "Male",
+          "bbox": [
+            440,
+            671,
+            531,
+            701
+          ]
+        },
+        "id_number": {
+          "value": "5454 9480 8313",
+          "bbox": [
+            440,
+            775,
+            744,
+            805
+          ]
+        },
+        "house_no": {
+          "value": "34",
+          "bbox": [
+            440,
+            879,
+            487,
+            909
+          ]
+        },
+        "locality": {
+          "value": "Verma Road",
+          "bbox": [
+            510,
+            879,
+            743,
+            909
+          ]
+        },
+        "city": {
+          "value": "Solapur",
+          "bbox": [
+            767,
+            879,
+            913,
+            917
+          ]
+        },
+        "state": {
+          "value": "Tamil Nadu",
+          "bbox": [
+            935,
+            879,
+            1145,
+            909
+          ]
+        },
+        "pincode": {
+          "value": "345581",
+          "bbox": [
+            440,
+            937,
+            580,
+            967
+          ]
+        },
+        "address": {
+          "value": "34, Verma Road, Solapur, Tamil Nadu, 345581",
+          "bbox": [
+            440,
+            879,
+            1145,
+            967
+          ]
+        }
+      }
+    },
+    "address_proof": {
+      "file": "address_proof.png",
+      "fields": {
+        "name": {
+          "value": "Udant Dutt",
+          "bbox": [
+            440,
+            359,
+            641,
+            389
+          ]
+        },
+        "house_no": {
+          "value": "34",
+          "bbox": [
+            440,
+            463,
+            487,
+            493
+          ]
+        },
+        "locality": {
+          "value": "Verma Road",
+          "bbox": [
+            510,
+            463,
+            743,
+            493
+          ]
+        },
+        "city": {
+          "value": "Solapur",
+          "bbox": [
+            767,
+            463,
+            913,
+            501
+          ]
+        },
+        "state": {
+          "value": "Tamil Nadu",
+          "bbox": [
+            935,
+            463,
+            1145,
+            493
+          ]
+        },
+        "pincode": {
+          "value": "345581",
+          "bbox": [
+            440,
+            521,
+            580,
+            551
+          ]
+        },
+        "address": {
+          "value": "34, Verma Road, Solapur, Tamil Nadu, 345581",
+          "bbox": [
+            440,
+            463,
+            1145,
+            551
+          ]
+        },
+        "bill_date": {
+          "value": "28/07/2025",
+          "bbox": [
+            440,
+            625,
+            650,
+            655
+          ]
+        },
+        "account_number": {
+          "value": "77701436349",
+          "bbox": [
+            440,
+            729,
+            697,
+            759
+          ]
+        }
+      }
+    },
+    "income_certificate": {
+      "file": "income_certificate.png",
+      "fields": {
+        "name": {
+          "value": "Udant Dutt",
+          "bbox": [
+            440,
+            359,
+            641,
+            389
+          ]
+        },
+        "father_name": {
+          "value": "Umang Lad",
+          "bbox": [
+            440,
+            463,
+            657,
+            501
+          ]
+        },
+        "dob": {
+          "value": "05/08/1977",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "id_number": {
+          "value": "5454 9480 8313",
+          "bbox": [
+            440,
+            671,
+            744,
+            701
+          ]
+        },
+        "annual_income": {
+          "value": "Rs. 6,42,000",
+          "bbox": [
+            440,
+            775,
+            678,
+            811
+          ]
+        },
+        "issue_date": {
+          "value": "08/09/2025",
+          "bbox": [
+            440,
+            879,
+            650,
+            909
+          ]
+        },
+        "house_no": {
+          "value": "34",
+          "bbox": [
+            440,
+            983,
+            487,
+            1013
+          ]
+        },
+        "locality": {
+          "value": "Verma Road",
+          "bbox": [
+            510,
+            983,
+            743,
+            1013
+          ]
+        },
+        "city": {
+          "value": "Solapur",
+          "bbox": [
+            767,
+            983,
+            913,
+            1021
+          ]
+        },
+        "state": {
+          "value": "Tamil Nadu",
+          "bbox": [
+            935,
+            983,
+            1145,
+            1013
+          ]
+        },
+        "pincode": {
+          "value": "345581",
+          "bbox": [
+            440,
+            1041,
+            580,
+            1071
+          ]
+        },
+        "address": {
+          "value": "34, Verma Road, Solapur, Tamil Nadu, 345581",
+          "bbox": [
+            440,
+            983,
+            1145,
+            1071
+          ]
+        }
+      }
+    }
+  },
+  "injected": []
+}

@@ -1,0 +1,325 @@
+{
+  "bundle_id": "bundle_0005",
+  "scenario": "address_word_order",
+  "documents": {
+    "id_card": {
+      "file": "id_card.png",
+      "fields": {
+        "name": {
+          "value": "Tanish Rastogi",
+          "bbox": [
+            440,
+            359,
+            715,
+            397
+          ]
+        },
+        "father_name": {
+          "value": "Imaran Devi",
+          "bbox": [
+            440,
+            463,
+            666,
+            493
+          ]
+        },
+        "dob": {
+          "value": "11/06/1995",
+          "bbox": [
+            440,
+            567,
+            647,
+            597
+          ]
+        },
+        "gender": {
+          "value": "Male",
+          "bbox": [
+            440,
+            671,
+            531,
+            701
+          ]
+        },
+        "id_number": {
+          "value": "7182 2782 4896",
+          "bbox": [
+            440,
+            775,
+            744,
+            805
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 122",
+          "bbox": [
+            440,
+            879,
+            629,
+            909
+          ]
+        },
+        "locality": {
+          "value": "Chand Chowk Road",
+          "bbox": [
+            652,
+            879,
+            1028,
+            909
+          ]
+        },
+        "city": {
+          "value": "Kavali",
+          "bbox": [
+            440,
+            937,
+            554,
+            967
+          ]
+        },
+        "state": {
+          "value": "Assam",
+          "bbox": [
+            577,
+            937,
+            706,
+            967
+          ]
+        },
+        "pincode": {
+          "value": "697848",
+          "bbox": [
+            729,
+            937,
+            869,
+            967
+          ]
+        },
+        "address": {
+          "value": "H.No. 122, Chand Chowk Road, Kavali, Assam, 697848",
+          "bbox": [
+            440,
+            879,
+            1028,
+            967
+          ]
+        }
+      }
+    },
+    "address_proof": {
+      "file": "address_proof.png",
+      "fields": {
+        "name": {
+          "value": "Tanish Rastogi",
+          "bbox": [
+            440,
+            359,
+            715,
+            397
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 122",
+          "bbox": [
+            440,
+            463,
+            629,
+            493
+          ]
+        },
+        "locality": {
+          "value": "Chand Chowk Road",
+          "bbox": [
+            652,
+            463,
+            1028,
+            493
+          ]
+        },
+        "city": {
+          "value": "Kavali",
+          "bbox": [
+            440,
+            521,
+            554,
+            551
+          ]
+        },
+        "state": {
+          "value": "Assam",
+          "bbox": [
+            577,
+            521,
+            706,
+            551
+          ]
+        },
+        "pincode": {
+          "value": "697848",
+          "bbox": [
+            729,
+            521,
+            869,
+            551
+          ]
+        },
+        "address": {
+          "value": "H.No. 122, Chand Chowk Road, Kavali, Assam, 697848",
+          "bbox": [
+            440,
+            463,
+            1028,
+            551
+          ]
+        },
+        "bill_date": {
+          "value": "04/10/2025",
+          "bbox": [
+            440,
+            625,
+            650,
+            655
+          ]
+        },
+        "account_number": {
+          "value": "65787133150",
+          "bbox": [
+            440,
+            729,
+            697,
+            759
+          ]
+        }
+      }
+    },
+    "income_certificate": {
+      "file": "income_certificate.png",
+      "fields": {
+        "name": {
+          "value": "Tanish Rastogi",
+          "bbox": [
+            440,
+            359,
+            715,
+            397
+          ]
+        },
+        "father_name": {
+          "value": "Imaran Devi",
+          "bbox": [
+            440,
+            463,
+            666,
+            493
+          ]
+        },
+        "dob": {
+          "value": "11/06/1995",
+          "bbox": [
+            440,
+            567,
+            647,
+            597
+          ]
+        },
+        "id_number": {
+          "value": "7182 2782 4896",
+          "bbox": [
+            440,
+            671,
+            744,
+            701
+          ]
+        },
+        "annual_income": {
+          "value": "Rs. 7,88,000",
+          "bbox": [
+            440,
+            775,
+            678,
+            811
+          ]
+        },
+        "issue_date": {
+          "value": "13/04/2025",
+          "bbox": [
+            440,
+            879,
+            650,
+            909
+          ]
+        },
+        "locality": {
+          "value": "Chand Chowk Road",
+          "bbox": [
+            440,
+            983,
+            816,
+            1013
+          ]
+        },
+        "city": {
+          "value": "Kavali",
+          "bbox": [
+            839,
+            983,
+            953,
+            1013
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 122",
+          "bbox": [
+            440,
+            1041,
+            629,
+            1071
+          ]
+        },
+        "state": {
+          "value": "Assam",
+          "bbox": [
+            651,
+            1041,
+            780,
+            1071
+          ]
+        },
+        "pincode": {
+          "value": "697848",
+          "bbox": [
+            804,
+            1041,
+            944,
+            1071
+          ]
+        },
+        "address": {
+          "value": "Chand Chowk Road, Kavali, H.No. 122, Assam, 697848",
+          "bbox": [
+            440,
+            983,
+            953,
+            1071
+          ]
+        }
+      }
+    }
+  },
+  "injected": [
+    {
+      "type": "address_word_order",
+      "field": "address",
+      "is_conflict": false,
+      "severity": null,
+      "docs": [
+        "id_card",
+        "income_certificate"
+      ],
+      "values": {
+        "id_card": "H.No. 122, Chand Chowk Road, Kavali, Assam, 697848",
+        "income_certificate": "Chand Chowk Road, Kavali, H.No. 122, Assam, 697848"
+      }
+    }
+  ]
+}

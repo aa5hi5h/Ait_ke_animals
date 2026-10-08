@@ -1,0 +1,325 @@
+{
+  "bundle_id": "bundle_0012",
+  "scenario": "date_format",
+  "documents": {
+    "id_card": {
+      "file": "id_card.png",
+      "fields": {
+        "name": {
+          "value": "Neelima Kalla",
+          "bbox": [
+            440,
+            359,
+            699,
+            389
+          ]
+        },
+        "father_name": {
+          "value": "Azaan Murthy",
+          "bbox": [
+            439,
+            463,
+            699,
+            501
+          ]
+        },
+        "dob": {
+          "value": "28-Aug-1964",
+          "bbox": [
+            440,
+            567,
+            683,
+            605
+          ]
+        },
+        "gender": {
+          "value": "Female",
+          "bbox": [
+            440,
+            671,
+            580,
+            701
+          ]
+        },
+        "id_number": {
+          "value": "5053 3158 6923",
+          "bbox": [
+            440,
+            775,
+            744,
+            805
+          ]
+        },
+        "house_no": {
+          "value": "82/08",
+          "bbox": [
+            440,
+            879,
+            545,
+            909
+          ]
+        },
+        "locality": {
+          "value": "Sood Nagar Road",
+          "bbox": [
+            568,
+            879,
+            904,
+            917
+          ]
+        },
+        "city": {
+          "value": "Gaya",
+          "bbox": [
+            928,
+            879,
+            1028,
+            917
+          ]
+        },
+        "state": {
+          "value": "Assam",
+          "bbox": [
+            439,
+            937,
+            568,
+            967
+          ]
+        },
+        "pincode": {
+          "value": "361939",
+          "bbox": [
+            592,
+            937,
+            732,
+            967
+          ]
+        },
+        "address": {
+          "value": "82/08, Sood Nagar Road, Gaya, Assam, 361939",
+          "bbox": [
+            439,
+            879,
+            1028,
+            967
+          ]
+        }
+      }
+    },
+    "address_proof": {
+      "file": "address_proof.png",
+      "fields": {
+        "name": {
+          "value": "Neelima Kalla",
+          "bbox": [
+            440,
+            359,
+            699,
+            389
+          ]
+        },
+        "house_no": {
+          "value": "82/08",
+          "bbox": [
+            440,
+            463,
+            545,
+            493
+          ]
+        },
+        "locality": {
+          "value": "Sood Nagar Road",
+          "bbox": [
+            568,
+            463,
+            904,
+            501
+          ]
+        },
+        "city": {
+          "value": "Gaya",
+          "bbox": [
+            928,
+            463,
+            1028,
+            501
+          ]
+        },
+        "state": {
+          "value": "Assam",
+          "bbox": [
+            439,
+            521,
+            568,
+            551
+          ]
+        },
+        "pincode": {
+          "value": "361939",
+          "bbox": [
+            592,
+            521,
+            732,
+            551
+          ]
+        },
+        "address": {
+          "value": "82/08, Sood Nagar Road, Gaya, Assam, 361939",
+          "bbox": [
+            439,
+            463,
+            1028,
+            551
+          ]
+        },
+        "bill_date": {
+          "value": "01/04/2025",
+          "bbox": [
+            440,
+            625,
+            650,
+            655
+          ]
+        },
+        "account_number": {
+          "value": "25634216073",
+          "bbox": [
+            440,
+            729,
+            697,
+            759
+          ]
+        }
+      }
+    },
+    "income_certificate": {
+      "file": "income_certificate.png",
+      "fields": {
+        "name": {
+          "value": "Neelima Kalla",
+          "bbox": [
+            440,
+            359,
+            699,
+            389
+          ]
+        },
+        "father_name": {
+          "value": "Azaan Murthy",
+          "bbox": [
+            439,
+            463,
+            699,
+            501
+          ]
+        },
+        "dob": {
+          "value": "28/08/1964",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "id_number": {
+          "value": "5053 3158 6923",
+          "bbox": [
+            440,
+            671,
+            744,
+            701
+          ]
+        },
+        "annual_income": {
+          "value": "Rs. 2,00,000",
+          "bbox": [
+            440,
+            775,
+            678,
+            811
+          ]
+        },
+        "issue_date": {
+          "value": "31/07/2025",
+          "bbox": [
+            440,
+            879,
+            650,
+            909
+          ]
+        },
+        "house_no": {
+          "value": "82/08",
+          "bbox": [
+            440,
+            983,
+            545,
+            1013
+          ]
+        },
+        "locality": {
+          "value": "Sood Nagar Road",
+          "bbox": [
+            568,
+            983,
+            904,
+            1021
+          ]
+        },
+        "city": {
+          "value": "Gaya",
+          "bbox": [
+            928,
+            983,
+            1028,
+            1021
+          ]
+        },
+        "state": {
+          "value": "Assam",
+          "bbox": [
+            439,
+            1041,
+            568,
+            1071
+          ]
+        },
+        "pincode": {
+          "value": "361939",
+          "bbox": [
+            592,
+            1041,
+            732,
+            1071
+          ]
+        },
+        "address": {
+          "value": "82/08, Sood Nagar Road, Gaya, Assam, 361939",
+          "bbox": [
+            439,
+            983,
+            1028,
+            1071
+          ]
+        }
+      }
+    }
+  },
+  "injected": [
+    {
+      "type": "date_format",
+      "field": "dob",
+      "is_conflict": false,
+      "severity": null,
+      "docs": [
+        "id_card",
+        "income_certificate"
+      ],
+      "values": {
+        "id_card": "28-Aug-1964",
+        "income_certificate": "28/08/1964"
+      }
+    }
+  ]
+}

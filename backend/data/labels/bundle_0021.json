@@ -1,0 +1,325 @@
+{
+  "bundle_id": "bundle_0021",
+  "scenario": "pincode_mismatch",
+  "documents": {
+    "id_card": {
+      "file": "id_card.png",
+      "fields": {
+        "name": {
+          "value": "Brijesh Mander",
+          "bbox": [
+            440,
+            359,
+            723,
+            397
+          ]
+        },
+        "father_name": {
+          "value": "Chakradhar Keer",
+          "bbox": [
+            440,
+            463,
+            761,
+            493
+          ]
+        },
+        "dob": {
+          "value": "22/11/1981",
+          "bbox": [
+            440,
+            567,
+            647,
+            597
+          ]
+        },
+        "gender": {
+          "value": "Male",
+          "bbox": [
+            440,
+            671,
+            531,
+            701
+          ]
+        },
+        "id_number": {
+          "value": "2419 0496 6319",
+          "bbox": [
+            440,
+            775,
+            744,
+            805
+          ]
+        },
+        "house_no": {
+          "value": "003",
+          "bbox": [
+            440,
+            879,
+            510,
+            909
+          ]
+        },
+        "locality": {
+          "value": "Issac Ganj Road",
+          "bbox": [
+            533,
+            879,
+            844,
+            917
+          ]
+        },
+        "city": {
+          "value": "Phagwara",
+          "bbox": [
+            867,
+            879,
+            1056,
+            917
+          ]
+        },
+        "state": {
+          "value": "West Bengal",
+          "bbox": [
+            440,
+            937,
+            677,
+            975
+          ]
+        },
+        "pincode": {
+          "value": "769367",
+          "bbox": [
+            701,
+            937,
+            841,
+            967
+          ]
+        },
+        "address": {
+          "value": "003, Issac Ganj Road, Phagwara, West Bengal, 769367",
+          "bbox": [
+            440,
+            879,
+            1056,
+            975
+          ]
+        }
+      }
+    },
+    "address_proof": {
+      "file": "address_proof.png",
+      "fields": {
+        "name": {
+          "value": "Brijesh Mander",
+          "bbox": [
+            440,
+            359,
+            723,
+            397
+          ]
+        },
+        "house_no": {
+          "value": "003",
+          "bbox": [
+            440,
+            463,
+            510,
+            493
+          ]
+        },
+        "locality": {
+          "value": "Issac Ganj Road",
+          "bbox": [
+            533,
+            463,
+            844,
+            501
+          ]
+        },
+        "city": {
+          "value": "Phagwara",
+          "bbox": [
+            867,
+            463,
+            1056,
+            501
+          ]
+        },
+        "state": {
+          "value": "West Bengal",
+          "bbox": [
+            440,
+            521,
+            677,
+            559
+          ]
+        },
+        "pincode": {
+          "value": "210665",
+          "bbox": [
+            701,
+            521,
+            841,
+            551
+          ]
+        },
+        "address": {
+          "value": "003, Issac Ganj Road, Phagwara, West Bengal, 210665",
+          "bbox": [
+            440,
+            463,
+            1056,
+            559
+          ]
+        },
+        "bill_date": {
+          "value": "22/02/2025",
+          "bbox": [
+            440,
+            625,
+            650,
+            655
+          ]
+        },
+        "account_number": {
+          "value": "90586518506",
+          "bbox": [
+            440,
+            729,
+            697,
+            759
+          ]
+        }
+      }
+    },
+    "income_certificate": {
+      "file": "income_certificate.png",
+      "fields": {
+        "name": {
+          "value": "Brijesh Mander",
+          "bbox": [
+            440,
+            359,
+            723,
+            397
+          ]
+        },
+        "father_name": {
+          "value": "Chakradhar Keer",
+          "bbox": [
+            440,
+            463,
+            761,
+            493
+          ]
+        },
+        "dob": {
+          "value": "22/11/1981",
+          "bbox": [
+            440,
+            567,
+            647,
+            597
+          ]
+        },
+        "id_number": {
+          "value": "2419 0496 6319",
+          "bbox": [
+            440,
+            671,
+            744,
+            701
+          ]
+        },
+        "annual_income": {
+          "value": "Rs. 3,97,000",
+          "bbox": [
+            440,
+            775,
+            678,
+            811
+          ]
+        },
+        "issue_date": {
+          "value": "04/06/2025",
+          "bbox": [
+            440,
+            879,
+            650,
+            909
+          ]
+        },
+        "house_no": {
+          "value": "003",
+          "bbox": [
+            440,
+            983,
+            510,
+            1013
+          ]
+        },
+        "locality": {
+          "value": "Issac Ganj Road",
+          "bbox": [
+            533,
+            983,
+            844,
+            1021
+          ]
+        },
+        "city": {
+          "value": "Phagwara",
+          "bbox": [
+            867,
+            983,
+            1056,
+            1021
+          ]
+        },
+        "state": {
+          "value": "West Bengal",
+          "bbox": [
+            440,
+            1041,
+            677,
+            1079
+          ]
+        },
+        "pincode": {
+          "value": "769367",
+          "bbox": [
+            701,
+            1041,
+            841,
+            1071
+          ]
+        },
+        "address": {
+          "value": "003, Issac Ganj Road, Phagwara, West Bengal, 769367",
+          "bbox": [
+            440,
+            983,
+            1056,
+            1079
+          ]
+        }
+      }
+    }
+  },
+  "injected": [
+    {
+      "type": "pincode_mismatch",
+      "field": "pincode",
+      "is_conflict": true,
+      "severity": "MEDIUM",
+      "docs": [
+        "id_card",
+        "address_proof"
+      ],
+      "values": {
+        "id_card": "769367",
+        "address_proof": "210665"
+      }
+    }
+  ]
+}

@@ -1,0 +1,310 @@
+{
+  "bundle_id": "bundle_0037",
+  "scenario": "none",
+  "documents": {
+    "id_card": {
+      "file": "id_card.png",
+      "fields": {
+        "name": {
+          "value": "Maanas Sarna",
+          "bbox": [
+            440,
+            359,
+            713,
+            389
+          ]
+        },
+        "father_name": {
+          "value": "Vivaan Modi",
+          "bbox": [
+            440,
+            463,
+            670,
+            493
+          ]
+        },
+        "dob": {
+          "value": "28/02/1988",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "gender": {
+          "value": "Male",
+          "bbox": [
+            440,
+            671,
+            531,
+            701
+          ]
+        },
+        "id_number": {
+          "value": "3285 8842 4745",
+          "bbox": [
+            440,
+            775,
+            744,
+            805
+          ]
+        },
+        "house_no": {
+          "value": "77/19",
+          "bbox": [
+            440,
+            879,
+            545,
+            909
+          ]
+        },
+        "locality": {
+          "value": "Tella Road",
+          "bbox": [
+            568,
+            879,
+            766,
+            909
+          ]
+        },
+        "city": {
+          "value": "Bhiwani",
+          "bbox": [
+            790,
+            879,
+            937,
+            909
+          ]
+        },
+        "state": {
+          "value": "Telangana",
+          "bbox": [
+            961,
+            879,
+            1155,
+            917
+          ]
+        },
+        "pincode": {
+          "value": "940139",
+          "bbox": [
+            440,
+            937,
+            580,
+            967
+          ]
+        },
+        "address": {
+          "value": "77/19, Tella Road, Bhiwani, Telangana, 940139",
+          "bbox": [
+            440,
+            879,
+            1155,
+            967
+          ]
+        }
+      }
+    },
+    "address_proof": {
+      "file": "address_proof.png",
+      "fields": {
+        "name": {
+          "value": "Maanas Sarna",
+          "bbox": [
+            440,
+            359,
+            713,
+            389
+          ]
+        },
+        "house_no": {
+          "value": "77/19",
+          "bbox": [
+            440,
+            463,
+            545,
+            493
+          ]
+        },
+        "locality": {
+          "value": "Tella Road",
+          "bbox": [
+            568,
+            463,
+            766,
+            493
+          ]
+        },
+        "city": {
+          "value": "Bhiwani",
+          "bbox": [
+            790,
+            463,
+            937,
+            493
+          ]
+        },
+        "state": {
+          "value": "Telangana",
+          "bbox": [
+            961,
+            463,
+            1155,
+            501
+          ]
+        },
+        "pincode": {
+          "value": "940139",
+          "bbox": [
+            440,
+            521,
+            580,
+            551
+          ]
+        },
+        "address": {
+          "value": "77/19, Tella Road, Bhiwani, Telangana, 940139",
+          "bbox": [
+            440,
+            463,
+            1155,
+            551
+          ]
+        },
+        "bill_date": {
+          "value": "28/02/2025",
+          "bbox": [
+            440,
+            625,
+            650,
+            655
+          ]
+        },
+        "account_number": {
+          "value": "23685160481",
+          "bbox": [
+            440,
+            729,
+            697,
+            759
+          ]
+        }
+      }
+    },
+    "income_certificate": {
+      "file": "income_certificate.png",
+      "fields": {
+        "name": {
+          "value": "Maanas Sarna",
+          "bbox": [
+            440,
+            359,
+            713,
+            389
+          ]
+        },
+        "father_name": {
+          "value": "Vivaan Modi",
+          "bbox": [
+            440,
+            463,
+            670,
+            493
+          ]
+        },
+        "dob": {
+          "value": "28/02/1988",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "id_number": {
+          "value": "3285 8842 4745",
+          "bbox": [
+            440,
+            671,
+            744,
+            701
+          ]
+        },
+        "annual_income": {
+          "value": "Rs. 3,04,000",
+          "bbox": [
+            440,
+            775,
+            678,
+            811
+          ]
+        },
+        "issue_date": {
+          "value": "28/08/2025",
+          "bbox": [
+            440,
+            879,
+            650,
+            909
+          ]
+        },
+        "house_no": {
+          "value": "77/19",
+          "bbox": [
+            440,
+            983,
+            545,
+            1013
+          ]
+        },
+        "locality": {
+          "value": "Tella Road",
+          "bbox": [
+            568,
+            983,
+            766,
+            1013
+          ]
+        },
+        "city": {
+          "value": "Bhiwani",
+          "bbox": [
+            790,
+            983,
+            937,
+            1013
+          ]
+        },
+        "state": {
+          "value": "Telangana",
+          "bbox": [
+            961,
+            983,
+            1155,
+            1021
+          ]
+        },
+        "pincode": {
+          "value": "940139",
+          "bbox": [
+            440,
+            1041,
+            580,
+            1071
+          ]
+        },
+        "address": {
+          "value": "77/19, Tella Road, Bhiwani, Telangana, 940139",
+          "bbox": [
+            440,
+            983,
+            1155,
+            1071
+          ]
+        }
+      }
+    }
+  },
+  "injected": []
+}

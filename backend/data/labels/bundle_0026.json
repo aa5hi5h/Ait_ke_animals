@@ -1,0 +1,325 @@
+{
+  "bundle_id": "bundle_0026",
+  "scenario": "date_format",
+  "documents": {
+    "id_card": {
+      "file": "id_card.png",
+      "fields": {
+        "name": {
+          "value": "Ronith Bala",
+          "bbox": [
+            440,
+            359,
+            657,
+            389
+          ]
+        },
+        "father_name": {
+          "value": "Tanish Deshmukh",
+          "bbox": [
+            440,
+            463,
+            774,
+            493
+          ]
+        },
+        "dob": {
+          "value": "09-Mar-1992",
+          "bbox": [
+            440,
+            567,
+            680,
+            597
+          ]
+        },
+        "gender": {
+          "value": "Male",
+          "bbox": [
+            440,
+            671,
+            531,
+            701
+          ]
+        },
+        "id_number": {
+          "value": "9022 9413 1869",
+          "bbox": [
+            440,
+            775,
+            744,
+            805
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 65",
+          "bbox": [
+            440,
+            879,
+            606,
+            909
+          ]
+        },
+        "locality": {
+          "value": "Bedi Street",
+          "bbox": [
+            629,
+            879,
+            837,
+            909
+          ]
+        },
+        "city": {
+          "value": "Malda",
+          "bbox": [
+            860,
+            879,
+            974,
+            909
+          ]
+        },
+        "state": {
+          "value": "Karnataka",
+          "bbox": [
+            440,
+            937,
+            631,
+            967
+          ]
+        },
+        "pincode": {
+          "value": "646417",
+          "bbox": [
+            655,
+            937,
+            795,
+            967
+          ]
+        },
+        "address": {
+          "value": "H.No. 65, Bedi Street, Malda, Karnataka, 646417",
+          "bbox": [
+            440,
+            879,
+            974,
+            967
+          ]
+        }
+      }
+    },
+    "address_proof": {
+      "file": "address_proof.png",
+      "fields": {
+        "name": {
+          "value": "Ronith Bala",
+          "bbox": [
+            440,
+            359,
+            657,
+            389
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 65",
+          "bbox": [
+            440,
+            463,
+            606,
+            493
+          ]
+        },
+        "locality": {
+          "value": "Bedi Street",
+          "bbox": [
+            629,
+            463,
+            837,
+            493
+          ]
+        },
+        "city": {
+          "value": "Malda",
+          "bbox": [
+            860,
+            463,
+            974,
+            493
+          ]
+        },
+        "state": {
+          "value": "Karnataka",
+          "bbox": [
+            440,
+            521,
+            631,
+            551
+          ]
+        },
+        "pincode": {
+          "value": "646417",
+          "bbox": [
+            655,
+            521,
+            795,
+            551
+          ]
+        },
+        "address": {
+          "value": "H.No. 65, Bedi Street, Malda, Karnataka, 646417",
+          "bbox": [
+            440,
+            463,
+            974,
+            551
+          ]
+        },
+        "bill_date": {
+          "value": "26/04/2025",
+          "bbox": [
+            440,
+            625,
+            650,
+            655
+          ]
+        },
+        "account_number": {
+          "value": "77496499091",
+          "bbox": [
+            440,
+            729,
+            697,
+            759
+          ]
+        }
+      }
+    },
+    "income_certificate": {
+      "file": "income_certificate.png",
+      "fields": {
+        "name": {
+          "value": "Ronith Bala",
+          "bbox": [
+            440,
+            359,
+            657,
+            389
+          ]
+        },
+        "father_name": {
+          "value": "Tanish Deshmukh",
+          "bbox": [
+            440,
+            463,
+            774,
+            493
+          ]
+        },
+        "dob": {
+          "value": "09/03/1992",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "id_number": {
+          "value": "9022 9413 1869",
+          "bbox": [
+            440,
+            671,
+            744,
+            701
+          ]
+        },
+        "annual_income": {
+          "value": "Rs. 9,29,000",
+          "bbox": [
+            440,
+            775,
+            678,
+            811
+          ]
+        },
+        "issue_date": {
+          "value": "25/09/2025",
+          "bbox": [
+            440,
+            879,
+            650,
+            909
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 65",
+          "bbox": [
+            440,
+            983,
+            606,
+            1013
+          ]
+        },
+        "locality": {
+          "value": "Bedi Street",
+          "bbox": [
+            629,
+            983,
+            837,
+            1013
+          ]
+        },
+        "city": {
+          "value": "Malda",
+          "bbox": [
+            860,
+            983,
+            974,
+            1013
+          ]
+        },
+        "state": {
+          "value": "Karnataka",
+          "bbox": [
+            440,
+            1041,
+            631,
+            1071
+          ]
+        },
+        "pincode": {
+          "value": "646417",
+          "bbox": [
+            655,
+            1041,
+            795,
+            1071
+          ]
+        },
+        "address": {
+          "value": "H.No. 65, Bedi Street, Malda, Karnataka, 646417",
+          "bbox": [
+            440,
+            983,
+            974,
+            1071
+          ]
+        }
+      }
+    }
+  },
+  "injected": [
+    {
+      "type": "date_format",
+      "field": "dob",
+      "is_conflict": false,
+      "severity": null,
+      "docs": [
+        "id_card",
+        "income_certificate"
+      ],
+      "values": {
+        "id_card": "09-Mar-1992",
+        "income_certificate": "09/03/1992"
+      }
+    }
+  ]
+}

@@ -1,0 +1,310 @@
+{
+  "bundle_id": "bundle_0029",
+  "scenario": "none",
+  "documents": {
+    "id_card": {
+      "file": "id_card.png",
+      "fields": {
+        "name": {
+          "value": "Shivansh Suri",
+          "bbox": [
+            440,
+            359,
+            699,
+            389
+          ]
+        },
+        "father_name": {
+          "value": "Tarak Pathak",
+          "bbox": [
+            440,
+            463,
+            685,
+            493
+          ]
+        },
+        "dob": {
+          "value": "08/01/2004",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "gender": {
+          "value": "Male",
+          "bbox": [
+            440,
+            671,
+            531,
+            701
+          ]
+        },
+        "id_number": {
+          "value": "9904 9027 8742",
+          "bbox": [
+            440,
+            775,
+            744,
+            805
+          ]
+        },
+        "house_no": {
+          "value": "28",
+          "bbox": [
+            440,
+            879,
+            487,
+            909
+          ]
+        },
+        "locality": {
+          "value": "Dua Chowk Street",
+          "bbox": [
+            510,
+            879,
+            851,
+            909
+          ]
+        },
+        "city": {
+          "value": "Tadepalligudem",
+          "bbox": [
+            440,
+            937,
+            734,
+            975
+          ]
+        },
+        "state": {
+          "value": "Uttar Pradesh",
+          "bbox": [
+            758,
+            937,
+            1017,
+            967
+          ]
+        },
+        "pincode": {
+          "value": "769453",
+          "bbox": [
+            440,
+            995,
+            580,
+            1025
+          ]
+        },
+        "address": {
+          "value": "28, Dua Chowk Street, Tadepalligudem, Uttar Pradesh, 769453",
+          "bbox": [
+            440,
+            879,
+            1017,
+            1025
+          ]
+        }
+      }
+    },
+    "address_proof": {
+      "file": "address_proof.png",
+      "fields": {
+        "name": {
+          "value": "Shivansh Suri",
+          "bbox": [
+            440,
+            359,
+            699,
+            389
+          ]
+        },
+        "house_no": {
+          "value": "28",
+          "bbox": [
+            440,
+            463,
+            487,
+            493
+          ]
+        },
+        "locality": {
+          "value": "Dua Chowk Street",
+          "bbox": [
+            510,
+            463,
+            851,
+            493
+          ]
+        },
+        "city": {
+          "value": "Tadepalligudem",
+          "bbox": [
+            440,
+            521,
+            734,
+            559
+          ]
+        },
+        "state": {
+          "value": "Uttar Pradesh",
+          "bbox": [
+            758,
+            521,
+            1017,
+            551
+          ]
+        },
+        "pincode": {
+          "value": "769453",
+          "bbox": [
+            440,
+            579,
+            580,
+            609
+          ]
+        },
+        "address": {
+          "value": "28, Dua Chowk Street, Tadepalligudem, Uttar Pradesh, 769453",
+          "bbox": [
+            440,
+            463,
+            1017,
+            609
+          ]
+        },
+        "bill_date": {
+          "value": "09/09/2025",
+          "bbox": [
+            440,
+            683,
+            650,
+            713
+          ]
+        },
+        "account_number": {
+          "value": "56551256746",
+          "bbox": [
+            440,
+            787,
+            697,
+            817
+          ]
+        }
+      }
+    },
+    "income_certificate": {
+      "file": "income_certificate.png",
+      "fields": {
+        "name": {
+          "value": "Shivansh Suri",
+          "bbox": [
+            440,
+            359,
+            699,
+            389
+          ]
+        },
+        "father_name": {
+          "value": "Tarak Pathak",
+          "bbox": [
+            440,
+            463,
+            685,
+            493
+          ]
+        },
+        "dob": {
+          "value": "08/01/2004",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "id_number": {
+          "value": "9904 9027 8742",
+          "bbox": [
+            440,
+            671,
+            744,
+            701
+          ]
+        },
+        "annual_income": {
+          "value": "Rs. 11,12,000",
+          "bbox": [
+            440,
+            775,
+            698,
+            811
+          ]
+        },
+        "issue_date": {
+          "value": "16/02/2025",
+          "bbox": [
+            440,
+            879,
+            650,
+            909
+          ]
+        },
+        "house_no": {
+          "value": "28",
+          "bbox": [
+            440,
+            983,
+            487,
+            1013
+          ]
+        },
+        "locality": {
+          "value": "Dua Chowk Street",
+          "bbox": [
+            510,
+            983,
+            851,
+            1013
+          ]
+        },
+        "city": {
+          "value": "Tadepalligudem",
+          "bbox": [
+            440,
+            1041,
+            734,
+            1079
+          ]
+        },
+        "state": {
+          "value": "Uttar Pradesh",
+          "bbox": [
+            758,
+            1041,
+            1017,
+            1071
+          ]
+        },
+        "pincode": {
+          "value": "769453",
+          "bbox": [
+            440,
+            1099,
+            580,
+            1129
+          ]
+        },
+        "address": {
+          "value": "28, Dua Chowk Street, Tadepalligudem, Uttar Pradesh, 769453",
+          "bbox": [
+            440,
+            983,
+            1017,
+            1129
+          ]
+        }
+      }
+    }
+  },
+  "injected": []
+}

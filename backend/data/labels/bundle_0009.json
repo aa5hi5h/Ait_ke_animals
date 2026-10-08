@@ -1,0 +1,325 @@
+{
+  "bundle_id": "bundle_0009",
+  "scenario": "city_mismatch",
+  "documents": {
+    "id_card": {
+      "file": "id_card.png",
+      "fields": {
+        "name": {
+          "value": "Amol Narayanan",
+          "bbox": [
+            439,
+            359,
+            753,
+            397
+          ]
+        },
+        "father_name": {
+          "value": "Jagat Mallick",
+          "bbox": [
+            440,
+            463,
+            683,
+            501
+          ]
+        },
+        "dob": {
+          "value": "20/10/1993",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "gender": {
+          "value": "Male",
+          "bbox": [
+            440,
+            671,
+            531,
+            701
+          ]
+        },
+        "id_number": {
+          "value": "8121 9136 1939",
+          "bbox": [
+            440,
+            775,
+            744,
+            805
+          ]
+        },
+        "house_no": {
+          "value": "997",
+          "bbox": [
+            440,
+            879,
+            510,
+            909
+          ]
+        },
+        "locality": {
+          "value": "Zacharia Ganj Road",
+          "bbox": [
+            533,
+            879,
+            909,
+            917
+          ]
+        },
+        "city": {
+          "value": "Kochi",
+          "bbox": [
+            933,
+            879,
+            1038,
+            909
+          ]
+        },
+        "state": {
+          "value": "Uttar Pradesh",
+          "bbox": [
+            440,
+            937,
+            699,
+            967
+          ]
+        },
+        "pincode": {
+          "value": "311656",
+          "bbox": [
+            722,
+            937,
+            859,
+            967
+          ]
+        },
+        "address": {
+          "value": "997, Zacharia Ganj Road, Kochi, Uttar Pradesh, 311656",
+          "bbox": [
+            440,
+            879,
+            1038,
+            967
+          ]
+        }
+      }
+    },
+    "address_proof": {
+      "file": "address_proof.png",
+      "fields": {
+        "name": {
+          "value": "Amol Narayanan",
+          "bbox": [
+            439,
+            359,
+            753,
+            397
+          ]
+        },
+        "house_no": {
+          "value": "997",
+          "bbox": [
+            440,
+            463,
+            510,
+            493
+          ]
+        },
+        "locality": {
+          "value": "Zacharia Ganj Road",
+          "bbox": [
+            533,
+            463,
+            909,
+            501
+          ]
+        },
+        "city": {
+          "value": "Bhalswa Jahangir Pur",
+          "bbox": [
+            440,
+            521,
+            850,
+            559
+          ]
+        },
+        "state": {
+          "value": "Uttar Pradesh",
+          "bbox": [
+            872,
+            521,
+            1131,
+            551
+          ]
+        },
+        "pincode": {
+          "value": "311656",
+          "bbox": [
+            440,
+            579,
+            577,
+            609
+          ]
+        },
+        "address": {
+          "value": "997, Zacharia Ganj Road, Bhalswa Jahangir Pur, Uttar Pradesh, 311656",
+          "bbox": [
+            440,
+            463,
+            1131,
+            609
+          ]
+        },
+        "bill_date": {
+          "value": "11/02/2025",
+          "bbox": [
+            440,
+            683,
+            647,
+            713
+          ]
+        },
+        "account_number": {
+          "value": "43534624751",
+          "bbox": [
+            440,
+            787,
+            697,
+            817
+          ]
+        }
+      }
+    },
+    "income_certificate": {
+      "file": "income_certificate.png",
+      "fields": {
+        "name": {
+          "value": "Amol Narayanan",
+          "bbox": [
+            439,
+            359,
+            753,
+            397
+          ]
+        },
+        "father_name": {
+          "value": "Jagat Mallick",
+          "bbox": [
+            440,
+            463,
+            683,
+            501
+          ]
+        },
+        "dob": {
+          "value": "20/10/1993",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "id_number": {
+          "value": "8121 9136 1939",
+          "bbox": [
+            440,
+            671,
+            744,
+            701
+          ]
+        },
+        "annual_income": {
+          "value": "Rs. 7,97,000",
+          "bbox": [
+            440,
+            775,
+            678,
+            811
+          ]
+        },
+        "issue_date": {
+          "value": "03/08/2025",
+          "bbox": [
+            440,
+            879,
+            650,
+            909
+          ]
+        },
+        "house_no": {
+          "value": "997",
+          "bbox": [
+            440,
+            983,
+            510,
+            1013
+          ]
+        },
+        "locality": {
+          "value": "Zacharia Ganj Road",
+          "bbox": [
+            533,
+            983,
+            909,
+            1021
+          ]
+        },
+        "city": {
+          "value": "Bhalswa Jahangir Pur",
+          "bbox": [
+            440,
+            1041,
+            850,
+            1079
+          ]
+        },
+        "state": {
+          "value": "Uttar Pradesh",
+          "bbox": [
+            872,
+            1041,
+            1131,
+            1071
+          ]
+        },
+        "pincode": {
+          "value": "311656",
+          "bbox": [
+            440,
+            1099,
+            577,
+            1129
+          ]
+        },
+        "address": {
+          "value": "997, Zacharia Ganj Road, Bhalswa Jahangir Pur, Uttar Pradesh, 311656",
+          "bbox": [
+            440,
+            983,
+            1131,
+            1129
+          ]
+        }
+      }
+    }
+  },
+  "injected": [
+    {
+      "type": "city_mismatch",
+      "field": "city",
+      "is_conflict": true,
+      "severity": "MEDIUM",
+      "docs": [
+        "id_card",
+        "address_proof"
+      ],
+      "values": {
+        "id_card": "Kochi",
+        "address_proof": "Bhalswa Jahangir Pur"
+      }
+    }
+  ]
+}

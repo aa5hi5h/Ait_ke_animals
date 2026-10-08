@@ -1,0 +1,325 @@
+{
+  "bundle_id": "bundle_0039",
+  "scenario": "name_order_or_case",
+  "documents": {
+    "id_card": {
+      "file": "id_card.png",
+      "fields": {
+        "name": {
+          "value": "RATTAN MITALI",
+          "bbox": [
+            440,
+            359,
+            746,
+            389
+          ]
+        },
+        "father_name": {
+          "value": "Utkarsh Chakrabarti",
+          "bbox": [
+            440,
+            463,
+            813,
+            493
+          ]
+        },
+        "dob": {
+          "value": "04/03/1982",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "gender": {
+          "value": "Female",
+          "bbox": [
+            440,
+            671,
+            580,
+            701
+          ]
+        },
+        "id_number": {
+          "value": "7586 9261 7964",
+          "bbox": [
+            440,
+            775,
+            744,
+            805
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 680",
+          "bbox": [
+            440,
+            879,
+            629,
+            909
+          ]
+        },
+        "locality": {
+          "value": "Naik Road",
+          "bbox": [
+            652,
+            879,
+            848,
+            909
+          ]
+        },
+        "city": {
+          "value": "Haridwar",
+          "bbox": [
+            872,
+            879,
+            1041,
+            909
+          ]
+        },
+        "state": {
+          "value": "Arunachal Pradesh",
+          "bbox": [
+            439,
+            937,
+            797,
+            967
+          ]
+        },
+        "pincode": {
+          "value": "859770",
+          "bbox": [
+            821,
+            937,
+            961,
+            967
+          ]
+        },
+        "address": {
+          "value": "H.No. 680, Naik Road, Haridwar, Arunachal Pradesh, 859770",
+          "bbox": [
+            439,
+            879,
+            1041,
+            967
+          ]
+        }
+      }
+    },
+    "address_proof": {
+      "file": "address_proof.png",
+      "fields": {
+        "name": {
+          "value": "Mitali Rattan",
+          "bbox": [
+            440,
+            359,
+            673,
+            389
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 680",
+          "bbox": [
+            440,
+            463,
+            629,
+            493
+          ]
+        },
+        "locality": {
+          "value": "Naik Road",
+          "bbox": [
+            652,
+            463,
+            848,
+            493
+          ]
+        },
+        "city": {
+          "value": "Haridwar",
+          "bbox": [
+            872,
+            463,
+            1041,
+            493
+          ]
+        },
+        "state": {
+          "value": "Arunachal Pradesh",
+          "bbox": [
+            439,
+            521,
+            797,
+            551
+          ]
+        },
+        "pincode": {
+          "value": "859770",
+          "bbox": [
+            821,
+            521,
+            961,
+            551
+          ]
+        },
+        "address": {
+          "value": "H.No. 680, Naik Road, Haridwar, Arunachal Pradesh, 859770",
+          "bbox": [
+            439,
+            463,
+            1041,
+            551
+          ]
+        },
+        "bill_date": {
+          "value": "17/01/2025",
+          "bbox": [
+            440,
+            625,
+            650,
+            655
+          ]
+        },
+        "account_number": {
+          "value": "77351585064",
+          "bbox": [
+            440,
+            729,
+            697,
+            759
+          ]
+        }
+      }
+    },
+    "income_certificate": {
+      "file": "income_certificate.png",
+      "fields": {
+        "name": {
+          "value": "Mitali Rattan",
+          "bbox": [
+            440,
+            359,
+            673,
+            389
+          ]
+        },
+        "father_name": {
+          "value": "Utkarsh Chakrabarti",
+          "bbox": [
+            440,
+            463,
+            813,
+            493
+          ]
+        },
+        "dob": {
+          "value": "04/03/1982",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "id_number": {
+          "value": "7586 9261 7964",
+          "bbox": [
+            440,
+            671,
+            744,
+            701
+          ]
+        },
+        "annual_income": {
+          "value": "Rs. 5,94,000",
+          "bbox": [
+            440,
+            775,
+            678,
+            811
+          ]
+        },
+        "issue_date": {
+          "value": "09/07/2025",
+          "bbox": [
+            440,
+            879,
+            650,
+            909
+          ]
+        },
+        "house_no": {
+          "value": "H.No. 680",
+          "bbox": [
+            440,
+            983,
+            629,
+            1013
+          ]
+        },
+        "locality": {
+          "value": "Naik Road",
+          "bbox": [
+            652,
+            983,
+            848,
+            1013
+          ]
+        },
+        "city": {
+          "value": "Haridwar",
+          "bbox": [
+            872,
+            983,
+            1041,
+            1013
+          ]
+        },
+        "state": {
+          "value": "Arunachal Pradesh",
+          "bbox": [
+            439,
+            1041,
+            797,
+            1071
+          ]
+        },
+        "pincode": {
+          "value": "859770",
+          "bbox": [
+            821,
+            1041,
+            961,
+            1071
+          ]
+        },
+        "address": {
+          "value": "H.No. 680, Naik Road, Haridwar, Arunachal Pradesh, 859770",
+          "bbox": [
+            439,
+            983,
+            1041,
+            1071
+          ]
+        }
+      }
+    }
+  },
+  "injected": [
+    {
+      "type": "name_order_or_case",
+      "field": "name",
+      "is_conflict": false,
+      "severity": null,
+      "docs": [
+        "id_card",
+        "address_proof"
+      ],
+      "values": {
+        "id_card": "RATTAN MITALI",
+        "address_proof": "Mitali Rattan"
+      }
+    }
+  ]
+}

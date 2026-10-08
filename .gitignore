@@ -1,5 +1,35 @@
-node_modules/
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
 dist/
+
+# Virtual environments and secrets
+.venv/
+venv/
+env/
 .env
 .env.*
 !.env.example
+
+# Node / frontend
+node_modules/
+frontend/dist/
+npm-debug.log*
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Generated runtime output
+uvicorn.log
+ocr_results/
+extraction_results/
+normalization_results/
+detection_results/

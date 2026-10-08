@@ -1,0 +1,325 @@
+{
+  "bundle_id": "bundle_0040",
+  "scenario": "city_mismatch",
+  "documents": {
+    "id_card": {
+      "file": "id_card.png",
+      "fields": {
+        "name": {
+          "value": "Kiaan Deep",
+          "bbox": [
+            440,
+            359,
+            660,
+            397
+          ]
+        },
+        "father_name": {
+          "value": "Theodore Sundaram",
+          "bbox": [
+            440,
+            463,
+            825,
+            493
+          ]
+        },
+        "dob": {
+          "value": "12/01/1969",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "gender": {
+          "value": "Male",
+          "bbox": [
+            440,
+            671,
+            531,
+            701
+          ]
+        },
+        "id_number": {
+          "value": "7139 0053 2931",
+          "bbox": [
+            440,
+            775,
+            744,
+            805
+          ]
+        },
+        "house_no": {
+          "value": "24/808",
+          "bbox": [
+            440,
+            879,
+            568,
+            909
+          ]
+        },
+        "locality": {
+          "value": "Khatri Nagar Road",
+          "bbox": [
+            592,
+            879,
+            940,
+            917
+          ]
+        },
+        "city": {
+          "value": "Mumbai",
+          "bbox": [
+            963,
+            879,
+            1112,
+            909
+          ]
+        },
+        "state": {
+          "value": "Haryana",
+          "bbox": [
+            440,
+            937,
+            599,
+            975
+          ]
+        },
+        "pincode": {
+          "value": "712748",
+          "bbox": [
+            622,
+            937,
+            762,
+            967
+          ]
+        },
+        "address": {
+          "value": "24/808, Khatri Nagar Road, Mumbai, Haryana, 712748",
+          "bbox": [
+            440,
+            879,
+            1112,
+            975
+          ]
+        }
+      }
+    },
+    "address_proof": {
+      "file": "address_proof.png",
+      "fields": {
+        "name": {
+          "value": "Kiaan Deep",
+          "bbox": [
+            440,
+            359,
+            660,
+            397
+          ]
+        },
+        "house_no": {
+          "value": "24/808",
+          "bbox": [
+            440,
+            463,
+            568,
+            493
+          ]
+        },
+        "locality": {
+          "value": "Khatri Nagar Road",
+          "bbox": [
+            592,
+            463,
+            940,
+            501
+          ]
+        },
+        "city": {
+          "value": "Tiruchirappalli",
+          "bbox": [
+            440,
+            521,
+            700,
+            559
+          ]
+        },
+        "state": {
+          "value": "Haryana",
+          "bbox": [
+            723,
+            521,
+            882,
+            559
+          ]
+        },
+        "pincode": {
+          "value": "712748",
+          "bbox": [
+            905,
+            521,
+            1045,
+            551
+          ]
+        },
+        "address": {
+          "value": "24/808, Khatri Nagar Road, Tiruchirappalli, Haryana, 712748",
+          "bbox": [
+            440,
+            463,
+            1045,
+            559
+          ]
+        },
+        "bill_date": {
+          "value": "21/04/2025",
+          "bbox": [
+            440,
+            625,
+            650,
+            655
+          ]
+        },
+        "account_number": {
+          "value": "29042284210",
+          "bbox": [
+            440,
+            729,
+            697,
+            759
+          ]
+        }
+      }
+    },
+    "income_certificate": {
+      "file": "income_certificate.png",
+      "fields": {
+        "name": {
+          "value": "Kiaan Deep",
+          "bbox": [
+            440,
+            359,
+            660,
+            397
+          ]
+        },
+        "father_name": {
+          "value": "Theodore Sundaram",
+          "bbox": [
+            440,
+            463,
+            825,
+            493
+          ]
+        },
+        "dob": {
+          "value": "12/01/1969",
+          "bbox": [
+            440,
+            567,
+            650,
+            597
+          ]
+        },
+        "id_number": {
+          "value": "7139 0053 2931",
+          "bbox": [
+            440,
+            671,
+            744,
+            701
+          ]
+        },
+        "annual_income": {
+          "value": "Rs. 8,22,000",
+          "bbox": [
+            440,
+            775,
+            678,
+            811
+          ]
+        },
+        "issue_date": {
+          "value": "30/04/2025",
+          "bbox": [
+            440,
+            879,
+            650,
+            909
+          ]
+        },
+        "house_no": {
+          "value": "24/808",
+          "bbox": [
+            440,
+            983,
+            568,
+            1013
+          ]
+        },
+        "locality": {
+          "value": "Khatri Nagar Road",
+          "bbox": [
+            592,
+            983,
+            940,
+            1021
+          ]
+        },
+        "city": {
+          "value": "Tiruchirappalli",
+          "bbox": [
+            440,
+            1041,
+            700,
+            1079
+          ]
+        },
+        "state": {
+          "value": "Haryana",
+          "bbox": [
+            723,
+            1041,
+            882,
+            1079
+          ]
+        },
+        "pincode": {
+          "value": "712748",
+          "bbox": [
+            905,
+            1041,
+            1045,
+            1071
+          ]
+        },
+        "address": {
+          "value": "24/808, Khatri Nagar Road, Tiruchirappalli, Haryana, 712748",
+          "bbox": [
+            440,
+            983,
+            1045,
+            1079
+          ]
+        }
+      }
+    }
+  },
+  "injected": [
+    {
+      "type": "city_mismatch",
+      "field": "city",
+      "is_conflict": true,
+      "severity": "MEDIUM",
+      "docs": [
+        "id_card",
+        "address_proof"
+      ],
+      "values": {
+        "id_card": "Mumbai",
+        "address_proof": "Tiruchirappalli"
+      }
+    }
+  ]
+}
