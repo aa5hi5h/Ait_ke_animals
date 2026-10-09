@@ -27,6 +27,11 @@ npm-debug.log*
 .DS_Store
 Thumbs.db
 
+# Local reviewer database
+*.sqlite
+*.sqlite3
+backend/data/samanvay.sqlite
+
 # Generated runtime output
 uvicorn.log
 ocr_results/

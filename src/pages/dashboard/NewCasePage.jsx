@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { createCase, getSession } from '../../api/cases.js';
-import { reviewerFirstName } from '../../api.js';
+import { reviewerFirstName, signOutReviewer } from '../../api.js';
+import { clearSession } from '../../api/session.js';
 import { dashboardText, LANGS } from '../../i18n/dashboardText.js';
 import NewCaseDialog from '../../components/dashboard/NewCaseDialog.jsx';
 
@@ -12,6 +13,10 @@ const LANG_KEY = 'yonko_dashboard_lang';
 export default function NewCasePage() {
   const navigate = useNavigate();
   const session = getSession();
+
+  useEffect(() => {
+    if (!session?.token) navigate('/');
+  }, [session, navigate]);
 
   const [lang, setLang] = useState(() => {
     try {
@@ -32,11 +37,8 @@ export default function NewCasePage() {
   };
 
   const logout = () => {
-    try {
-      localStorage.removeItem('yonko_reviewer_session');
-    } catch {
-      // Session storage unavailable.
-    }
+    signOutReviewer();
+    clearSession();
     navigate('/');
   };
 

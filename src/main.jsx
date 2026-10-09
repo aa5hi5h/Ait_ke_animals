@@ -7,9 +7,11 @@ import {
   signInReviewer,
   signUpReviewer,
   saveProfile,
+  signOutReviewer,
   reviewerFirstName,
   reviewerInitials,
 } from './api';
+import { clearSession, getSession, setSession } from './api/session.js';
 import { useNavigate } from 'react-router-dom';
 import { AppRouter } from './router';
 
@@ -18,44 +20,26 @@ const IMAGE_EXTENSIONS = new Set(['png', 'jpg', 'jpeg']);
 const PDF_TYPE = 'application/pdf';
 const ACCEPTED_EXTENSIONS = new Set([...IMAGE_EXTENSIONS, 'pdf']);
 const ACCEPT_ATTRIBUTE = '.png,.jpg,.jpeg,.pdf,image/png,image/jpeg,application/pdf';
-const SESSION_KEY = 'yonko_reviewer_session';
-
 export function App() {
   const [appView, setAppView] = useState('landing');
   const navigate = useNavigate();
   const [reviewer, setReviewer] = useState(null);
 
   useEffect(() => {
-    try {
-      const saved = localStorage.getItem(SESSION_KEY);
-      if (saved) {
-        const parsed = JSON.parse(saved);
-        if (parsed && parsed.email) {
-          setReviewer(parsed);
-        }
-      }
-    } catch {
-      // Ignore storage read errors
-    }
+    const saved = getSession();
+    if (saved) setReviewer(saved);
   }, []);
 
   const handleAuthenticated = (account) => {
     setReviewer(account);
-    try {
-      localStorage.setItem(SESSION_KEY, JSON.stringify(account));
-    } catch {
-      // Ignore storage write errors
-    }
+    setSession(account);
     navigate('/dashboard');
   };
 
   const handleSignOut = () => {
+    signOutReviewer();
     setReviewer(null);
-    try {
-      localStorage.removeItem(SESSION_KEY);
-    } catch {
-      // Ignore storage delete errors
-    }
+    clearSession();
     navigate('/');
   };
 
@@ -461,6 +445,7 @@ function AccountModal({
           email: pendingAccount?.email,
           name: profileName,
           dob: profileDob,
+          token: pendingAccount?.token,
         });
         onAuthenticated(account);
         return;
@@ -542,8 +527,8 @@ function AccountModal({
           {isProfile
             ? 'A few basic details so every review you sign is attributed correctly.'
             : mode === 'signup'
-            ? 'Sign up with your official email address and password (min 8 characters).'
-            : 'Sign in with your registered reviewer account.'}
+            ? 'Create an account. Your email and password are stored in the reviewer database.'
+            : 'Sign in with an email you already registered. New reviewers must sign up first.'}
         </p>
 
         <form onSubmit={submit}>

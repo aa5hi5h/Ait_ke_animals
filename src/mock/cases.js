@@ -1,4 +1,6 @@
-// In-memory case store for the reviewer dashboard.
+// Demo applicants used only as local fixtures. Live dashboards start empty
+// and store each reviewer's cases in SQLite, so these names are not shown
+// to signed-in users.
 //
 // Shape is derived from the FastAPI detection models in
 // backend/app/detect/types.py:

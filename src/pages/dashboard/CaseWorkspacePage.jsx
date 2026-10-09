@@ -9,6 +9,8 @@ import {
   saveNotes,
   attachAnalysis,
 } from '../../api/cases.js';
+import { signOutReviewer } from '../../api.js';
+import { clearSession } from '../../api/session.js';
 import { dashboardText } from '../../i18n/dashboardText.js';
 import CaseReport from '../../components/dashboard/CaseReport.jsx';
 import { ErrorState, SkeletonRows } from '../../components/dashboard/StateBlocks.jsx';
@@ -22,6 +24,10 @@ export default function CaseWorkspacePage() {
   const { caseId } = useParams();
   const navigate = useNavigate();
   const session = getSession();
+
+  useEffect(() => {
+    if (!session?.token) navigate('/');
+  }, [session, navigate]);
 
   const [lang, setLang] = useState(() => {
     try {
@@ -72,11 +78,8 @@ export default function CaseWorkspacePage() {
   };
 
   const logout = () => {
-    try {
-      localStorage.removeItem('yonko_reviewer_session');
-    } catch {
-      // Session storage unavailable.
-    }
+    signOutReviewer();
+    clearSession();
     navigate('/');
   };
 

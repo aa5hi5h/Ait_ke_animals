@@ -1,7 +1,8 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { listCases, createCase, getSession } from '../../api/cases.js';
-import { reviewerFirstName } from '../../api.js';
+import { reviewerFirstName, signOutReviewer } from '../../api.js';
+import { clearSession } from '../../api/session.js';
 import { dashboardText, LANGS } from '../../i18n/dashboardText.js';
 import SummaryCards from '../../components/dashboard/SummaryCards.jsx';
 import CaseTable from '../../components/dashboard/CaseTable.jsx';
@@ -14,6 +15,10 @@ const PAGE_SIZE = 6;
 export default function DashboardPage() {
   const navigate = useNavigate();
   const session = getSession();
+
+  useEffect(() => {
+    if (!session?.token) navigate('/');
+  }, [session, navigate]);
 
   const [lang, setLang] = useState(() => {
     try {
@@ -47,11 +52,8 @@ export default function DashboardPage() {
   };
 
   const logout = () => {
-    try {
-      localStorage.removeItem('yonko_reviewer_session');
-    } catch {
-      // Session storage unavailable.
-    }
+    signOutReviewer();
+    clearSession();
     navigate('/');
   };
 
