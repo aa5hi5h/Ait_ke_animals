@@ -33,3 +33,5 @@ ocr_results/
 extraction_results/
 normalization_results/
 detection_results/
+.pytest-tmp/
+YONKO/

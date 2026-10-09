@@ -30,9 +30,7 @@ export async function analyzeFiles(files) {
 
 // Reviewer sign in / sign up with an official email and password.
 //
-// Email accounts are kept in this browser for the demo. Google sign in is
-// handled separately below: the backend verifies the credential with Google
-// and answers with our own session token.
+// Email accounts are kept in this browser for the demo.
 const ACCOUNTS_KEY = 'yonko_reviewer_accounts';
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
@@ -103,37 +101,6 @@ export async function signInReviewer({ email, password }) {
     dob: account.dob || '',
     // Older / freshly provisioned accounts never answered the basic questions.
     needsProfile: !account.name,
-  };
-}
-
-// Google sign in. The browser only holds Google's ID token for a moment; the
-// backend calls Google, checks the token belongs to this app, and replies with
-// a session token plus the reviewer profile.
-export async function signInWithGoogle(credential) {
-  let response;
-  try {
-    response = await fetch(`${API_BASE_URL}/auth/google`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ credential }),
-    });
-  } catch (error) {
-    throw new Error(`Could not reach the analysis service at ${API_BASE_URL}. ${error.message}`);
-  }
-
-  if (!response.ok) throw new Error(await readError(response));
-  const body = await response.json();
-
-  if (!body?.access_token || !body?.user?.email) {
-    throw new Error('Google sign in returned an unexpected response.');
-  }
-
-  return {
-    email: body.user.email,
-    name: body.user.name || body.user.email,
-    picture: body.user.picture || '',
-    provider: 'google',
-    token: body.access_token,
   };
 }
 

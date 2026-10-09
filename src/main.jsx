@@ -6,7 +6,6 @@ import {
   analyzeFiles,
   signInReviewer,
   signUpReviewer,
-  signInWithGoogle,
   saveProfile,
   reviewerFirstName,
   reviewerInitials,
@@ -429,25 +428,6 @@ function Landing({
   );
 }
 
-const GOOGLE_CLIENT_ID = (import.meta.env.VITE_GOOGLE_CLIENT_ID || '').trim();
-let googleIdentityScript = null;
-
-function loadGoogleIdentityServices() {
-  if (window.google?.accounts?.id) return Promise.resolve(window.google);
-  if (!googleIdentityScript) {
-    googleIdentityScript = new Promise((resolve, reject) => {
-      const script = document.createElement('script');
-      script.src = 'https://accounts.google.com/gsi/client';
-      script.async = true;
-      script.defer = true;
-      script.onload = () => resolve(window.google);
-      script.onerror = () => reject(new Error('Google sign in could not load. Check your connection.'));
-      document.head.appendChild(script);
-    });
-  }
-  return googleIdentityScript;
-}
-
 function AccountModal({
   initialMode = 'signin',
   initialAccount = null,
@@ -461,7 +441,6 @@ function AccountModal({
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [pending, setPending] = useState(false);
-  const googleButtonRef = useRef(null);
 
   // Step 2 of the sign-up flow: a few basic questions.
   const [profileName, setProfileName] = useState(initialAccount?.name || '');
@@ -520,54 +499,6 @@ function AccountModal({
     else onClose();
   };
 
-  const submitWithGoogle = async (credential) => {
-    setPending(true);
-    setError('');
-
-    try {
-      onAuthenticated(await signInWithGoogle(credential));
-    } catch (requestError) {
-      setError(requestError.message || 'Google sign in failed. Please try again.');
-    } finally {
-      setPending(false);
-    }
-  };
-
-  // Google renders its own button, so the wording has to be requested rather
-  // than written: "Sign in with Google" on the sign in tab, "Sign up with
-  // Google" on the create account tab. The flow is identical either way —
-  // Google creates the account on first use — but the label should match what
-  // the reviewer thinks they are doing. The slot is emptied first because
-  // renderButton appends, and re-running on mode would otherwise stack two.
-  useEffect(() => {
-    if (!GOOGLE_CLIENT_ID || !googleButtonRef.current) return undefined;
-    let cancelled = false;
-    const slot = googleButtonRef.current;
-
-    loadGoogleIdentityServices()
-      .then((google) => {
-        if (cancelled || !slot || !google?.accounts?.id) return;
-        google.accounts.id.initialize({
-          client_id: GOOGLE_CLIENT_ID,
-          callback: (response) => submitWithGoogle(response.credential),
-        });
-        slot.replaceChildren();
-        google.accounts.id.renderButton(slot, {
-          theme: 'outline',
-          size: 'large',
-          text: mode === 'signup' ? 'signup_with' : 'signin_with',
-          shape: 'rectangular',
-          width: 300,
-        });
-      })
-      .catch((loadError) => {
-        if (!cancelled) setError(loadError.message);
-      });
-
-    return () => {
-      cancelled = true;
-    };
-  }, [mode]);
 
   return (
     <div className="login-backdrop" onClick={onClose}>
@@ -682,35 +613,6 @@ function AccountModal({
           </button>
         </form>
 
-        {!isProfile && (
-          <>
-            <div className="google-auth-divider">
-              <span>or continue with</span>
-            </div>
-
-            {GOOGLE_CLIENT_ID ? (
-              <div className="google-auth-row">
-                <div ref={googleButtonRef} />
-                {pending && <span className="google-auth-pending">Verifying Google account…</span>}
-              </div>
-            ) : (
-              <>
-                <button
-                  className="google-auth-disabled"
-                  type="button"
-                  disabled
-                  title="Set VITE_GOOGLE_CLIENT_ID in a root .env file to switch Google sign in on."
-                >
-                  <span className="google-g-mark">G</span>{' '}
-                  {mode === 'signup' ? 'Sign up with Google' : 'Sign in with Google'}
-                </button>
-                <small className="google-auth-hint">
-                  Add VITE_GOOGLE_CLIENT_ID to enable Google sign in.
-                </small>
-              </>
-            )}
-          </>
-        )}
 
         {isProfile ? (
           <button className="account-switch" onClick={skipProfile}>

@@ -1,14 +1,9 @@
 <#
 .SYNOPSIS
-  Starts the Samanvay FastAPI backend (document analysis + Google sign in).
+  Starts the Samanvay FastAPI backend (document analysis).
 
 .DESCRIPTION
-  Reads the repository-root .env file, exports GOOGLE_CLIENT_ID and
-  YONKO_SESSION_SECRET, puts Tesseract on PATH, then runs uvicorn from
-  the backend/ directory.
-
-  The session secret is generated once and appended to .env, so reviewer
-  sessions survive restarts.
+  Puts Tesseract on PATH, then runs uvicorn from the backend/ directory.
 
 .EXAMPLE
   .\start-backend.ps1
@@ -56,29 +51,6 @@ if (-not (Test-Path $python)) {
     if (-not (Test-Path $python)) { throw 'Failed to create .venv - see the output above.' }
 }
 
-# --- Session secret: generated once, persisted in .env ------------------
-$secret = ''
-if ($vars.ContainsKey('YONKO_SESSION_SECRET')) { $secret = $vars['YONKO_SESSION_SECRET'] }
-if ([string]::IsNullOrWhiteSpace($secret)) {
-    $secret = ("& '$python' -c `"import secrets; print(secrets.token_urlsafe(48))`"")
-    $secret = Invoke-Expression $secret
-    $secret = "$secret".Trim()
-    if ([string]::IsNullOrWhiteSpace($secret)) { throw 'Could not generate YONKO_SESSION_SECRET.' }
-    $entry = "YONKO_SESSION_SECRET=$secret"
-    if (Test-Path $envPath) { Add-Content -Path $envPath -Value $entry }
-    else { Set-Content -Path $envPath -Value $entry }
-    Write-Host 'Generated YONKO_SESSION_SECRET and appended it to .env' -ForegroundColor Green
-}
-$env:YONKO_SESSION_SECRET = $secret
-
-# --- Google OAuth client id --------------------------------------------
-$clientId = ''
-if (-not [string]::IsNullOrWhiteSpace($env:GOOGLE_CLIENT_ID)) { $clientId = $env:GOOGLE_CLIENT_ID }
-elseif ($vars.ContainsKey('VITE_GOOGLE_CLIENT_ID')) { $clientId = $vars['VITE_GOOGLE_CLIENT_ID'] }
-if ([string]::IsNullOrWhiteSpace($clientId)) {
-    Write-Warning 'GOOGLE_CLIENT_ID is not set. Email sign in works, but Google sign in returns 401 "not configured". Add VITE_GOOGLE_CLIENT_ID to .env.'
-}
-else { $env:GOOGLE_CLIENT_ID = $clientId }
 
 # --- Tesseract OCR ------------------------------------------------------
 $tessDir = $null
@@ -116,7 +88,6 @@ try {
     Write-Host "Starting backend on http://$($Bind):$($Port)" -ForegroundColor Cyan
     Write-Host "  python     : $python"
     Write-Host "  tesseract  : $(if ($tessDir) { $tessDir } else { 'MISSING' })"
-    Write-Host "  google auth: $(if ($clientId) { 'configured' } else { 'not configured' })"
     Write-Host "  frontend   : run 'npm run dev' separately (http://localhost:5173)" -ForegroundColor DarkGray
     Write-Host "  stop       : Ctrl+C" -ForegroundColor DarkGray
     Write-Host ''

@@ -3,7 +3,6 @@ import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api.auth_routes import router as auth_router
 from app.api.routes import router as api_router
 
 app = FastAPI(title="AI Document Contradiction Detector")
@@ -19,7 +18,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 app.include_router(api_router)
-app.include_router(auth_router)
 
 
 @app.get("/health")
