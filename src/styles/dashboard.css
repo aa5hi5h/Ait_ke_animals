@@ -1,0 +1,1092 @@
+/* Reviewer dashboard — new file. Shares the app's existing tokens
+   (--navy, --blue, --muted, --line, --soft) so it reads as one product. */
+
+:root {
+  --db-success: #1c7a4a;
+  --db-success-bg: #e7f5ed;
+  --db-warn: #8a5a06;
+  --db-warn-bg: #fdf3e0;
+  --db-danger: #b3261e;
+  --db-danger-bg: #fceceb;
+  --db-info: #1f5c99;
+  --db-info-bg: #e9f1fa;
+  --db-radius: 6px;
+}
+
+.db-shell {
+  min-height: 100vh;
+  background: #fbfcfd;
+  color: #172235;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+/* ---------- Header ---------- */
+.db-header {
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+  padding: 16px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.db-header-left {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  min-width: 0;
+}
+
+.db-brand {
+  font: 700 12px 'DM Sans';
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+.db-header h1 {
+  margin: 0;
+  font: 600 26px 'Space Grotesk';
+  letter-spacing: -0.6px;
+  color: var(--navy);
+}
+
+.db-header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.db-reviewer {
+  font: 500 13px 'DM Sans';
+  color: var(--muted);
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.db-lang button {
+  font-size: 12px;
+  padding: 6px 11px;
+}
+
+/* ---------- Buttons / links ---------- */
+.db-btn {
+  border: 1px solid #d7e0e9;
+  background: #fff;
+  color: #26405e;
+  border-radius: var(--db-radius);
+  padding: 10px 16px;
+  font: 600 14px 'DM Sans';
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.db-btn:hover:not(:disabled) {
+  background: #f4f7fa;
+  border-color: #c3cedb;
+}
+
+.db-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.db-btn-primary {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+}
+
+.db-btn-primary:hover:not(:disabled) {
+  background: var(--blue);
+  border-color: var(--blue);
+}
+
+.db-btn-ghost {
+  background: transparent;
+}
+
+.db-link {
+  border: 0;
+  background: transparent;
+  color: var(--blue);
+  font: 600 14px 'DM Sans';
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+.db-link:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Layout ---------- */
+.db-main {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 26px 28px 64px;
+}
+
+.db-main-narrow {
+  max-width: 640px;
+}
+
+.db-subtitle {
+  margin: 0 0 22px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* ---------- Summary cards ---------- */
+.db-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.db-summary-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--db-radius);
+  padding: 18px 18px 20px;
+  overflow: hidden;
+}
+
+.db-summary-label {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.db-summary-value {
+  display: block;
+  margin-top: 6px;
+  font: 600 32px 'Space Grotesk';
+  color: var(--navy);
+  line-height: 1.1;
+}
+
+.db-summary-bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: #c8d2de;
+}
+
+.db-tone-warn .db-summary-bar {
+  background: #d9a236;
+}
+
+.db-tone-danger .db-summary-bar {
+  background: var(--db-danger);
+}
+
+.db-tone-success .db-summary-bar {
+  background: var(--db-success);
+}
+
+.db-tone-total .db-summary-bar {
+  background: var(--blue);
+}
+
+/* ---------- Toolbar ---------- */
+.db-toolbar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.db-search {
+  flex: 1;
+  min-width: 240px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #d7e0e9;
+  border-radius: var(--db-radius);
+  padding: 0 12px;
+}
+
+.db-search span {
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.db-search input {
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 11px 0;
+  font: 500 15px 'DM Sans';
+  color: #172235;
+  background: transparent;
+}
+
+.db-filter {
+  border: 1px solid #d7e0e9;
+  background: #fff;
+  border-radius: var(--db-radius);
+  padding: 11px 12px;
+  font: 500 15px 'DM Sans';
+  color: #26405e;
+  min-width: 190px;
+}
+
+/* ---------- Table ---------- */
+.db-table-card,
+.db-table-wrap {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--db-radius);
+  overflow-x: auto;
+}
+
+.db-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.db-table th {
+  text-align: left;
+  font: 700 11px 'DM Sans';
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #93a0ae;
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+  background: #fbfcfd;
+}
+
+.db-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #eef1f4;
+  color: #3d4a5c;
+  vertical-align: top;
+}
+
+.db-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.db-table tbody tr[role='link'] {
+  cursor: pointer;
+}
+
+.db-table tbody tr[role='link']:hover,
+.db-table tbody tr[role='link']:focus {
+  background: #f6f9fc;
+  outline: none;
+}
+
+.db-cell-id {
+  font: 600 13px 'DM Sans';
+  color: var(--navy);
+  white-space: nowrap;
+}
+
+.db-cell-name {
+  font-weight: 600;
+  color: #172235;
+}
+
+.db-cell-count {
+  font-weight: 700;
+  color: var(--navy);
+  text-align: center;
+}
+
+/* ---------- Mobile case cards ---------- */
+.db-cards {
+  display: none;
+}
+
+.db-case-card {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--db-radius);
+  padding: 15px 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.db-case-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.db-case-card-top b {
+  font: 600 14px 'DM Sans';
+  color: var(--navy);
+}
+
+.db-case-card-name {
+  margin: 8px 0 6px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #172235;
+}
+
+.db-case-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.db-case-card small {
+  color: #9aa4b0;
+  font-size: 13px;
+}
+
+/* ---------- Badges (colour AND text, never colour alone) ---------- */
+.db-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font: 700 11px 'DM Sans';
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+
+.db-badge i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  flex: none;
+}
+
+.db-status-neutral,
+.db-sev-neutral {
+  background: #eef1f4;
+  color: #5b6774;
+  border-color: #dde3e9;
+}
+
+.db-status-info,
+.db-sev-info {
+  background: var(--db-info-bg);
+  color: var(--db-info);
+  border-color: #c9ddf1;
+}
+
+.db-status-warn,
+.db-sev-warn {
+  background: var(--db-warn-bg);
+  color: var(--db-warn);
+  border-color: #f0dfba;
+}
+
+.db-status-danger,
+.db-sev-danger {
+  background: var(--db-danger-bg);
+  color: var(--db-danger);
+  border-color: #f3cfcc;
+}
+
+.db-status-success {
+  background: var(--db-success-bg);
+  color: var(--db-success);
+  border-color: #c6e6d5;
+}
+
+/* ---------- Pager ---------- */
+.db-pager {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+
+/* ---------- Skeleton / empty / error ---------- */
+.db-skeleton-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--db-radius);
+  padding: 6px 0;
+}
+
+.db-skeleton-row {
+  display: flex;
+  gap: 18px;
+  padding: 16px;
+  border-bottom: 1px solid #eef1f4;
+}
+
+.db-skeleton-row:last-child {
+  border-bottom: 0;
+}
+
+.db-sk {
+  display: block;
+  height: 13px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #eef1f4 25%, #f7f9fb 50%, #eef1f4 75%);
+  background-size: 400% 100%;
+  animation: db-shimmer 1.4s infinite;
+}
+
+.db-sk-lg {
+  width: 26%;
+}
+
+.db-sk-md {
+  width: 20%;
+}
+
+.db-sk-sm {
+  width: 12%;
+}
+
+@keyframes db-shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+.db-state {
+  background: #fff;
+  border: 1px dashed #d3dce5;
+  border-radius: var(--db-radius);
+  padding: 52px 24px;
+  text-align: center;
+}
+
+.db-state-icon {
+  width: 46px;
+  height: 46px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #eef3f8;
+  color: var(--blue);
+  font-size: 20px;
+}
+
+.db-state h3 {
+  margin: 0 0 8px;
+  font: 600 20px 'Space Grotesk';
+  color: var(--navy);
+}
+
+.db-state p {
+  margin: 0 auto 20px;
+  max-width: 440px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.db-state-error {
+  border-style: solid;
+  border-color: #f0cfcc;
+  background: #fffafa;
+}
+
+.db-state-error .db-state-icon {
+  background: var(--db-danger-bg);
+  color: var(--db-danger);
+  font-weight: 700;
+}
+
+/* ---------- New case modal / form ---------- */
+.db-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: #0b1b2e66;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.db-modal {
+  position: relative;
+  background: #fff;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 520px;
+  padding: 28px;
+  box-shadow: 0 24px 60px #0b1b2e33;
+}
+
+.db-modal h2,
+.db-newcase-page h2 {
+  margin: 0 0 6px;
+  font: 600 24px 'Space Grotesk';
+  color: var(--navy);
+}
+
+.db-modal > p,
+.db-newcase-page > p {
+  margin: 0 0 22px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.db-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  border: 0;
+  background: transparent;
+  font-size: 24px;
+  line-height: 1;
+  color: #9aa4b0;
+  cursor: pointer;
+}
+
+.db-newcase-page {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--db-radius);
+  padding: 26px;
+  margin-top: 16px;
+}
+
+.db-field {
+  margin-bottom: 18px;
+}
+
+.db-field label {
+  display: block;
+  font: 700 13px 'DM Sans';
+  color: #33415a;
+  margin-bottom: 7px;
+}
+
+.db-field input,
+.db-field select,
+.db-field textarea {
+  width: 100%;
+  border: 1px solid #d7e0e9;
+  border-radius: var(--db-radius);
+  padding: 11px 12px;
+  font: 500 15px 'DM Sans';
+  color: #172235;
+  background: #fff;
+}
+
+.db-field input:focus,
+.db-field select:focus,
+.db-field textarea:focus,
+.db-search input:focus {
+  outline: 2px solid #b9d0ea;
+  outline-offset: 1px;
+}
+
+.db-form-error {
+  background: var(--db-danger-bg);
+  border-left: 3px solid var(--db-danger);
+  color: var(--db-danger);
+  font-size: 14px;
+  padding: 10px 12px;
+  margin: 0 0 16px;
+}
+
+.db-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* ---------- Case workspace ---------- */
+.db-case-workspace {
+  background: #fbfcfd;
+}
+
+/* Shared shell: the analysis page and the case report are two views of the
+   same workspace, switched from the sidebar. */
+.db-view-hidden {
+  display: none !important;
+}
+
+.case-bar-slot {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #fff;
+}
+
+.report-slot {
+  background: #fbfcfd;
+  min-height: calc(100vh - 54px);
+}
+
+.db-casebar {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+  padding: 12px 28px;
+}
+
+.db-casebar-id {
+  font: 600 14px 'DM Sans';
+  color: var(--navy);
+}
+
+.db-casebar-type {
+  font: 500 13px 'DM Sans';
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px 11px;
+}
+
+.db-casebar .db-lang {
+  margin-left: auto;
+}
+
+/* ---------- Case report ---------- */
+.db-report {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 30px 28px 70px;
+}
+
+.db-report-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.db-report-head h2 {
+  margin: 4px 0 0;
+  font: 600 28px 'Space Grotesk';
+  letter-spacing: -0.7px;
+  color: var(--navy);
+}
+
+.db-report-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--db-radius);
+  overflow: hidden;
+}
+
+.db-sum-item {
+  background: #fff;
+  padding: 15px 17px;
+}
+
+.db-sum-item small {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.db-sum-item b {
+  font: 600 16px 'DM Sans';
+  color: #172235;
+  word-break: break-word;
+}
+
+.db-severity-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 18px 0 4px;
+}
+
+.db-severity-title {
+  font: 700 13px 'DM Sans';
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.db-severity-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.db-severity-chip b {
+  font: 700 17px 'Space Grotesk';
+  color: var(--navy);
+}
+
+.db-report-block {
+  margin-top: 26px;
+}
+
+.db-report-block h3 {
+  margin: 0 0 13px;
+  font: 600 19px 'Space Grotesk';
+  color: var(--navy);
+}
+
+.db-report-table {
+  font-size: 14px;
+}
+
+.db-report-table td {
+  min-width: 120px;
+}
+
+.db-value-pair {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 190px;
+}
+
+.db-value-pair span {
+  display: flex;
+  flex-direction: column;
+  border-left: 3px solid #ccd8e5;
+  padding-left: 9px;
+}
+
+.db-value-pair small {
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.db-value-pair b {
+  font: 600 14px 'DM Sans';
+  color: #172235;
+}
+
+.db-location {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  color: #3d4a5c;
+}
+
+.db-location small {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.db-explanation {
+  max-width: 300px;
+  color: #4a5768;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.db-decision-select {
+  border: 1px solid #d7e0e9;
+  border-radius: var(--db-radius);
+  padding: 7px 9px;
+  font: 700 12px 'DM Sans';
+  cursor: pointer;
+  margin-bottom: 7px;
+  display: block;
+}
+
+.db-decision-pending {
+  background: var(--db-warn-bg);
+  color: var(--db-warn);
+  border-color: #f0dfba;
+}
+
+.db-decision-accepted {
+  background: var(--db-success-bg);
+  color: var(--db-success);
+  border-color: #c6e6d5;
+}
+
+.db-decision-dismissed {
+  background: #eef1f4;
+  color: #5b6774;
+  border-color: #dde3e9;
+}
+
+/* ---------- Ignored as harmless ---------- */
+.db-ignored {
+  margin-top: 26px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--db-radius);
+}
+
+.db-ignored-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  border: 0;
+  background: transparent;
+  padding: 16px 18px;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+}
+
+.db-ignored-toggle span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font: 600 16px 'DM Sans';
+  color: var(--navy);
+}
+
+.db-ignored-toggle em {
+  font-style: normal;
+  background: var(--db-info-bg);
+  color: var(--db-info);
+  border-radius: 999px;
+  padding: 2px 9px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.db-ignored-toggle small {
+  flex-basis: 100%;
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.db-ignored-toggle b {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.db-ignored-body {
+  display: none;
+  border-top: 1px solid var(--line);
+  padding: 14px 18px 16px;
+}
+
+.db-ignored-body.open {
+  display: block;
+}
+
+.db-ignored-body p {
+  margin: 0 0 10px;
+  font-size: 15px;
+  color: #3d4a5c;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  align-items: baseline;
+}
+
+.db-ignored-body p:last-child {
+  margin-bottom: 0;
+}
+
+.db-ignored-body b {
+  color: var(--navy);
+  min-width: 110px;
+}
+
+.db-ignored-body span b,
+.db-ignored-body span {
+  color: #172235;
+}
+
+.db-ignored-body i {
+  color: var(--muted);
+  font-style: normal;
+  font-size: 13px;
+}
+
+.db-ignored-body em {
+  color: var(--muted);
+  font-style: normal;
+  font-size: 14px;
+}
+
+.db-ignored-empty {
+  color: var(--muted);
+}
+
+/* ---------- Notes ---------- */
+.db-notes textarea {
+  width: 100%;
+  border: 1px solid #d7e0e9;
+  border-radius: var(--db-radius);
+  padding: 12px;
+  font: 500 15px/1.55 'DM Sans';
+  color: #172235;
+  resize: vertical;
+}
+
+.db-notes-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+/* ---------- Report actions ---------- */
+.db-report-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+
+.db-hint {
+  color: var(--db-warn);
+  font-size: 14px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 960px) {
+  .db-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .db-header,
+  .db-main,
+  .db-report,
+  .db-casebar {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+@media (max-width: 780px) {
+  .db-table-wrap {
+    display: none;
+  }
+
+  .db-cards {
+    display: block;
+  }
+
+  .db-report .db-table-wrap {
+    display: block;
+  }
+
+  .db-header h1 {
+    font-size: 22px;
+  }
+
+  .db-reviewer {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .db-summary {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .db-report-actions .db-btn {
+    width: 100%;
+  }
+}
+
+/* ---------- Print (Download report as PDF) ---------- */
+@media print {
+  .db-header-right,
+  .db-toolbar,
+  .case-bar-slot,
+  .db-casebar,
+  .db-lang,
+  .db-btn,
+  .db-link,
+  .db-pager,
+  .db-notes-actions,
+  .db-modal-backdrop,
+  .db-hint {
+    display: none !important;
+  }
+
+  .db-shell,
+  .db-case-workspace,
+  .db-main,
+  .db-report,
+  .report-slot {
+    background: #fff !important;
+    padding: 0 !important;
+    max-width: none !important;
+    min-height: 0 !important;
+  }
+
+  .db-header {
+    border: 0;
+    padding: 0 0 12px;
+  }
+
+  /* Nothing may be hidden in a downloaded report. */
+  .db-ignored-body {
+    display: block !important;
+  }
+
+  .db-ignored-toggle b {
+    display: none;
+  }
+
+  .db-summary,
+  .db-report-summary,
+  .db-ignored {
+    break-inside: avoid;
+  }
+
+  .db-table tr,
+  .db-skeleton-row {
+    break-inside: avoid;
+  }
+
+  .db-table-wrap,
+  .db-table-card {
+    overflow: visible !important;
+    border-color: #d5dbe2 !important;
+  }
+
+  a[href]::after {
+    content: '';
+  }
+}

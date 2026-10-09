@@ -2,14 +2,24 @@ import React, { useMemo, useState, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles.css';
 import { runPrecheck } from './api/precheck';
-import { analyzeFiles, signInReviewer, signUpReviewer } from './api';
+import {
+  analyzeFiles,
+  signInReviewer,
+  signUpReviewer,
+  saveProfile,
+  reviewerFirstName,
+  reviewerInitials,
+} from './api';
+import { useNavigate } from 'react-router-dom';
+import { AppRouter } from './router';
 
 const IMAGE_TYPES = new Set(['image/png', 'image/jpeg']);
 const IMAGE_EXTENSIONS = new Set(['png', 'jpg', 'jpeg']);
 const SESSION_KEY = 'yonko_reviewer_session';
 
-function App() {
+export function App() {
   const [appView, setAppView] = useState('landing');
+  const navigate = useNavigate();
   const [reviewer, setReviewer] = useState(null);
 
   useEffect(() => {
@@ -33,7 +43,7 @@ function App() {
     } catch {
       // Ignore storage write errors
     }
-    setAppView('workspace');
+    navigate('/dashboard');
   };
 
   const handleSignOut = () => {
@@ -43,7 +53,7 @@ function App() {
     } catch {
       // Ignore storage delete errors
     }
-    setAppView('landing');
+    navigate('/');
   };
 
   if (appView === 'landing') {
@@ -53,7 +63,9 @@ function App() {
         onAuthenticated={handleAuthenticated}
         onSignOut={handleSignOut}
         onPrecheck={() => setAppView('precheck')}
-        onGoToWorkspace={() => setAppView('workspace')}
+        onGoToWorkspace={() => navigate('/dashboard')}
+        // Existing sessions predate the basic-information step.
+        initialAuthMode={reviewer && !reviewer.name ? 'profile' : null}
       />
     );
   }
@@ -61,7 +73,7 @@ function App() {
   if (appView === 'precheck') {
     return (
       <CitizenPrecheck
-        onBack={() => setAppView(reviewer ? 'workspace' : 'landing')}
+        onBack={() => navigate(reviewer ? '/dashboard' : '/')}
       />
     );
   }
@@ -81,8 +93,14 @@ function Landing({
   onSignOut,
   onPrecheck,
   onGoToWorkspace,
+  initialAuthMode = null,
 }) {
   const [accountModal, setAccountModal] = useState({ open: false, initialMode: 'signin' });
+
+  // Ask for basic information when a stored session has not answered yet.
+  useEffect(() => {
+    if (initialAuthMode) setAccountModal({ open: true, initialMode: initialAuthMode });
+  }, [initialAuthMode]);
 
   const openAuth = (mode) => {
     setAccountModal({ open: true, initialMode: mode });
@@ -398,6 +416,7 @@ function Landing({
       {accountModal.open && (
         <AccountModal
           initialMode={accountModal.initialMode}
+          initialAccount={accountModal.initialMode === 'profile' ? reviewer : null}
           onClose={() => setAccountModal({ open: false, initialMode: 'signin' })}
           onAuthenticated={onAuthenticated}
         />
@@ -406,12 +425,27 @@ function Landing({
   );
 }
 
-function AccountModal({ initialMode = 'signin', onClose, onAuthenticated }) {
+function AccountModal({
+  initialMode = 'signin',
+  initialAccount = null,
+  onClose,
+  onAuthenticated,
+}) {
+  const isProfileOnly = initialMode === 'profile';
+
   const [mode, setMode] = useState(initialMode);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [pending, setPending] = useState(false);
+
+  // Step 2 of the sign-up flow: a few basic questions.
+  const [profileName, setProfileName] = useState(initialAccount?.name || '');
+  const [profileDob, setProfileDob] = useState(initialAccount?.dob || '');
+  const [pendingAccount, setPendingAccount] = useState(initialAccount);
+  const [awaitingAuth, setAwaitingAuth] = useState(!isProfileOnly);
+
+  const isProfile = mode === 'profile';
 
   const submit = async (event) => {
     event.preventDefault();
@@ -419,22 +453,47 @@ function AccountModal({ initialMode = 'signin', onClose, onAuthenticated }) {
     setError('');
 
     try {
+      if (isProfile) {
+        const account = await saveProfile({
+          email: pendingAccount?.email,
+          name: profileName,
+          dob: profileDob,
+        });
+        onAuthenticated(account);
+        return;
+      }
+
       const account =
         mode === 'signup'
           ? await signUpReviewer({ email, password })
           : await signInReviewer({ email, password });
 
+      // Sign up always asks; sign in asks only when basic info is missing.
+      if (mode === 'signup' || account.needsProfile) {
+        setPendingAccount(account);
+        setAwaitingAuth(true);
+        setMode('profile');
+        return;
+      }
+
       onAuthenticated(account);
     } catch (requestError) {
       setError(
         requestError.message ||
-          (mode === 'signup'
+          (isProfile
+            ? 'Could not save your details.'
+            : mode === 'signup'
             ? 'Sign up failed. Please check your details.'
             : 'Sign in failed. Incorrect email or password.')
       );
     } finally {
       setPending(false);
     }
+  };
+
+  const skipProfile = () => {
+    if (awaitingAuth && pendingAccount) onAuthenticated(pendingAccount);
+    else onClose();
   };
 
   return (
@@ -444,61 +503,94 @@ function AccountModal({ initialMode = 'signin', onClose, onAuthenticated }) {
           ×
         </button>
         <div className="login-mark">⌘</div>
-        <div className="login-kicker">REVIEWER PORTAL</div>
-
-        {/* Auth Mode Tabs */}
-        <div className="auth-tab-row">
-          <button
-            type="button"
-            className={`auth-tab-btn ${mode === 'signin' ? 'active' : ''}`}
-            onClick={() => {
-              setMode('signin');
-              setError('');
-            }}
-          >
-            Sign In
-          </button>
-          <button
-            type="button"
-            className={`auth-tab-btn ${mode === 'signup' ? 'active' : ''}`}
-            onClick={() => {
-              setMode('signup');
-              setError('');
-            }}
-          >
-            Create Account (Sign Up)
-          </button>
+        <div className="login-kicker">
+          {isProfile ? 'BASIC INFORMATION · STEP 2 OF 2' : 'REVIEWER PORTAL'}
         </div>
 
-        <h2>{mode === 'signup' ? 'Register as Reviewer' : 'Welcome back'}</h2>
+        {/* Auth Mode Tabs */}
+        {!isProfile && (
+          <div className="auth-tab-row">
+            <button
+              type="button"
+              className={`auth-tab-btn ${mode === 'signin' ? 'active' : ''}`}
+              onClick={() => {
+                setMode('signin');
+                setError('');
+              }}
+            >
+              Sign In
+            </button>
+            <button
+              type="button"
+              className={`auth-tab-btn ${mode === 'signup' ? 'active' : ''}`}
+              onClick={() => {
+                setMode('signup');
+                setError('');
+              }}
+            >
+              Create Account (Sign Up)
+            </button>
+          </div>
+        )}
+
+        <h2>{isProfile ? 'Tell us about you' : mode === 'signup' ? 'Register as Reviewer' : 'Welcome back'}</h2>
         <p>
-          {mode === 'signup'
+          {isProfile
+            ? 'A few basic details so every review you sign is attributed correctly.'
+            : mode === 'signup'
             ? 'Sign up with your official email address and password (min 8 characters).'
             : 'Sign in with your registered reviewer account.'}
         </p>
 
         <form onSubmit={submit}>
-          <label>
-            Official email address
-            <input
-              type="email"
-              value={email}
-              onChange={(event) => setEmail(event.target.value)}
-              placeholder="reviewer@department.gov.in"
-              required
-            />
-          </label>
-          <label>
-            Password
-            <input
-              type="password"
-              minLength="8"
-              value={password}
-              onChange={(event) => setPassword(event.target.value)}
-              placeholder="At least 8 characters"
-              required
-            />
-          </label>
+          {isProfile ? (
+            <>
+              <label>
+                Full name
+                <input
+                  type="text"
+                  value={profileName}
+                  onChange={(event) => setProfileName(event.target.value)}
+                  placeholder="e.g. Aniket Rai"
+                  autoComplete="name"
+                  required
+                />
+              </label>
+              <label>
+                Date of birth
+                <input
+                  type="date"
+                  value={profileDob}
+                  onChange={(event) => setProfileDob(event.target.value)}
+                  required
+                />
+              </label>
+            </>
+          ) : (
+            <>
+              <label>
+                Official email address
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
+                  placeholder="reviewer@department.gov.in"
+                  required
+                />
+              </label>
+              <label>
+                Password
+                <input
+                  type="password"
+                  minLength="8"
+                  value={password}
+                  onChange={(event) => setPassword(event.target.value)}
+                  placeholder="At least 8 characters"
+                  required
+                />
+              </label>
+            </>
+          )}
 
           {error && (
             <div className="account-error-alert" role="alert">
@@ -509,34 +601,55 @@ function AccountModal({ initialMode = 'signin', onClose, onAuthenticated }) {
           <button className="login-submit" disabled={pending} type="submit">
             {pending
               ? 'Connecting to database…'
+              : isProfile
+              ? 'Save and continue →'
               : mode === 'signup'
               ? 'Create Reviewer Account →'
               : 'Sign in →'}
           </button>
         </form>
 
-        <button
-          className="account-switch"
-          onClick={() => {
-            setMode(mode === 'signup' ? 'signin' : 'signup');
-            setError('');
-          }}
-        >
-          {mode === 'signup'
-            ? 'Already registered? Sign in to your account'
-            : 'New reviewer? Click here to sign up'}
-        </button>
+        {isProfile ? (
+          <button className="account-switch" onClick={skipProfile}>
+            Skip for now — you can add this later
+          </button>
+        ) : (
+          <button
+            className="account-switch"
+            onClick={() => {
+              setMode(mode === 'signup' ? 'signin' : 'signup');
+              setError('');
+            }}
+          >
+            {mode === 'signup'
+              ? 'Already registered? Sign in to your account'
+              : 'New reviewer? Click here to sign up'}
+          </button>
+        )}
       </section>
     </div>
   );
 }
 
-function Workspace({ reviewer, onSignOut, onPrecheck }) {
+export function Workspace({
+  reviewer,
+  onSignOut,
+  onPrecheck,
+  onAnalysisChange,
+  activeView,
+  onViewChange,
+  reportSlot,
+  caseBar,
+  lang: langProp,
+  onLangChange,
+}) {
   const [files, setFiles] = useState([]);
   const [result, setResult] = useState(null);
   const [selected, setSelected] = useState(null);
 
-  const [lang, setLang] = useState('en');
+  const [internalLang, setInternalLang] = useState('en');
+  const lang = langProp === undefined ? internalLang : langProp;
+  const setLang = onLangChange || setInternalLang;
   const [ignoredOpen, setIgnoredOpen] = useState(false);
   const [query, setQuery] = useState('');
   const [severityFilter, setSeverityFilter] = useState('ALL');
@@ -618,6 +731,7 @@ function Workspace({ reviewer, onSignOut, onPrecheck }) {
       setSelected(mapped[0]?.id || null);
       setReviewStates({});
       setShowUpload(false);
+      onAnalysisChange?.({ ...response, findings: mapped });
       notify('Analysis complete! Documents analyzed by backend.');
     } catch (error) {
       setRequestError(error.message || 'Analysis could not be completed.');
@@ -632,8 +746,8 @@ function Workspace({ reviewer, onSignOut, onPrecheck }) {
     notify(`Finding marked ${status} locally.`);
   };
 
-  const reviewerEmail = reviewer?.email || 'Reviewer';
-  const reviewerInitials = reviewerEmail.substring(0, 2).toUpperCase();
+  const reviewerName = reviewerFirstName(reviewer);
+  const reviewerAvatar = reviewerInitials(reviewer);
   const t = workspaceText[lang];
   const harmlessFindings = findings.filter((item) => item.decision === 'harmless_variant');
 
@@ -649,14 +763,18 @@ function Workspace({ reviewer, onSignOut, onPrecheck }) {
     notify(`${t.again} · ${t.emptyTitle}`);
   };
 
+  // Optional second view: the Case report sits alongside Document Analysis.
+  const isReport = activeView === 'report';
+  const showReportNav = Boolean(onViewChange && reportSlot);
+
   return (
     <div className="shell">
       {/* Clean, essential Sidebar */}
       <aside className="sidebar">
         <div className="profile">
-          <div className="profile-photo">{reviewerInitials}</div>
+          <div className="profile-photo">{reviewerAvatar}</div>
           <div className="profile-info">
-            <b>{reviewerEmail}</b>
+            <b>{reviewerName}</b>
             <small>{t.reviewer}</small>
           </div>
         </div>
@@ -664,10 +782,21 @@ function Workspace({ reviewer, onSignOut, onPrecheck }) {
         <div className="side-rule" />
 
         <nav className="primary-nav-clean">
-          <button className="side-link active">
+          <button
+            className={`side-link ${isReport ? '' : 'active'}`}
+            onClick={() => onViewChange?.('analysis')}
+          >
             <span className="side-icon">▣</span> {t.analysis}
             {documentsProcessed > 0 && <span className="doc-count-badge">{documentsProcessed}</span>}
           </button>
+          {showReportNav && (
+            <button
+              className={`side-link side-link-report ${isReport ? 'active' : ''}`}
+              onClick={() => onViewChange?.('report')}
+            >
+              <span className="side-icon">▤</span> {t.report}
+            </button>
+          )}
           <button className="side-link btn-sidebar-precheck" onClick={onPrecheck}>
             <span className="side-icon">⚡</span> {t.precheck}
           </button>
@@ -712,8 +841,8 @@ function Workspace({ reviewer, onSignOut, onPrecheck }) {
               <span className="btn-icon">⚡</span> {t.precheck}
             </button>
             <div className="user-profile-header">
-              <div className="user-mini" title={reviewerEmail}>
-                {reviewerInitials}
+              <div className="user-mini" title={reviewerName}>
+                {reviewerAvatar}
               </div>
               <button className="header-signout-btn" onClick={onSignOut}>
                 {t.signOut}
@@ -722,7 +851,9 @@ function Workspace({ reviewer, onSignOut, onPrecheck }) {
           </div>
         </header>
 
-        <div className="page">
+        {caseBar && <div className="case-bar-slot no-print">{caseBar}</div>}
+
+        <div className={`page${isReport ? ' db-view-hidden' : ''}`}>
           <div className="page-title">
             <div>
               <h1>
@@ -1010,6 +1141,10 @@ function Workspace({ reviewer, onSignOut, onPrecheck }) {
             </div>
           )}
         </div>
+
+        {reportSlot && (
+          <div className={`report-slot${isReport ? '' : ' db-view-hidden'}`}>{reportSlot}</div>
+        )}
       </main>
 
       {/* Modal dialogs */}
@@ -1174,6 +1309,7 @@ const workspaceText = {
   en: {
     langLabel: 'Language',
     analysis: 'Document Analysis',
+    report: 'Case Report',
     precheck: 'Citizen Pre-Check',
     reviewer: 'Verified Reviewer',
     signOut: 'Sign Out',
@@ -1230,6 +1366,7 @@ const workspaceText = {
   hi: {
     langLabel: 'भाषा',
     analysis: 'दस्तावेज़ विश्लेषण',
+    report: 'मामला रिपोर्ट',
     precheck: 'नागरिक प्री-चेक',
     reviewer: 'सत्यापित समीक्षक',
     signOut: 'साइन आउट',
@@ -1286,6 +1423,7 @@ const workspaceText = {
   mr: {
     langLabel: 'भाषा',
     analysis: 'कागदपत्र विश्लेषण',
+    report: 'प्रकरण अहवाल',
     precheck: 'नागरिक प्री-चेक',
     reviewer: 'प्रमाणित समीक्षक',
     signOut: 'साइन आउट',
@@ -1708,4 +1846,4 @@ function fieldLabel(field, lang) {
   return labels[field]?.[{ en: 0, hi: 1, mr: 2 }[lang]] || field;
 }
 
-createRoot(document.getElementById('root')).render(<App />);
+createRoot(document.getElementById('root')).render(<AppRouter />);

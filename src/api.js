@@ -98,5 +98,64 @@ export async function signInReviewer({ email, password }) {
     writeAccounts(accounts);
   }
 
-  return { email: accounts[normalized].email };
+  const account = accounts[normalized];
+  return {
+    email: account.email,
+    name: account.name || '',
+    dob: account.dob || '',
+    // Older / freshly provisioned accounts never answered the basic questions.
+    needsProfile: !account.name,
+  };
+}
+
+// Basic information collected once, right after the first sign up (or the
+// first sign in for accounts that predate this step).
+export async function saveProfile({ email, name, dob }) {
+  const normalized = String(email || '').trim().toLowerCase();
+  const cleanName = String(name || '').trim().replace(/\s+/g, ' ');
+  const cleanDob = String(dob || '').trim();
+
+  if (cleanName.length < 2) throw new Error('Enter your full name.');
+  if (!cleanDob) throw new Error('Enter your date of birth.');
+  if (Number.isNaN(new Date(cleanDob).getTime())) {
+    throw new Error('Enter a valid date of birth.');
+  }
+
+  await delay(300);
+
+  const accounts = readAccounts();
+  if (!accounts[normalized]) throw new Error('Account not found. Please sign in again.');
+
+  accounts[normalized] = { ...accounts[normalized], name: cleanName, dob: cleanDob };
+  writeAccounts(accounts);
+  return { email: accounts[normalized].email, name: cleanName, dob: cleanDob };
+}
+
+// The reviewer UI shows a first name, never the raw email address.
+export function reviewerFirstName(account) {
+  const name = String(account?.name || '').trim();
+  if (name) return name.split(/\s+/)[0];
+
+  const letters = String(account?.email || '')
+    .split('@')[0]
+    .replace(/[^A-Za-z]+/g, ' ')
+    .trim();
+  if (letters) return letters.split(/\s+/)[0].replace(/^./, (c) => c.toUpperCase());
+  return 'Reviewer';
+}
+
+export function reviewerInitials(account) {
+  const name = String(account?.name || '').trim();
+  if (name) {
+    const parts = name.split(/\s+/);
+    const first = parts[0];
+    const letters =
+      parts.length > 1 ? first[0] + parts[parts.length - 1][0] : first.slice(0, 2);
+    return letters.toUpperCase();
+  }
+
+  const letters = String(account?.email || '')
+    .split('@')[0]
+    .replace(/[^A-Za-z]/g, '');
+  return (letters.slice(0, 2) || 'RV').toUpperCase();
 }
