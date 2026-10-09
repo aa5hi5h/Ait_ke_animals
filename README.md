@@ -6,7 +6,13 @@ All repository documents are synthetic specimens. Do not add real identities or 
 
 ## Run the backend
 
-In Windows PowerShell:
+The easiest way on Windows is the bundled script. It creates `.venv` if it is missing, installs `backend/requirements.txt`, puts Tesseract on `PATH`, reads the environment from the root `.env` file, refuses to start if the port is already taken, and then runs uvicorn:
+
+```powershell
+.\start-backend.ps1            # add -Reload for auto-reload, -Port to change the port
+```
+
+`YONKO_SESSION_SECRET` is generated once and appended to `.env`, so reviewer sessions survive restarts. To start the server by hand instead:
 
 ```powershell
 cd backend
@@ -55,8 +61,8 @@ The reviewer portal offers two sign in options side by side:
 To switch Google sign in on:
 
 1. Google Cloud Console → **APIs & Services → OAuth consent screen**: pick *External*, add the `email` and `profile` scopes, and add your Google addresses under **Test users** while the app is in *Testing*.
-2. **APIs & Services → Credentials → Create credentials → OAuth client ID**: choose **Web application** and add `http://localhost:5173` and `http://localhost:3000` under **Authorized JavaScript origins** (redirect URIs are not needed). Copy the Client ID.
-3. Backend — set the environment variables before starting uvicorn:
+2. **APIs & Services → Credentials → Create credentials → OAuth client ID**: choose **Web application** and add `http://localhost:5173` and `http://localhost:3000` under **Authorized JavaScript origins** (redirect URIs are not needed). Copy the Client ID. Origins must include the scheme and must not end in a slash — `localhost:5173` and `http://localhost:5173/` are both rejected, and the browser reports `The given origin is not allowed for the given client ID.`
+3. Backend — `start-backend.ps1` reads `GOOGLE_CLIENT_ID` from the `VITE_GOOGLE_CLIENT_ID` value in the root `.env` file automatically, so with the script there is nothing extra to set. Starting uvicorn by hand means exporting both variables yourself:
 
    ```powershell
    $env:GOOGLE_CLIENT_ID = "1234567890-abcdef.apps.googleusercontent.com"
