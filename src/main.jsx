@@ -533,23 +533,29 @@ function AccountModal({
     }
   };
 
-  // Google renders its own button. It lives outside the mode-specific form
-  // fields, so mounting once is enough.
+  // Google renders its own button, so the wording has to be requested rather
+  // than written: "Sign in with Google" on the sign in tab, "Sign up with
+  // Google" on the create account tab. The flow is identical either way —
+  // Google creates the account on first use — but the label should match what
+  // the reviewer thinks they are doing. The slot is emptied first because
+  // renderButton appends, and re-running on mode would otherwise stack two.
   useEffect(() => {
     if (!GOOGLE_CLIENT_ID || !googleButtonRef.current) return undefined;
     let cancelled = false;
+    const slot = googleButtonRef.current;
 
     loadGoogleIdentityServices()
       .then((google) => {
-        if (cancelled || !googleButtonRef.current || !google?.accounts?.id) return;
+        if (cancelled || !slot || !google?.accounts?.id) return;
         google.accounts.id.initialize({
           client_id: GOOGLE_CLIENT_ID,
           callback: (response) => submitWithGoogle(response.credential),
         });
-        google.accounts.id.renderButton(googleButtonRef.current, {
+        slot.replaceChildren();
+        google.accounts.id.renderButton(slot, {
           theme: 'outline',
           size: 'large',
-          text: 'signin_with',
+          text: mode === 'signup' ? 'signup_with' : 'signin_with',
           shape: 'rectangular',
           width: 300,
         });
@@ -561,7 +567,7 @@ function AccountModal({
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [mode]);
 
   return (
     <div className="login-backdrop" onClick={onClose}>
@@ -695,7 +701,8 @@ function AccountModal({
                   disabled
                   title="Set VITE_GOOGLE_CLIENT_ID in a root .env file to switch Google sign in on."
                 >
-                  <span className="google-g-mark">G</span> Sign in with Google
+                  <span className="google-g-mark">G</span>{' '}
+                  {mode === 'signup' ? 'Sign up with Google' : 'Sign in with Google'}
                 </button>
                 <small className="google-auth-hint">
                   Add VITE_GOOGLE_CLIENT_ID to enable Google sign in.
@@ -1200,24 +1207,25 @@ export function Workspace({
                   </span>
                   <b>{ignoredOpen ? '⌃' : '⌄'}</b>
                 </button>
-                {ignoredOpen && (
-                  <div>
-                    {harmlessFindings.length ? (
-                      harmlessFindings.map((item, index) => (
-                        <p key={`${item.field}-${index}`}>
-                          <b>{item.field}:</b>{' '}
-                          {item.evidence
-                            ?.map((evidence) => evidence.raw_value || evidence.normalized_value)
-                            .filter(Boolean)
-                            .join(' · ')}{' '}
-                          <span>— {item.reason}</span>
-                        </p>
-                      ))
-                    ) : (
-                      <p>{t.ignoredEmpty}</p>
-                    )}
-                  </div>
-                )}
+                {/* Kept in the DOM while collapsed so the print stylesheet can
+                    force it open — a downloaded report must never show a count
+                    with nothing underneath it. */}
+                <div className={ignoredOpen ? '' : 'ignored-collapsed'}>
+                  {harmlessFindings.length ? (
+                    harmlessFindings.map((item, index) => (
+                      <p key={`${item.field}-${index}`}>
+                        <b>{item.field}:</b>{' '}
+                        {item.evidence
+                          ?.map((evidence) => evidence.raw_value || evidence.normalized_value)
+                          .filter(Boolean)
+                          .join(' · ')}{' '}
+                        <span>— {item.reason}</span>
+                      </p>
+                    ))
+                  ) : (
+                    <p>{t.ignoredEmpty}</p>
+                  )}
+                </div>
               </section>
 
               {/* Report and restart actions */}
@@ -1914,16 +1922,17 @@ function CitizenPrecheck({ onBack }) {
                 </span>
                 <b>{ignoredOpen ? '⌃' : '⌄'}</b>
               </button>
-              {ignoredOpen && (
-                <div>
-                  {result.ignored.map((item) => (
-                    <p key={item.field}>
-                      <b>{fieldLabel(item.field, lang)}:</b> {item.values.join(' · ')}{' '}
-                      <span>— {item.reason[lang]}</span>
-                    </p>
-                  ))}
-                </div>
-              )}
+              {/* Always mounted; .ignored-collapsed hides it on screen and the
+                  print stylesheet overrides that so the downloaded report
+                  lists what was set aside. */}
+              <div className={ignoredOpen ? '' : 'ignored-collapsed'}>
+                {result.ignored.map((item) => (
+                  <p key={item.field}>
+                    <b>{fieldLabel(item.field, lang)}:</b> {item.values.join(' · ')}{' '}
+                    <span>— {item.reason[lang]}</span>
+                  </p>
+                ))}
+              </div>
             </section>
             <div className="result-actions">
               <button onClick={() => window.print()}>↓ {t.download}</button>

@@ -729,6 +729,11 @@
 /* Reviewer Workspace: Samanvay feature parity */
 .workspace-language{padding:2px}.workspace-language button{white-space:nowrap}.review-card .fix-box{margin:13px 17px 0}.review-card .compare-box{margin:0 17px}.review-card .severity-label{margin:0 17px}.review-card h3{margin:8px 17px 0}.review-card .explanation{margin:0 17px 13px}.review-card .card-heading{padding-bottom:8px}
 .workspace .ignored-box{background:#fff}.workspace .result-actions{margin-top:18px}
+
+/* "Differences we ignored" stays in the DOM while collapsed; only display
+   toggles, so print can force it back open. */
+.ignored-box>div.ignored-collapsed{display:none}
+
 @media print{
   .sidebar,.topbar,.toolbar,.dropzone,.title-actions,.result-actions,.modal-backdrop,.toast,.review-card-actions,.decision,.local-note,.filter-chips{display:none!important}
   .main,.page{padding:0;max-width:none}
@@ -736,6 +741,26 @@
   .ignored-box>button b{display:none}
   body{background:#fff}
   .findings-card,.summary-card,.table-card{break-inside:avoid}
+}
+
+/* Citizen Pre-Check: "Download report (PDF)" prints the result card only — no
+   nav bar, no language picker, no step stepper, no action buttons. */
+@media print{
+  .precheck{background:#fff;min-height:0}
+  .precheck-nav,.precheck-progress,.result-actions,.synthetic-notice{display:none!important}
+  .precheck-main{max-width:none;padding:0}
+  .precheck-results{border:0;box-shadow:none;padding:0}
+  .precheck-results h1{font-size:24px;margin:8px 0 16px}
+  .result-summary,.citizen-finding,.fix-box,.ignored-box{break-inside:avoid}
+  .citizen-finding{border-color:#d5dbe2}
+  .ignored-box>div{display:block!important}
+  .ignored-box>button b{display:none}
+  /* Browsers drop background colours in print by default, which would strip
+     the severity tints out of the report and leave a plain black-and-white
+     list. The text label stays readable either way — severity is never carried
+     by colour alone — but keeping the tints means the PDF matches the screen. */
+  .citizen-severity,.result-summary{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{background:#fff}
 }
 
 /* Google sign in inside the reviewer account modal */
