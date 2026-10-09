@@ -105,7 +105,8 @@ async def analyze(files: list[UploadFile] = File(...)) -> dict[str, object]:
         if upload.content_type:
             content_type = upload.content_type.lower()
             if not (content_type.startswith("image/")
-                    or content_type == "application/pdf"):
+                    or "pdf" in content_type
+                    or (content_type == "application/octet-stream" and suffix == PDF_SUFFIX)):
                 raise _bad_request(
                     "Each upload must declare an image or PDF content type.")
         names.append(filename)

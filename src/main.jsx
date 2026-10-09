@@ -701,22 +701,39 @@ export function Workspace({
     window.setTimeout(() => setToast(''), 2800);
   };
 
-  const chooseFiles = (fileList) => {
-    const next = Array.from(fileList || []);
-    const seen = new Set();
-    const invalid = next.find((file) => !isValidImage(file));
-    const duplicate = next.find((file) => {
-      const name = file.name.toLowerCase();
-      if (seen.has(name)) return true;
-      seen.add(name);
-      return false;
-    });
+  const handleFileSelection = (fileList) => {
+    const incoming = Array.from(fileList || []);
+    if (!incoming.length) return;
 
-    if (invalid) return setSelectionError(`${invalid.name} must be a non-empty PNG, JPG, JPEG, or PDF file.`);
-    if (duplicate) return setSelectionError(`Duplicate filename: ${duplicate.name}.`);
-    if (next.length < 2 || next.length > 10) return setSelectionError('Choose between 2 and 10 files.');
+    const invalid = incoming.find((file) => !isValidImage(file));
+    if (invalid) {
+      setSelectionError(`${invalid.name} must be a non-empty PNG, JPG, JPEG, or PDF file.`);
+      return;
+    }
 
-    setFiles(next);
+    // Accumulate files: add incoming to existing bundle (or update if same name)
+    const fileMap = new Map();
+    files.forEach((f) => fileMap.set(f.name.toLowerCase(), f));
+    incoming.forEach((f) => fileMap.set(f.name.toLowerCase(), f));
+
+    const combined = Array.from(fileMap.values());
+    if (combined.length > 10) {
+      setSelectionError('A bundle can have at most 10 files.');
+      return;
+    }
+
+    setFiles(combined);
+    setSelectionError('');
+    setRequestError('');
+  };
+
+  const removeFile = (fileName) => {
+    setFiles((prev) => prev.filter((f) => f.name !== fileName));
+    setSelectionError('');
+  };
+
+  const clearFiles = () => {
+    setFiles([]);
     setSelectionError('');
     setRequestError('');
   };
@@ -1163,7 +1180,20 @@ export function Workspace({
             <div className="modal-kicker">{t.newBundle}</div>
             <h2>{t.uploadTitle}</h2>
             <p>{t.uploadText}</p>
-            <div className="modal-drop">
+            <div
+              className="modal-drop"
+              onDragOver={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+              }}
+              onDrop={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                if (e.dataTransfer?.files?.length) {
+                  handleFileSelection(e.dataTransfer.files);
+                }
+              }}
+            >
               <b>{t.uploadDrop}</b>
               <label>
                 {t.uploadBrowse}
@@ -1171,27 +1201,75 @@ export function Workspace({
                   type="file"
                   multiple
                   accept={ACCEPT_ATTRIBUTE}
-                  onChange={(event) => chooseFiles(event.target.files)}
+                  onChange={(event) => {
+                    handleFileSelection(event.target.files);
+                    event.target.value = '';
+                  }}
                 />
               </label>
               <small>PNG, JPG, JPEG or PDF · 2–10 files</small>
             </div>
+
             {files.length > 0 && (
-              <p className="selection-copy">
-                {files.length} {t.selectedFiles} {files.map((file) => file.name).join(', ')}
+              <div className="modal-files-section">
+                <div className="modal-files-header">
+                  <span><b>{files.length}</b> {t.selectedFiles}</span>
+                  <button type="button" className="btn-clear-files" onClick={clearFiles}>
+                    Clear all
+                  </button>
+                </div>
+                <div className="modal-files-list">
+                  {files.map((file) => {
+                    const ext = file.name.split('.').pop()?.toUpperCase() || 'FILE';
+                    return (
+                      <div key={file.name} className="modal-file-pill">
+                        <span className={`file-badge ${ext === 'PDF' ? 'badge-pdf' : 'badge-img'}`}>
+                          {ext}
+                        </span>
+                        <span className="file-name" title={file.name}>{file.name}</span>
+                        <button
+                          type="button"
+                          className="file-remove-btn"
+                          onClick={() => removeFile(file.name)}
+                          title="Remove file"
+                        >
+                          ×
+                        </button>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
+            {files.length === 1 && (
+              <p className="selection-notice warning" role="status">
+                ℹ️ 1 document selected. Please add at least 1 more document to compare (2–10 files required).
               </p>
             )}
+
+            {files.length >= 2 && files.length <= 10 && (
+              <p className="selection-notice success" role="status">
+                ✓ {files.length} documents ready to compare.
+              </p>
+            )}
+
             {selectionError && (
               <p className="selection-error" role="alert">
-                {selectionError}
+                ⚠️ {selectionError}
               </p>
             )}
+
             <button
               className="primary-button full"
               disabled={!canAnalyze}
               onClick={analyze}
             >
-              {loading ? 'Analyzing documents…' : 'Upload and analyze'}
+              {loading
+                ? 'Analyzing documents…'
+                : files.length < 2
+                ? 'Select at least 2 files to analyze'
+                : `Upload and analyze (${files.length} files)`}
             </button>
           </div>
         </div>
@@ -1251,12 +1329,9 @@ export function Workspace({
 }
 
 function isValidImage(file) {
+  if (!file || typeof file.size !== 'number' || file.size <= 0) return false;
   const extension = file.name.split('.').pop()?.toLowerCase();
-  return (
-    file.size > 0 &&
-    ACCEPTED_EXTENSIONS.has(extension) &&
-    (IMAGE_TYPES.has(file.type) || file.type === PDF_TYPE)
-  );
+  return Boolean(extension && ACCEPTED_EXTENSIONS.has(extension));
 }
 
 function decisionLabel(decision) {
